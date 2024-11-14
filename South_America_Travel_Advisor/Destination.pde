@@ -4,6 +4,8 @@ class Destination {
   boolean rainy = false;
   int numDaysVisiting;
   
+}
+  
   
   
   
