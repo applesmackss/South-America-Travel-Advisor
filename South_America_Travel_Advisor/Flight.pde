@@ -3,22 +3,17 @@ class Flight {
   //Fields 
   String uState;
   String destination;
-  int age;
   float cost;
-  int nPeople;
   float distance;
+  boolean children;
   
-  Flight (String uS, String d, int a, float c, int nP, float dist) {
+  Flight(String uS, String d, float c, float dist) {
     this.uState = uS;
     this.destination = d;
-    this.age = a;
     this.cost = c;
-    this.nPeople = nP;
     this.distance = dist;
     
   }
   
   void checkAge() {
-    if (nPeople > 1) {
-      println("Do you have any children under the age of 12?");
-  
+    if (numPeople > 1) {
