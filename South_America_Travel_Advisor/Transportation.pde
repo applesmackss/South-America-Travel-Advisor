@@ -6,18 +6,11 @@ class Transportation {
   int maxiumCapacity;
   int numberofPeople;
   
-  //train,bus, 5,7,11 seaters
-  //Transportation("train", - , "10")
-  //Transportation("bus", - , "10")
-  //Transportation("car", - , "5")\
-  //Transportation("miny van", - , "7")
-  //Transportation("vans", - , "11")
-  
   //Constructor
   Transportation (String v, float c, int mc) {
   
     this.vehicle = v;
-    this.cost = cost;
+    this.cost = c;
     this.maxiumCapacity = mc;
   
   }
