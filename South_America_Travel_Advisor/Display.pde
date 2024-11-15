@@ -28,9 +28,12 @@ void display() {
     Next.setVisible(true);
     Previous.setVisible(true);
     Finish.setVisible(false);
+    Flight a = new Flight("a","b",1,2,3);
+    a.checkAge();
     rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
-    backcol = color(0,252,252);
     fill(backcol);
+    backcol = color(0,252,252);
+    
   }
   if(pageOn == "info2") {
     Start.setVisible(false);  

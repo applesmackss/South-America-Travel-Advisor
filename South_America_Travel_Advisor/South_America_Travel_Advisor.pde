@@ -25,6 +25,7 @@ public void setup(){
   car = new Transportation("car", 3.21 , 5);
   minivan = new Transportation("miny van",3.21 , 7);
   van = new Transportation("van", 3.21 , 11);
+ 
 }
 
 public void draw(){
