@@ -3,12 +3,12 @@ import g4p_controls.*;
 // You can remove the PeasyCam import if you are not using
 // the GViewPeasyCam control or the PeasyCam library.
 //import peasy.*;
+PImage bg;
 String pageOn = "start";
-Transportation train; 
-Transportation bus; 
-Transportation car;
-Transportation minivan; 
-Transportation van;
+Transportation train, bus, car, minivan, van, vehicleAtuse; 
+String vehicleChosen;
+boolean pageStopper = true;
+String[] backgroundChoice = {"bg1.png","bg2.png","bg1.png"};
 
 
 
@@ -17,6 +17,7 @@ public void setup(){
   size(1200, 700, JAVA2D);
   createGUI();
   customGUI();
+  bg = loadImage("bg1.png");
   // Place your setup code here
   
     //train,bus, 5,7,11 seaters (transportation class) (vehicle, price per day, max pasengers allowed)
@@ -29,7 +30,7 @@ public void setup(){
 }
 
 public void draw(){
-  background(230);
+  image(bg,0,0);
   display();
   
 }
