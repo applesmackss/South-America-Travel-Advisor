@@ -21,4 +21,7 @@ class Flight {
   void checkAge() {
     if (nPeople > 1) {
       println("Do you have any children under the age of 12?");
+    }
+  }
+}
   
