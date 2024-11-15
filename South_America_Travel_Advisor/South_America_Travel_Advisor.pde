@@ -14,7 +14,7 @@ Transportation van;
 
 
 public void setup(){
-  size(1200, 900, JAVA2D);
+  size(1200, 700, JAVA2D);
   createGUI();
   customGUI();
   // Place your setup code here

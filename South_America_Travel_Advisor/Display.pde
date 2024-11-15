@@ -19,7 +19,7 @@ void display() {
     Finish.setVisible(false);
     backcol = color(252,0,252);
     fill(backcol);
-    rect(bookCoord.x,100,bookShape.x,700);
+    rect(bookCoord.x,25,bookShape.x,650);
   }
   if(pageOn == "info1") {
     Start.setVisible(false);  
