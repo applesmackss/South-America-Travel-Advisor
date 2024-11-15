@@ -27,13 +27,30 @@ public void FinishButtonClicked(GButton source, GEvent event) { //_CODE_:Finish:
 } //_CODE_:Finish:287929:
 
 public void NextButtonClicked(GButton source, GEvent event) { //_CODE_:Next:342455:
-  if(pageOn == "info1") {}
+  if(pageOn == "info1") {
+    pageOn = "info2";
+  }
+  
 } //_CODE_:Next:342455:
 
 public void PreviousButtonClicked(GButton source, GEvent event) { //_CODE_:Previous:223227:
-  println("Previous - GButton >> GEvent." + event + " @ " + millis());
+  if(pageOn == "info1") {
+    pageOn = "start";
+  }
+  
+  if(pageOn == "info2") {
+    pageOn = "info1";
+  }
+  
+  if(pageOn == "final") {
+    pageOn = "info2";
+  }
+  
 } //_CODE_:Previous:223227:
 
+public void XButtonClicked(GButton source, GEvent event) { //_CODE_:X:848310:
+  pageOn = "start";
+} //_CODE_:X:848310:
 
 
 // Create all the GUI controls. 
@@ -61,6 +78,10 @@ public void createGUI(){
   Previous.setText("Previous");
   Previous.setLocalColorScheme(GCScheme.CYAN_SCHEME);
   Previous.addEventHandler(this, "PreviousButtonClicked");
+  X = new GButton(this, 845, 102, 52, 42);
+  X.setText("X");
+  X.setLocalColorScheme(GCScheme.RED_SCHEME);
+  X.addEventHandler(this, "XButtonClicked");
 }
 
 // Variable declarations 
@@ -70,3 +91,4 @@ GButton About;
 GButton Finish; 
 GButton Next; 
 GButton Previous; 
+GButton X; 
