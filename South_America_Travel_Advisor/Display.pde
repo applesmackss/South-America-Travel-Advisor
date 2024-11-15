@@ -17,9 +17,9 @@ void display() {
     Next.setVisible(false);
     Previous.setVisible(false);
     Finish.setVisible(false);
-    rect(bookCoord.x,100,bookShape.x,700);
     backcol = color(252,0,252);
     fill(backcol);
+    rect(bookCoord.x,100,bookShape.x,700);
   }
   if(pageOn == "info1") {
     Start.setVisible(false);  
@@ -30,9 +30,9 @@ void display() {
     Finish.setVisible(false);
     Flight a = new Flight("a","b",1,2,3);
     a.checkAge();
-    rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
-    fill(backcol);
     backcol = color(0,252,252);
+    fill(backcol);
+    rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
     
   }
   if(pageOn == "info2") {
@@ -42,9 +42,9 @@ void display() {
     Next.setVisible(false);
     Previous.setVisible(true);
     Finish.setVisible(true);
-    rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
     backcol = color(0,0,252);
     fill(backcol);
+    rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
   }
   if(pageOn == "final") {
     Start.setVisible(false);  
@@ -53,9 +53,9 @@ void display() {
     Next.setVisible(false);
     Previous.setVisible(true);
     Finish.setVisible(false);
-    rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
     backcol = color(0,252,0);
     fill(backcol);
+    rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
   }
 
 
