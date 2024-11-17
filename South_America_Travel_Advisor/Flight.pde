@@ -1,32 +1,45 @@
 class Flight {
   
   //Fields 
-  String uState;
-  String destination;
-  int nPeople;
-  float cost;
+  String airline;
+  float ratePerKm;
   float distance;
-  boolean children;
+  ArrayList<Traveler> passengers;
   
-  Flight(String uS, String d, int np, float c, float dist) {
-    this.uState = uS;
-    this.destination = d;
-    this.nPeople = np;
-    this.cost = c;
-    this.distance = dist;
+  Flight(String a, float rpk, float d) {
+    this.airline = a;
+    this.ratePerKm = rpk;
+    this.distance = d;
+    this.passengers = new ArrayList<Traveler>();
+  }
+  
+  void addPassnger(Traveler traveler) {
+    passengers.add(traveler);  
+}
+  
+  float calculateTotalCost() {
+    float totalCost = 0;
     
-  }
-  
-  void checkNumPeople() {
-    //Some GUI that lets the user input a number for the number of passengers they have
-  }
-  
-  void checkAge() {
-      textSize(12);
-      fill(0);
-      text("Do you have any children under the age of 12?", 100, 400);
+    for (Traveler traveler : passengers) {
+      traveler.calculateTicketCost(distance, ratePerKm);
+      totalCost += traveler.ticketCost;
     }
-    //Lets the user pick yes or no for the question, if yes, boolean children = true. If no, boolean children = false
     
-    
+      return totalCost;
   }
+  
+  void displayFlightDetails() {
+    println("Airline: " + airline);
+    println("Distance: " + distance + " km");
+    println("Rate per km: $" + ratePerKm);
+    println("Number of Passengers: " + passengers.size());
+
+    println("\nTicket Costs:");
+    for (int i = 0; i < passengers.size(); i++) {
+      Traveler traveler = passengers.get(i);
+      println("Passenger " + (i + 1) + ": Age " + traveler.age + " - Ticket Cost: $" + traveler.ticketCost);
+    }
+
+    println("\nTotal Flight Cost: $" + calculateTotalCost());
+  }
+}
