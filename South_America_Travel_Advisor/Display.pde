@@ -30,8 +30,6 @@ void display() {
     Next.setVisible(true);
     Previous.setVisible(true);
     Finish.setVisible(false);
-    Flight a = new Flight("a","b",1,2,3);
-    a.checkAge();
     fill(backcol);
     rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
     Info1();
@@ -149,5 +147,5 @@ void Final() {
   text("Transportation Cost:",500,450);
   text("Itinerary Cost:",900,450);
   textSize(35);
-  text("Transportation Cost:",450,550);
+  text("Total Final Trip Cost:",450,550);
 }
