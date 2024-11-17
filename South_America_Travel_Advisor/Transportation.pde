@@ -3,7 +3,7 @@ class Transportation {
   //Fields
   String vehicle;
   float cost; //per day
-  int maxiumCapacity;
+  int maximumCapacity;
   int tripDays;
   int numberOfPeople;
   
@@ -11,7 +11,7 @@ class Transportation {
   Transportation (String v, float c, int mc, int td, int nOP) {
     this.vehicle = v;
     this.cost = c;
-    this.maxiumCapacity = mc;
+    this.maximumCapacity = mc;
     this.tripDays = td;
     this.numberOfPeople = nOP;
   
@@ -19,15 +19,37 @@ class Transportation {
 
   // Method to see if the chosen transportation method is valid
   boolean isValidOption() {
-    return numberOfPeople <= maxiumCapacity || vehicle.equals("train pass") || vehicle.equals("bus pass");
+    return numberOfPeople <= maximumCapacity || vehicle.equals("train") || vehicle.equals("bus");
   }
-
-  //Methods
-  void getCost() {
-    float days = 23;
-    float overallCost = cost * days; //days should be turned into a variable that will know the # of days
-    println("The cost of this vehicle per day is $"+this.cost+".");
-    println("The overall cost to use the",this.vehicle,"is $"+overallCost,"for", days, "days.");  
+  
+  // Calculate total cost for transportation
+  float calculateTotalCost() {
+    if (!isValidOption()) {
+      println("Selected transportation method cannot accommodate the number of travelers.");
+      return 0;
   }
+  
+  // Calculate cost based on daily rate and number of travelers
+  if (vehicle.equals("train") || vehicle.equals("bus")) {
+    return numberOfPeople * cost * tripDays; // Per-person rate
+  }
+  else {
+    return cost * tripDays; // Per-vehicle rate
+  }
+  }
+  
+  void displayTransportationDetails() {
+    println("Transportation Method: " + vehicle);
+    println("Daily Rate: $" + cost);
+    println("Seating Capacity: " + (maximumCapacity == -1 ? "Unlimited" : maximumCapacity));
+    println("Trip Duration: " + tripDays + " days");
+    println("Number of Travelers: " + numberOfPeople);
 
+    if (!isValidOption()) {
+      println("\nError: This transportation method cannot accommodate all travelers.");
+    } else {
+      println("\nTotal Transportation Cost: $" + calculateTotalCost());
+    }
+  }
+  
 }
