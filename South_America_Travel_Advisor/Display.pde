@@ -68,6 +68,7 @@ void display() {
     Finish.setVisible(false);
     fill(backcol);
     rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
+    Info4();
   }
   
   if(pageOn == "info5") {
@@ -123,7 +124,18 @@ void Info3() {
   text("State ----------> Country",100,300);
 }
 
+void Info4() {
+  rect(100,200,500,400);
+  fill(0);
+  textSize(35);
+  text("What kind of transporation would you like in this country?",100,100);
+  text("Summary: ",260,250);
+  fill(255);
+  
 
+
+
+}
 
 void Final() {
   float calx = 100;
