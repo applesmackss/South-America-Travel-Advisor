@@ -121,7 +121,7 @@ void Info3() {
   fill(0);
   textSize(35);
   text("What airline do you prefer?",100,100);
-  text("State ----------> Country",100,300);
+  text("State → Country",100,300);
 }
 
 void Info4() {
