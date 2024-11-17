@@ -7,7 +7,7 @@ import g4p_controls.*;
 //import peasy.*;
 PImage bg;
 String pageOn = "start";
-Transportation train, bus, car, minivan, van, vehicleAtuse; 
+Transportation train, bus, car, minivan, van; 
 String vehicleChosen;
 boolean pageStopper = true;
 String[] backgroundChoice = {"bg1.png","bg2.png","bg3.png"};

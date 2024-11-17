@@ -17,6 +17,11 @@ class Flight {
     passengers.add(traveler);  
 }
   
+  void getDistance() {
+    
+    
+  }
+  
   float calculateTotalCost() {
     float totalCost = 0;
     
