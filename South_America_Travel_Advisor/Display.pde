@@ -4,6 +4,7 @@ void display() {
   PVector bookShape = new PVector(1100,600);
 
   if(pageOn == "start") {
+    TransportationType.setVisible(false);
     Start.setVisible(true);  
     About.setVisible(true);
     X.setVisible(false);
@@ -13,6 +14,7 @@ void display() {
   }
   
   if(pageOn == "about") {
+    TransportationType.setVisible(false);
     Start.setVisible(false);  
     About.setVisible(false);
     X.setVisible(true);
@@ -24,6 +26,7 @@ void display() {
   }
   
   if(pageOn == "info1") {
+    TransportationType.setVisible(false);
     Start.setVisible(false);  
     About.setVisible(false);
     X.setVisible(false);
@@ -36,6 +39,7 @@ void display() {
     
   }
   if(pageOn == "info2") {
+    TransportationType.setVisible(false);
     Start.setVisible(false);  
     About.setVisible(false);
     X.setVisible(false);
@@ -48,6 +52,7 @@ void display() {
   }
   
   if(pageOn == "info3") {
+    TransportationType.setVisible(false);
     Start.setVisible(false);  
     About.setVisible(false);
     X.setVisible(false);
@@ -60,6 +65,7 @@ void display() {
   }
   
   if(pageOn == "info4") {
+    TransportationType.setVisible(true);
     Start.setVisible(false);  
     About.setVisible(false);
     X.setVisible(false);
@@ -72,6 +78,7 @@ void display() {
   }
   
   if(pageOn == "info5") {
+    TransportationType.setVisible(false);
     Start.setVisible(false);  
     About.setVisible(false);
     X.setVisible(false);
@@ -83,6 +90,7 @@ void display() {
   }
   
   if(pageOn == "final") {
+    TransportationType.setVisible(false);
     Start.setVisible(false);  
     About.setVisible(false);
     X.setVisible(false);
@@ -125,12 +133,16 @@ void Info3() {
 }
 
 void Info4() {
-  rect(100,200,500,400);
+  rect(100,225,500,375);
   fill(0);
   textSize(35);
   text("What kind of transporation would you like in this country?",100,100);
-  text("Summary: ",260,250);
+  text("Summary: ",275,270);
+  text("Cost of Method Chosen",700,200);
   fill(255);
+  if(vehicleAtuse != null) {
+  vehicleAtuse.displayTransportationDetails();
+  }
   
 
 

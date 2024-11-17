@@ -39,16 +39,17 @@ class Transportation {
   }
   
   void displayTransportationDetails() {
-    println("Transportation Method: " + vehicle);
-    println("Daily Rate: $" + cost);
-    println("Seating Capacity: " + (maximumCapacity == -1 ? "Unlimited" : maximumCapacity));
-    println("Trip Duration: " + tripDays + " days");
-    println("Number of Travelers: " + numberOfPeople);
+    textSize(35);
+    text("Transportation Method: " + vehicle,100,200);
+    text("Daily Rate: $" + cost,100,200);
+    text(("Seating Capacity: " + (maximumCapacity == -1 ? "Unlimited" : maximumCapacity)), 100,200);
+    text("Trip Duration: " + tripDays + " days",100,200);
+    text("Number of Travelers: " + numberOfPeople,100,200);
 
     if (!isValidOption()) {
-      println("\nError: This transportation method cannot accommodate all travelers.");
+      text("\nError: This transportation method cannot accommodate all travelers.",100,200);
     } else {
-      println("\nTotal Transportation Cost: $" + calculateTotalCost());
+      text("\nTotal Transportation Cost: $" + calculateTotalCost(),100,200);
     }
   }
   

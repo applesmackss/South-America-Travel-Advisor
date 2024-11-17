@@ -78,6 +78,11 @@ public void XButtonClicked(GButton source, GEvent event) { //_CODE_:X:848310:
   pageOn = "start";
 } //_CODE_:X:848310:
 
+public void TransportationTypeClicked(GDropList source, GEvent event) { //_CODE_:TransportationType:818380:
+  vehicleChosen = TransportationType.getSelectedText();
+  println(vehicleChosen);
+} //_CODE_:TransportationType:818380:
+
 
 
 // Create all the GUI controls. 
@@ -109,6 +114,9 @@ public void createGUI(){
   X.setText("X");
   X.setLocalColorScheme(GCScheme.RED_SCHEME);
   X.addEventHandler(this, "XButtonClicked");
+  TransportationType = new GDropList(this, 100, 165, 347, 141, 2, 10);
+  TransportationType.setItems(loadStrings("list_818380"), 0);
+  TransportationType.addEventHandler(this, "TransportationTypeClicked");
 }
 
 // Variable declarations 
@@ -119,3 +127,4 @@ GButton Finish;
 GButton Next; 
 GButton Previous; 
 GButton X; 
+GDropList TransportationType; 
