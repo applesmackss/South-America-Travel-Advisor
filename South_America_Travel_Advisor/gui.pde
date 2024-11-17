@@ -31,6 +31,20 @@ public void NextButtonClicked(GButton source, GEvent event) { //_CODE_:Next:3424
     pageOn = "info2";
   }
   
+  else if(pageOn == "info2") {
+    pageOn = "info3";
+  }
+  
+  else if(pageOn == "info3") {
+    pageOn = "info4";
+  }
+  
+  else if(pageOn == "info4") {
+    pageOn = "info5";
+  }
+
+  
+
 } //_CODE_:Next:342455:
 
 public void PreviousButtonClicked(GButton source, GEvent event) { //_CODE_:Previous:223227:
@@ -42,8 +56,20 @@ public void PreviousButtonClicked(GButton source, GEvent event) { //_CODE_:Previ
     pageOn = "info1";
   }
   
-  if(pageOn == "final") {
+  if(pageOn == "info3") {
     pageOn = "info2";
+  }
+  
+  if(pageOn == "info4") {
+    pageOn = "info3";
+  }
+  
+  if(pageOn == "info5") {
+    pageOn = "info4";
+  }
+  
+  if(pageOn == "final") {
+    pageOn = "info5";
   }
   
 } //_CODE_:Previous:223227:

@@ -8,8 +8,8 @@ String pageOn = "start";
 Transportation train, bus, car, minivan, van, vehicleAtuse; 
 String vehicleChosen;
 boolean pageStopper = true;
-String[] backgroundChoice = {"bg1.png","bg2.png","bg1.png"};
-
+String[] backgroundChoice = {"bg1.png","bg2.png","bg3.png"};
+int bgPicked = int(random(backgroundChoice.length));
 
 
 
@@ -17,7 +17,7 @@ public void setup(){
   size(1200, 700, JAVA2D);
   createGUI();
   customGUI();
-  bg = loadImage("bg1.png");
+  bg = loadImage(backgroundChoice[bgPicked]);
   // Place your setup code here
   
     //train,bus, 5,7,11 seaters (transportation class) (vehicle, price per day, max pasengers allowed)
