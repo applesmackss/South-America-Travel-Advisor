@@ -2,6 +2,7 @@ void display() {
   color backcol = color(255,255,255);
   PVector bookCoord = new PVector(50,25);
   PVector bookShape = new PVector(1100,600);
+  PFont font1, font2;
 
   if(pageOn == "start") {
     TransportationType.setVisible(false);
@@ -23,6 +24,18 @@ void display() {
     Finish.setVisible(false);
     fill(backcol);
     rect(300,25,600,650);
+    font1 = loadFont("Cambria-Bold-48.vlw");
+    font2 = loadFont("MicrosoftPhagsPa-48.vlw");
+    textFont(font1);
+    textSize(22);
+    fill(0);
+    text("Thank you for choosing South America Travel Advisor!", 315,120);
+    textFont(font2);
+    textSize(15);
+    fill(0);
+    text("South America Travel Advisor (SATA) is the perfect travel planner for U.S. citizens who ", 320, 280);
+    text("want to travel to South America. We have everything you need covered, such as the ", 320, 300);
+    text("activities, plane tickets, cost, transportation, and more!", 420, 320);
   }
   
   if(pageOn == "info1") {

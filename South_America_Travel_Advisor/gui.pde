@@ -80,7 +80,7 @@ public void XButtonClicked(GButton source, GEvent event) { //_CODE_:X:848310:
 
 public void TransportationTypeClicked(GDropList source, GEvent event) { //_CODE_:TransportationType:818380:
   vehicleChosen = TransportationType.getSelectedText();
-  println(vehicleChosen);
+  println(vehicleChosen, vehicleAtuse);
 } //_CODE_:TransportationType:818380:
 
 
