@@ -225,6 +225,7 @@ void Info4() {
   fill(255);
   if(vehicleAtuse != null) {
   vehicleAtuse.displayTransportationDetails();
+  vehicleAtuse.displayTransportationSummary();
   }
   
 
