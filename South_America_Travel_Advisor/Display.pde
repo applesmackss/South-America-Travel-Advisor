@@ -51,7 +51,7 @@ void display() {
     text("About Us", 475, 100);
     textSize(22);
     fill(0);
-    text("Thank you for choosing South America Travel Advisor!", 315,150);
+    text("Thank you for choosing South America Travel Advisor!", 315,175);
     textFont(font2);
     textSize(14.5);
     fill(0);
@@ -67,7 +67,16 @@ void display() {
     text("What we offer:", 490,325);
     textFont(font2);
     textSize(14.5);
-    text("We ", 320, 350);
+    text("We offer an experience that makes your trip planning easier and less stressful. We can list ", 320, 350);
+    text("multiple activities designed to fit your preferences. We find the best plane tickets for you ", 320, 370);
+    text("with a focus on affordability, comfort, or convinience to your preference. Thinking about ", 320, 390);
+    text("how you plan on travelling across the country? We'll find you the best transportation ", 320, 410);
+    text("method for you, and we'll show you the pricing of each option too, so that you can ", 320, 430);
+    text("adjust them accordingly to your budget.",475,450);
+
+    textSize(12);
+    text("To start planning for your trip, exit out this page by pressing the 'x' mark on the top right and then press the ", 310, 650);
+    text("'start planning' button on the main page", 490, 665);
     
   }
   
