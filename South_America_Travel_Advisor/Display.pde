@@ -78,8 +78,6 @@ void display() {
     
   }
   if(pageOn == "info2") {
-    TravUnder2.setVisible(false);
-    TravLess12.setVisible(false);
     NumOfTravelers.setVisible(true);
     StartDate.setVisible(false);
     EndDate.setVisible(false);
@@ -198,6 +196,11 @@ void Info2() {
   TravLess12.setVisible(true);
   text("How many of these kids are under 2?",100,500);
   TravUnder2.setVisible(true);
+  }
+  
+  else {
+   TravUnder2.setVisible(false);
+   TravLess12.setVisible(false);
   }
 
 
