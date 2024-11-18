@@ -5,6 +5,9 @@ void display() {
   PFont font1, font2;
 
   if(pageOn == "start") {
+    TravUnder2.setVisible(false);
+    TravLess12.setVisible(false);
+    NumOfTravelers.setVisible(false);
     StartDate.setVisible(false);
     EndDate.setVisible(false);
     StartingLocation.setVisible(false);
@@ -16,12 +19,17 @@ void display() {
     Next.setVisible(false);
     Previous.setVisible(false);
     Finish.setVisible(false);
+    fill(255);
+    rect(100,250,1000,150);
     textSize(75);
-    fill(0,255,255);
-    text("South America Travel Advisor",150,height/2);
+    fill(0);
+    text("South America Travel Advisor",140,height/2);
   }
   
   if(pageOn == "about") {
+    TravUnder2.setVisible(false);
+    TravLess12.setVisible(false);
+    NumOfTravelers.setVisible(false);
     StartDate.setVisible(false);
     EndDate.setVisible(false);
     StartingLocation.setVisible(false);
@@ -50,6 +58,9 @@ void display() {
   }
   
   if(pageOn == "info1") {
+    TravUnder2.setVisible(false);
+    TravLess12.setVisible(false);
+    NumOfTravelers.setVisible(false);
     StartDate.setVisible(true);
     EndDate.setVisible(true);
     StartingLocation.setVisible(true);
@@ -67,6 +78,9 @@ void display() {
     
   }
   if(pageOn == "info2") {
+    TravUnder2.setVisible(false);
+    TravLess12.setVisible(false);
+    NumOfTravelers.setVisible(true);
     StartDate.setVisible(false);
     EndDate.setVisible(false);
     StartingLocation.setVisible(false);
@@ -84,6 +98,9 @@ void display() {
   }
   
   if(pageOn == "info3") {
+    TravUnder2.setVisible(false);
+    TravLess12.setVisible(false);
+    NumOfTravelers.setVisible(false);
     StartDate.setVisible(false);
     EndDate.setVisible(false);
     StartingLocation.setVisible(false);
@@ -101,6 +118,9 @@ void display() {
   }
   
   if(pageOn == "info4") {
+    TravUnder2.setVisible(false);
+    TravLess12.setVisible(false);
+    NumOfTravelers.setVisible(false);
     StartDate.setVisible(false);
     EndDate.setVisible(false);
     StartingLocation.setVisible(false);
@@ -118,6 +138,9 @@ void display() {
   }
   
   if(pageOn == "info5") {
+    TravUnder2.setVisible(false);
+    TravLess12.setVisible(false);
+    NumOfTravelers.setVisible(false);
     StartDate.setVisible(false);
     EndDate.setVisible(false);
     StartingLocation.setVisible(false);
@@ -134,6 +157,9 @@ void display() {
   }
   
   if(pageOn == "final") {
+    TravUnder2.setVisible(false);
+    TravLess12.setVisible(false);
+    NumOfTravelers.setVisible(false);
     StartDate.setVisible(false);
     EndDate.setVisible(false);
     StartingLocation.setVisible(false);
@@ -167,8 +193,12 @@ void Info2() {
   fill(0);
   textSize(35);
   text("Number of Travelers?",100,100);
+  if(numOfTrav > 1) {
   text("How many under 12 years old?",100,300);
+  TravLess12.setVisible(true);
   text("How many of these kids are under 2?",100,500);
+  TravUnder2.setVisible(true);
+  }
 
 
 }
@@ -222,6 +252,17 @@ void Final() {
   text("Itinerary Cost:",900,450);
   textSize(35);
   text("Total Final Trip Cost:",450,550);
+  text("Your Planner Schedule",450,75);
   
+  int dx = 110;
+  for(int d = 1; d < 8; d++) {
+  text("Day"+d,dx,135);
+  dx += (1000/7);  
+  }
   
+  dx = 110;
+  for(int d = 8; d < 15; d++) {
+  text("Day"+d,dx,285);
+  dx += (1000/7);  
+  }
 }

@@ -11,6 +11,7 @@ Transportation vehicleAtuse,van,car,minivan,train,bus;
 String vehicleChosen;
 boolean pageStopper = true;
 String[] backgroundChoice = {"bg1.png","bg2.png","bg3.png"};
+int numOfTrav;
 int bgPicked = int(random(backgroundChoice.length));
 
 
