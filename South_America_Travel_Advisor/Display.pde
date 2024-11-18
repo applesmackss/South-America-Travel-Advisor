@@ -5,6 +5,10 @@ void display() {
   PFont font1, font2;
 
   if(pageOn == "start") {
+    StartDate.setVisible(false);
+    EndDate.setVisible(false);
+    StartingLocation.setVisible(false);
+    EndingLocation.setVisible(false);
     TransportationType.setVisible(false);
     Start.setVisible(true);  
     About.setVisible(true);
@@ -12,9 +16,16 @@ void display() {
     Next.setVisible(false);
     Previous.setVisible(false);
     Finish.setVisible(false);
+    textSize(75);
+    fill(0,255,255);
+    text("South America Travel Advisor",150,height/2);
   }
   
   if(pageOn == "about") {
+    StartDate.setVisible(false);
+    EndDate.setVisible(false);
+    StartingLocation.setVisible(false);
+    EndingLocation.setVisible(false);
     TransportationType.setVisible(false);
     Start.setVisible(false);  
     About.setVisible(false);
@@ -39,6 +50,10 @@ void display() {
   }
   
   if(pageOn == "info1") {
+    StartDate.setVisible(true);
+    EndDate.setVisible(true);
+    StartingLocation.setVisible(true);
+    EndingLocation.setVisible(true);
     TransportationType.setVisible(false);
     Start.setVisible(false);  
     About.setVisible(false);
@@ -52,6 +67,10 @@ void display() {
     
   }
   if(pageOn == "info2") {
+    StartDate.setVisible(false);
+    EndDate.setVisible(false);
+    StartingLocation.setVisible(false);
+    EndingLocation.setVisible(false);
     TransportationType.setVisible(false);
     Start.setVisible(false);  
     About.setVisible(false);
@@ -65,6 +84,10 @@ void display() {
   }
   
   if(pageOn == "info3") {
+    StartDate.setVisible(false);
+    EndDate.setVisible(false);
+    StartingLocation.setVisible(false);
+    EndingLocation.setVisible(false);
     TransportationType.setVisible(false);
     Start.setVisible(false);  
     About.setVisible(false);
@@ -78,6 +101,10 @@ void display() {
   }
   
   if(pageOn == "info4") {
+    StartDate.setVisible(false);
+    EndDate.setVisible(false);
+    StartingLocation.setVisible(false);
+    EndingLocation.setVisible(false);
     TransportationType.setVisible(true);
     Start.setVisible(false);  
     About.setVisible(false);
@@ -91,6 +118,10 @@ void display() {
   }
   
   if(pageOn == "info5") {
+    StartDate.setVisible(false);
+    EndDate.setVisible(false);
+    StartingLocation.setVisible(false);
+    EndingLocation.setVisible(false);
     TransportationType.setVisible(false);
     Start.setVisible(false);  
     About.setVisible(false);
@@ -103,6 +134,10 @@ void display() {
   }
   
   if(pageOn == "final") {
+    StartDate.setVisible(false);
+    EndDate.setVisible(false);
+    StartingLocation.setVisible(false);
+    EndingLocation.setVisible(false);
     TransportationType.setVisible(false);
     Start.setVisible(false);  
     About.setVisible(false);
@@ -187,4 +222,6 @@ void Final() {
   text("Itinerary Cost:",900,450);
   textSize(35);
   text("Total Final Trip Cost:",450,550);
+  
+  
 }

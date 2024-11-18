@@ -104,6 +104,22 @@ public void TransportationTypeClicked(GDropList source, GEvent event) { //_CODE_
 
 } //_CODE_:TransportationType:818380:
 
+public void StartingLocationClicked(GDropList source, GEvent event) { //_CODE_:StartingLocation:860803:
+  println("StartingLocation - GDropList >> GEvent." + event + " @ " + millis());
+} //_CODE_:StartingLocation:860803:
+
+public void EndingLocationClicked(GDropList source, GEvent event) { //_CODE_:EndingLocation:592370:
+  println("EndingLocation - GDropList >> GEvent." + event + " @ " + millis());
+} //_CODE_:EndingLocation:592370:
+
+public void StartDateClicked(GTextField source, GEvent event) { //_CODE_:StartDate:553639:
+  println("textfield1 - GTextField >> GEvent." + event + " @ " + millis());
+} //_CODE_:StartDate:553639:
+
+public void EndDateClicked(GTextField source, GEvent event) { //_CODE_:EndDate:301038:
+  println("EndDate - GTextField >> GEvent." + event + " @ " + millis());
+} //_CODE_:EndDate:301038:
+
 
 
 // Create all the GUI controls. 
@@ -138,6 +154,21 @@ public void createGUI(){
   TransportationType = new GDropList(this, 100, 165, 347, 141, 2, 10);
   TransportationType.setItems(loadStrings("list_818380"), 0);
   TransportationType.addEventHandler(this, "TransportationTypeClicked");
+  StartingLocation = new GDropList(this, 100, 250, 222, 380, 3, 10);
+  StartingLocation.setItems(loadStrings("list_860803"), 0);
+  StartingLocation.addEventHandler(this, "StartingLocationClicked");
+  EndingLocation = new GDropList(this, 700, 250, 222, 380, 3, 10);
+  EndingLocation.setItems(loadStrings("list_592370"), 0);
+  EndingLocation.addEventHandler(this, "EndingLocationClicked");
+  StartDate = new GTextField(this, 100, 450, 166, 80, G4P.SCROLLBARS_HORIZONTAL_ONLY | G4P.SCROLLBARS_AUTOHIDE);
+  StartDate.setText("Date(Year-Month-Day)");
+  StartDate.setLocalColorScheme(GCScheme.CYAN_SCHEME);
+  StartDate.setOpaque(true);
+  StartDate.addEventHandler(this, "StartDateClicked");
+  EndDate = new GTextField(this, 700, 450, 166, 80, G4P.SCROLLBARS_HORIZONTAL_ONLY | G4P.SCROLLBARS_AUTOHIDE);
+  EndDate.setText("Date(Year-Month-Day)");
+  EndDate.setOpaque(true);
+  EndDate.addEventHandler(this, "EndDateClicked");
 }
 
 // Variable declarations 
@@ -149,3 +180,7 @@ GButton Next;
 GButton Previous; 
 GButton X; 
 GDropList TransportationType; 
+GDropList StartingLocation; 
+GDropList EndingLocation; 
+GTextField StartDate; 
+GTextField EndDate; 
