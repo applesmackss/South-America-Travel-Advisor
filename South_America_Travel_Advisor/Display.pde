@@ -46,15 +46,29 @@ void display() {
     font1 = loadFont("Cambria-Bold-48.vlw");
     font2 = loadFont("MicrosoftPhagsPa-48.vlw");
     textFont(font1);
+    textSize(60);
+    fill(0);
+    text("About Us", 475, 100);
     textSize(22);
     fill(0);
-    text("Thank you for choosing South America Travel Advisor!", 315,120);
+    text("Thank you for choosing South America Travel Advisor!", 315,150);
     textFont(font2);
-    textSize(15);
+    textSize(14.5);
     fill(0);
-    text("South America Travel Advisor (SATA) is the perfect travel planner for U.S. citizens who ", 320, 280);
-    text("want to travel to South America. We have everything you need covered, such as the ", 320, 300);
-    text("activities, plane tickets, cost, transportation, and more!", 420, 320);
+    //First Block of Text
+    text("South America Travel Advisor (SATA) is the perfect travel planner for U.S. citizens who ", 320, 200);
+    text("want to explore the diverse landscapes of South America. Whether you plan on visiting ", 320, 220);
+    text("the Igauzu Falls, Ibirapuera Park, or the 'Christ the Reedemer' landmark, we got it covered!", 320, 240);
+    
+    //Second Bloxk of Text
+    textFont(font1);
+    textSize(30);
+    fill(0);
+    text("What we offer:", 490,325);
+    textFont(font2);
+    textSize(14.5);
+    text("We ", 320, 350);
+    
   }
   
   if(pageOn == "info1") {
