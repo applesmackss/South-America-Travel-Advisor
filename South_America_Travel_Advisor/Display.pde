@@ -148,6 +148,8 @@ void Info3() {
 void Info4() {
   rect(100,225,500,375);
   fill(0);
+  textSize(20);
+  text("Transporation Type",100,150);
   textSize(35);
   text("What kind of transporation would you like in this country?",100,100);
   text("Summary: ",275,270);

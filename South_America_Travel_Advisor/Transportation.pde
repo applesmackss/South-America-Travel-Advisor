@@ -39,17 +39,19 @@ class Transportation {
   }
   
   void displayTransportationDetails() {
-    textSize(35);
-    text("Transportation Method: " + vehicle,100,200);
-    text("Daily Rate: $" + cost,100,200);
-    text(("Seating Capacity: " + (maximumCapacity == -1 ? "Unlimited" : maximumCapacity)), 100,200);
-    text("Trip Duration: " + tripDays + " days",100,200);
-    text("Number of Travelers: " + numberOfPeople,100,200);
+    textSize(25);
+    fill(0);
+    text("Transportation Method: " + vehicle,700,250);
+    text("Daily Rate: $" + cost,700,300);
+    text(("Seating Capacity: " + (maximumCapacity == -1 ? "Unlimited" : maximumCapacity)), 700,350);
+    text("Trip Duration: " + tripDays + " days",700,400);
+    text("Number of Travelers: " + numberOfPeople,700,450);
 
     if (!isValidOption()) {
-      text("\nError: This transportation method cannot accommodate all travelers.",100,200);
+      text("\nError: This transportation method",700,500);
+      text("cannot accommodate all travelers.",700,575);
     } else {
-      text("\nTotal Transportation Cost: $" + calculateTotalCost(),100,200);
+      text("\nTotal Transportation Cost: $" + calculateTotalCost(),700,500);
     }
   }
   

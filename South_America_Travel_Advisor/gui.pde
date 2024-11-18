@@ -80,7 +80,28 @@ public void XButtonClicked(GButton source, GEvent event) { //_CODE_:X:848310:
 
 public void TransportationTypeClicked(GDropList source, GEvent event) { //_CODE_:TransportationType:818380:
   vehicleChosen = TransportationType.getSelectedText();
-  println(vehicleChosen, vehicleAtuse);
+  
+  if (vehicleChosen.equals ("van")) {
+    vehicleAtuse = van; 
+  }
+  
+  if (vehicleChosen.equals ("minivan")) {
+    vehicleAtuse = minivan; 
+  }
+  
+  if (vehicleChosen.equals ("car")) {
+    vehicleAtuse = car; 
+  }
+  
+  if (vehicleChosen.equals ("bus")) {
+    vehicleAtuse = bus; 
+  }
+  
+  if (vehicleChosen.equals ("train")) {
+    vehicleAtuse = train; 
+  }
+  println(vehicleAtuse);
+
 } //_CODE_:TransportationType:818380:
 
 

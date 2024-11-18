@@ -7,7 +7,7 @@ import g4p_controls.*;
 //import peasy.*;
 PImage bg;
 String pageOn = "start";
-Transportation vehicleAtuse;
+Transportation vehicleAtuse,van,car,minivan,train,bus;
 String vehicleChosen;
 boolean pageStopper = true;
 String[] backgroundChoice = {"bg1.png","bg2.png","bg3.png"};
@@ -23,25 +23,15 @@ public void setup(){
   // Place your setup code here
   
 //train,bus, 5,7,11 seaters (transportation class) (vehicle, price per day, max pasengers allowed)
-  if(vehicleChosen == "train") {
-    vehicleAtuse = new Transportation("train", 4.00 , 10, 10, 10);  
-  }
+    train = new Transportation("train", 4.00 , 10, 10, 10);  
   
-  if(vehicleChosen == "car") {
-    vehicleAtuse = new Transportation("car", 50.00 , 5, 10, 10);
-  }
+    car = new Transportation("car", 50.00 , 5, 10, 10);
+
+    bus = new Transportation("bus", 2.00 , 10, 10, 10);
   
-  if(vehicleChosen == "bus") {
-    vehicleAtuse = new Transportation("bus", 2.00 , 10, 10, 10);
-  }
+    minivan = new Transportation("minivan", 70.00 , 7, 10, 10);
   
-  if(vehicleChosen == "minivan") {
-    vehicleAtuse = new Transportation("minivan", 70.00 , 7, 10, 10);
-  }
-  
-  if(vehicleChosen == "van") {
-    vehicleAtuse = new Transportation("van", 80.00 , 9, 10, 10);
-  }
+    van = new Transportation("van", 80.00 , 9, 10, 10);
  
 }
 
