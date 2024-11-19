@@ -278,6 +278,17 @@ void Info2() {
   if(numOfTrav > 1) {
   text("How many under 12 years old?",100,250);
   TravLess12.setVisible(true);
+  if(numOfTravUnder12 >= numOfTrav) {
+    fill(255,0,0);
+    text("You need atleast 1 adult.",370,320);  
+  }
+  
+  if(numOfTravUnder2 >= numOfTrav | numOfTravUnder2 > numOfTravUnder12) {
+    fill(255,0,0);
+    text("That is not possible as number of",370,470);  
+  }
+  
+  fill(0);
   text("How many of these kids are under 2?",100,400);
   TravUnder2.setVisible(true);
   }
