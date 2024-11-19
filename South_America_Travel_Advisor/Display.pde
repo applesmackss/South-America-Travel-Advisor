@@ -276,9 +276,9 @@ void Info2() {
   textFont(font1);
   text("Number of Travelers?",100,100);
   if(numOfTrav > 1) {
-  text("How many under 12 years old?",100,300);
+  text("How many under 12 years old?",100,250);
   TravLess12.setVisible(true);
-  text("How many of these kids are under 2?",100,500);
+  text("How many of these kids are under 2?",100,400);
   TravUnder2.setVisible(true);
   }
   

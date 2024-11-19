@@ -117,14 +117,6 @@ public void NumOfTravelersClicked(GDropList source, GEvent event) { //_CODE_:Num
   println(numOfTrav);
 } //_CODE_:NumOfTravelers:591845:
 
-public void TravLess12Clicked(GTextField source, GEvent event) { //_CODE_:TravLess12:300621:
-  numOfTravUnder12 = int(TravLess12.getSelectedText());
-} //_CODE_:TravLess12:300621:
-
-public void TravUnder2Clicked(GTextField source, GEvent event) { //_CODE_:TravUnder2:436334:
- numOfTravUnder2 = int(TravUnder2.getSelectedText());
-} //_CODE_:TravUnder2:436334:
-
 public void StartYearClicked(GDropList source, GEvent event) { //_CODE_:StartYear:473003:
   vStartYear = StartYear.getSelectedText();
   
@@ -186,8 +178,16 @@ public void EndDayClicked(GDropList source, GEvent event) { //_CODE_:EndDay:7178
 } //_CODE_:EndDay:717898:
 
 public void AirlinesClicked(GDropList source, GEvent event) { //_CODE_:Airlines:456921:
-  println("Airlines - GDropList >> GEvent." + event + " @ " + millis());
+  airlineChosen = Airlines.getSelectedText();
 } //_CODE_:Airlines:456921:
+
+public void TravLess12Clicked(GDropList source, GEvent event) { //_CODE_:TravLess12:769362:
+  numOfTravUnder12 = int(TravLess12.getSelectedText());
+} //_CODE_:TravLess12:769362:
+
+public void TravUnder2Clicked(GDropList source, GEvent event) { //_CODE_:TravUnder2:321795:
+  numOfTravUnder2 = int(TravUnder2.getSelectedText());
+} //_CODE_:TravUnder2:321795:
 
 
 
@@ -229,17 +229,9 @@ public void createGUI(){
   EndingLocation = new GDropList(this, 700, 250, 222, 360, 3, 10);
   EndingLocation.setItems(loadStrings("list_592370"), 0);
   EndingLocation.addEventHandler(this, "EndingLocationClicked");
-  NumOfTravelers = new GDropList(this, 100, 130, 172, 147, 2, 10);
+  NumOfTravelers = new GDropList(this, 100, 130, 250, 138, 2, 10);
   NumOfTravelers.setItems(loadStrings("list_591845"), 0);
   NumOfTravelers.addEventHandler(this, "NumOfTravelersClicked");
-  TravLess12 = new GTextField(this, 100, 350, 250, 90, G4P.SCROLLBARS_HORIZONTAL_ONLY | G4P.SCROLLBARS_AUTOHIDE);
-  TravLess12.setPromptText("Number Of Traveler Less than 12 years old?");
-  TravLess12.setOpaque(true);
-  TravLess12.addEventHandler(this, "TravLess12Clicked");
-  TravUnder2 = new GTextField(this, 100, 525, 250, 90, G4P.SCROLLBARS_HORIZONTAL_ONLY | G4P.SCROLLBARS_AUTOHIDE);
-  TravUnder2.setPromptText("Number Of Traveler Less than 3 years old?");
-  TravUnder2.setOpaque(true);
-  TravUnder2.addEventHandler(this, "TravUnder2Clicked");
   StartYear = new GDropList(this, 100, 450, 111, 168, 2, 10);
   StartYear.setItems(loadStrings("list_473003"), 0);
   StartYear.addEventHandler(this, "StartYearClicked");
@@ -261,6 +253,12 @@ public void createGUI(){
   Airlines = new GDropList(this, 100, 135, 155, 168, 2, 10);
   Airlines.setItems(loadStrings("list_456921"), 0);
   Airlines.addEventHandler(this, "AirlinesClicked");
+  TravLess12 = new GDropList(this, 100, 280, 250, 184, 3, 10);
+  TravLess12.setItems(loadStrings("list_769362"), 0);
+  TravLess12.addEventHandler(this, "TravLess12Clicked");
+  TravUnder2 = new GDropList(this, 100, 430, 250, 184, 3, 10);
+  TravUnder2.setItems(loadStrings("list_321795"), 0);
+  TravUnder2.addEventHandler(this, "TravUnder2Clicked");
 }
 
 // Variable declarations 
@@ -275,8 +273,6 @@ GDropList TransportationType;
 GDropList StartingLocation; 
 GDropList EndingLocation; 
 GDropList NumOfTravelers; 
-GTextField TravLess12; 
-GTextField TravUnder2; 
 GDropList StartYear; 
 GDropList StartMonth; 
 GDropList StartDay; 
@@ -284,3 +280,5 @@ GDropList EndYear;
 GDropList EndMonth; 
 GDropList EndDay; 
 GDropList Airlines; 
+GDropList TravLess12; 
+GDropList TravUnder2; 

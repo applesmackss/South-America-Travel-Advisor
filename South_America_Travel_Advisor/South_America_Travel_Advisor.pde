@@ -8,7 +8,7 @@ import g4p_controls.*;
 PImage bg;
 String pageOn = "start";
 Transportation vehicleAtuse,van,car,minivan,train,bus;
-String vehicleChosen,stateChosen,countryChosen;
+String vehicleChosen,stateChosen,countryChosen,airlineChosen;
 String vStartYear = null,vStartMonth = null,vStartDay = null,vEndYear = null,vEndMonth = null,vEndDay = null;
 String startTripDate,endTripDate;
 boolean pageStopper = true;
