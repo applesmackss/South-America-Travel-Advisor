@@ -194,6 +194,7 @@ void display() {
     fill(backcol);
     rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
     Final();
+    tripbeingTaken.displaySummary();
   }
 
 
@@ -306,7 +307,7 @@ void Info3() {
   textSize(35);
   textFont(font1);
   text("What airline do you prefer?",100,100);
-  text("State to Country",100,300);
+  text(stateChosen+" to "+countryChosen,100,300);
 }
 
 void Info4() {
@@ -349,26 +350,25 @@ void Final() {
   textFont(font1);
   textSize(25);
   fill(0);
-  text("Total Flight Cost:",100,450);
+  text("Flight Information:",100,450);
   text("Transportation Cost:",500,450);
   text("Itinerary Cost:",900,450);
   textSize(35);
   text("Total Final Trip Cost:",450,550);
-  text("Your Planner Schedule",450,75);
+  text("Your Planner Schedule",440,75);
   
   int dx = 110;
-  for(int d = 1; d < 8; d++) {
+  int y = 125;
+  for(int d = 1; d < tripbeingTaken.travelDays + 1; d++) {
   textFont(font2);
   textSize(20);
-  text("Day"+d,dx,125);
+  text("Day"+d,dx,y);
   dx += (1000/7);  
-  }
   
-  dx = 110;
-  for(int d = 8; d < 15; d++) {
-  textFont(font2);
-  textSize(20);
-  text("Day"+d,dx,275);
-  dx += (1000/7);  
+  if( d == 7) {
+    y = 275;
+    dx = 110;   
   }
+  }
+  vehicleAtuse.finalTotalTransportationCost();
 }

@@ -109,7 +109,7 @@ public void StartingLocationClicked(GDropList source, GEvent event) { //_CODE_:S
 } //_CODE_:StartingLocation:860803:
 
 public void EndingLocationClicked(GDropList source, GEvent event) { //_CODE_:EndingLocation:592370:
-  countryChosen = StartingLocation.getSelectedText();
+  countryChosen = EndingLocation.getSelectedText();
 } //_CODE_:EndingLocation:592370:
 
 public void NumOfTravelersClicked(GDropList source, GEvent event) { //_CODE_:NumOfTravelers:591845:
