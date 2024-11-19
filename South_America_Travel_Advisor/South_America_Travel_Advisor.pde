@@ -13,6 +13,7 @@ boolean pageStopper = true;
 String[] backgroundChoice = {"bg1.png","bg2.png","bg3.png"};
 int numOfTrav;
 int bgPicked = int(random(backgroundChoice.length));
+PFont font1, font2;
 
 
 
@@ -22,6 +23,8 @@ public void setup(){
   customGUI();
   bg = loadImage(backgroundChoice[bgPicked]);
   // Place your setup code here
+  font1 = loadFont("Cambria-Bold-48.vlw");
+  font2 = loadFont("MicrosoftPhagsPa-48.vlw");
   
 //train,bus, 5,7,11 seaters (transportation class) (vehicle, price per day, max pasengers allowed)
     train = new Transportation("train", 4.00 , 10, 10, 10);  

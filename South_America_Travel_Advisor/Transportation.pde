@@ -39,6 +39,7 @@ class Transportation {
   }
   
   void displayTransportationDetails() {
+    textFont(font1);
     textSize(25);
     fill(0);
     text("Transportation Method: " + vehicle,700,250);
@@ -56,8 +57,9 @@ class Transportation {
   }
   
   void displayTransportationSummary() {
-    textSize(15);
     fill(0);
+    textFont(font2);
+    textSize(14);
     if (vehicle.equals("car")) {
       text("This is a 5 seater vehicle that is availble for rent. Popular cars for this option ", 110, 300);
       text("include but are not limited to: Toyota Corolla, Honda Civic, Toyota RAV4, and ", 110, 320);
@@ -67,8 +69,8 @@ class Transportation {
     }
     
    if (vehicle.equals("train")) {
-     text("The train is a great option for large families or travellers with a lower budget. It ", 110, 300);
-     text("is a great option for travelling across South America, as it is faster than a bus ", 110, 320);
+     text("The train is a great option for large families or travellers with a lower budget.", 110, 300);
+     text("It is a great option for travelling across South America, as it is faster than a bus ", 110, 320);
      text("and more affordable than renting a vehicle. Although South America doesn't ", 110, 340);
      text("have the extensive train routes that Japan or countries in Europe do, it can ", 110, 360);
      text("still be a memorable journey for tourists ", 110, 380);
