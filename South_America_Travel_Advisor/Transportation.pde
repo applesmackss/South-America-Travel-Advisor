@@ -75,6 +75,16 @@ class Transportation {
      text("have the extensive train routes that Japan or countries in Europe do, it can ", 110, 360);
      text("still be a memorable journey for tourists ", 110, 380);
   }
+  
+  if (vehicle.equals("van")) {
+    text("This is a 11 seater vehicle that is availble for rent. Popular vans for this option ", 110, 300);
+    text("include but are not limited to: Toyota Sienna, Honda Oddessey, Hyundai", 110, 320);
+    text("Ebtourage, and Kia Carnival. This is a great option for travellers who want", 110, 340);
+    text("to have more freedom over how they travel across the country. However, this", 110, 360);
+    text("option is quite expensive for bigger families, so be wary of your budget.", 110, 380);
+    text("The gas bills will rise drastically", 110, 400);  
+  }
+  
  }
 
   

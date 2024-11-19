@@ -4,11 +4,16 @@ void display() {
   PVector bookShape = new PVector(1100,600);
 
   if(pageOn == "start") {
+    Airlines.setVisible(false);
+    StartYear.setVisible(false);
+    StartMonth.setVisible(false);
+    StartDay.setVisible(false);
+    EndYear.setVisible(false);
+    EndMonth.setVisible(false);
+    EndDay.setVisible(false);
     TravUnder2.setVisible(false);
     TravLess12.setVisible(false);
     NumOfTravelers.setVisible(false);
-    StartDate.setVisible(false);
-    EndDate.setVisible(false);
     StartingLocation.setVisible(false);
     EndingLocation.setVisible(false);
     TransportationType.setVisible(false);
@@ -24,11 +29,10 @@ void display() {
   }
   
   if(pageOn == "about") {
+    Airlines.setVisible(false);
     TravUnder2.setVisible(false);
     TravLess12.setVisible(false);
     NumOfTravelers.setVisible(false);
-    StartDate.setVisible(false);
-    EndDate.setVisible(false);
     StartingLocation.setVisible(false);
     EndingLocation.setVisible(false);
     TransportationType.setVisible(false);
@@ -46,11 +50,16 @@ void display() {
   }
   
   if(pageOn == "info1") {
+    Airlines.setVisible(false);
+    StartYear.setVisible(true);
+    StartMonth.setVisible(true);
+    StartDay.setVisible(true);
+    EndYear.setVisible(true);
+    EndMonth.setVisible(true);
+    EndDay.setVisible(true);
     TravUnder2.setVisible(false);
     TravLess12.setVisible(false);
     NumOfTravelers.setVisible(false);
-    StartDate.setVisible(true);
-    EndDate.setVisible(true);
     StartingLocation.setVisible(true);
     EndingLocation.setVisible(true);
     TransportationType.setVisible(false);
@@ -66,9 +75,14 @@ void display() {
     
   }
   if(pageOn == "info2") {
+    Airlines.setVisible(false);
+    StartYear.setVisible(false);
+    StartMonth.setVisible(false);
+    StartDay.setVisible(false);
+    EndYear.setVisible(false);
+    EndMonth.setVisible(false);
+    EndDay.setVisible(false);
     NumOfTravelers.setVisible(true);
-    StartDate.setVisible(false);
-    EndDate.setVisible(false);
     StartingLocation.setVisible(false);
     EndingLocation.setVisible(false);
     TransportationType.setVisible(false);
@@ -84,11 +98,16 @@ void display() {
   }
   
   if(pageOn == "info3") {
+    Airlines.setVisible(true);
+    StartYear.setVisible(false);
+    StartMonth.setVisible(false);
+    StartDay.setVisible(false);
+    EndYear.setVisible(false);
+    EndMonth.setVisible(false);
+    EndDay.setVisible(false);
     TravUnder2.setVisible(false);
     TravLess12.setVisible(false);
     NumOfTravelers.setVisible(false);
-    StartDate.setVisible(false);
-    EndDate.setVisible(false);
     StartingLocation.setVisible(false);
     EndingLocation.setVisible(false);
     TransportationType.setVisible(false);
@@ -104,11 +123,16 @@ void display() {
   }
   
   if(pageOn == "info4") {
+    Airlines.setVisible(false);
+    StartYear.setVisible(false);
+    StartMonth.setVisible(false);
+    StartDay.setVisible(false);
+    EndYear.setVisible(false);
+    EndMonth.setVisible(false);
+    EndDay.setVisible(false);
     TravUnder2.setVisible(false);
     TravLess12.setVisible(false);
     NumOfTravelers.setVisible(false);
-    StartDate.setVisible(false);
-    EndDate.setVisible(false);
     StartingLocation.setVisible(false);
     EndingLocation.setVisible(false);
     TransportationType.setVisible(true);
@@ -124,11 +148,16 @@ void display() {
   }
   
   if(pageOn == "info5") {
+    Airlines.setVisible(false);
+    StartYear.setVisible(false);
+    StartMonth.setVisible(false);
+    StartDay.setVisible(false);
+    EndYear.setVisible(false);
+    EndMonth.setVisible(false);
+    EndDay.setVisible(false);
     TravUnder2.setVisible(false);
     TravLess12.setVisible(false);
     NumOfTravelers.setVisible(false);
-    StartDate.setVisible(false);
-    EndDate.setVisible(false);
     StartingLocation.setVisible(false);
     EndingLocation.setVisible(false);
     TransportationType.setVisible(false);
@@ -143,11 +172,16 @@ void display() {
   }
   
   if(pageOn == "final") {
+    Airlines.setVisible(false);
+    StartYear.setVisible(false);
+    StartMonth.setVisible(false);
+    StartDay.setVisible(false);
+    EndYear.setVisible(false);
+    EndMonth.setVisible(false);
+    EndDay.setVisible(false);
     TravUnder2.setVisible(false);
     TravLess12.setVisible(false);
     NumOfTravelers.setVisible(false);
-    StartDate.setVisible(false);
-    EndDate.setVisible(false);
     StartingLocation.setVisible(false);
     EndingLocation.setVisible(false);
     TransportationType.setVisible(false);
@@ -221,6 +255,18 @@ void Info1() {
   text("Ending Location",700,200);
   text("Start Date",100,400);
   text("End Date",700,400);
+  
+  textSize(20);
+  
+  //Start dates labels
+  text("Year:",100,435);
+  text("Month:",220,435);
+  text("Day:",340,435);
+  
+  //End dates labels
+  text("Year:",700,435);
+  text("Month:",820,435);
+  text("Day:",940,435);
 
 }
 

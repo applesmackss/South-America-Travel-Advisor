@@ -8,12 +8,15 @@ import g4p_controls.*;
 PImage bg;
 String pageOn = "start";
 Transportation vehicleAtuse,van,car,minivan,train,bus;
-String vehicleChosen;
+String vehicleChosen,stateChosen,countryChosen;
+String vStartYear = null,vStartMonth = null,vStartDay = null,vEndYear = null,vEndMonth = null,vEndDay = null;
+String startTripDate,endTripDate;
 boolean pageStopper = true;
 String[] backgroundChoice = {"bg1.png","bg2.png","bg3.png"};
-int numOfTrav;
+int numOfTrav = 0, numOfTravUnder12 = 0,numOfTravUnder2 = 0;
 int bgPicked = int(random(backgroundChoice.length));
 PFont font1, font2;
+Trip tripbeingTaken;
 
 
 
@@ -22,26 +25,36 @@ public void setup(){
   createGUI();
   customGUI();
   bg = loadImage(backgroundChoice[bgPicked]);
-  // Place your setup code here
+  
+  //Initialized the fonts
   font1 = loadFont("Cambria-Bold-48.vlw");
   font2 = loadFont("MicrosoftPhagsPa-48.vlw");
-  
-//train,bus, 5,7,11 seaters (transportation class) (vehicle, price per day, max pasengers allowed)
-    train = new Transportation("train", 4.00 , 10, 10, 10);  
-  
-    car = new Transportation("car", 50.00 , 5, 10, 10);
 
-    bus = new Transportation("bus", 2.00 , 10, 10, 10);
-  
-    minivan = new Transportation("minivan", 70.00 , 7, 10, 10);
-  
-    van = new Transportation("van", 80.00 , 9, 10, 10);
  
 }
 
 public void draw(){
   image(bg,0,0);
   display();
+    
+    
+  // This will change constantly if the user wants to update something, so this is why its in draw
+  if (stateChosen != null && countryChosen != null && startTripDate != null && endTripDate != null) {
+    tripbeingTaken = new Trip(stateChosen,countryChosen,startTripDate,endTripDate);
+    
+    //train,bus, 5,7,11 seaters (transportation class) (vehicle, price per day, max pasengers allowed) (are constantly changing)
+    train = new Transportation("train", 4.00 , 10, tripbeingTaken.travelDays, numOfTrav);  
+    
+    car = new Transportation("car", 50.00 , 5, tripbeingTaken.travelDays, numOfTrav);
+  
+    bus = new Transportation("bus", 2.00 , 10, tripbeingTaken.travelDays, numOfTrav);
+    
+    minivan = new Transportation("minivan", 70.00 , 7, tripbeingTaken.travelDays, numOfTrav);
+    
+    van = new Transportation("van", 80.00 , 11, tripbeingTaken.travelDays, numOfTrav);
+  }
+  
+
   
 }
 
