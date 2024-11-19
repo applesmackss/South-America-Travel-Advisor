@@ -49,6 +49,7 @@ class Transportation {
     text("Number of Travelers: " + numberOfPeople,700,450);
 
     if (!isValidOption()) {
+      fill(255,0,0);
       text("\nError: This transportation method",700,500);
       text("cannot accommodate all travelers.",700,575);
     } else {
@@ -78,12 +79,28 @@ class Transportation {
   
   if (vehicle.equals("van")) {
     text("This is a 11 seater vehicle that is availble for rent. Popular vans for this option ", 110, 300);
-    text("include but are not limited to: Toyota Sienna, Honda Oddessey, Hyundai", 110, 320);
-    text("Ebtourage, and Kia Carnival. This is a great option for travellers who want", 110, 340);
-    text("to have more freedom over how they travel across the country. However, this", 110, 360);
-    text("option is quite expensive for bigger families, so be wary of your budget.", 110, 380);
-    text("The gas bills will rise drastically", 110, 400);  
+    text("include but are not limited to: Toyota Sienna, Honda Oddessey, and Hyundai ", 110, 320);
+    text("Ebtourage. This is a great option for very large families who want to have more ", 110, 340);
+    text("freedom over how they travel across the country. This option is the most ", 110, 360);
+    text("expensive option out of the 5, so be wary of your budget.", 110, 380);
   }
+  
+  if (vehicle.equals("bus")) {
+    text("Althoguh it may not be as comfortable or fast as the train, the bus is the best ", 110, 300);
+    text(" option for travellers who are on a tight budget. Busses are ubiquitous in South ", 110, 320);
+    text("America, so rest assured that no matter which country you visit, you will be ", 110, 340);
+    text("able to frequently find busses to ride. ",110,360);
+  
+    }
+    
+  if (vehicle.equals("minivan")) {
+    text("The minivan is a 8-seat vehicle that is availble for rent. Popular minivans include ", 110, 300);
+    text("but are no limited to: Lincoln Navigator, Chevrolet Suburban, Subaru Ascent, ", 110, 320);
+    text("and Kia Carnival. This is a great option for large families who don't want to ride ", 110, 340);
+    text("a train or bus. Like the other 2 rentable vehicles, this option is quite expensive, ", 110, 360);
+    text("costing a whopping $70 per day to rent. ", 110, 380);
+  
+   }
   
  }
 
