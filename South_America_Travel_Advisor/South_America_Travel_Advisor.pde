@@ -2,9 +2,6 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 // Need G4P library
 import g4p_controls.*;
-// You can remove the PeasyCam import if you are not using
-// the GViewPeasyCam control or the PeasyCam library.
-//import peasy.*;
 PImage bg;
 String pageOn = "start";
 Transportation vehicleAtuse,van,car,minivan,train,bus;
@@ -17,6 +14,7 @@ int numOfTrav = 0, numOfTravUnder12 = 0,numOfTravUnder2 = 0;
 int bgPicked = int(random(backgroundChoice.length));
 PFont font1, font2;
 Trip tripbeingTaken;
+String[] distanceData = loadStrings("Distances.txt");
 
 
 
@@ -25,7 +23,6 @@ public void setup(){
   createGUI();
   customGUI();
   bg = loadImage(backgroundChoice[bgPicked]);
-  String[] notepad = loadStrings("Distances.txt");
   //Initialized the fonts
   font1 = loadFont("Cambria-Bold-48.vlw");
   font2 = loadFont("MicrosoftPhagsPa-48.vlw");
