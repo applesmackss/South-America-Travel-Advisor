@@ -1,85 +1,444 @@
-West to Argentina, 10000
-West to Bolivia, 9100
-West to Brazil, 8400
-West to Chile, 8500
-West to Columbia, 6300
-West to Ecuador, 6000
-West to Guyana, 6900
-West to Paraguay, 7700
-West to Peru, 5900
-West to Suriname, 7200
-West to Uruguay, 8200
-West to Venezuela, 5800
-Midwest to Argentina, 9300
-Midwest to Bolivia, 8700
-Midwest to Brazil, 7900
-Midwest to Chile, 8200
-Midwest to Columbia, 5800
-Midwest to Ecuador, 5900
-Midwest to Guyana, 6700
-Midwest to Paraguay, 7500
-Midwest to Peru, 6300
-Midwest to Suriname, 7100
-Midwest to Uruguay, 8200
-Midwest to Venezuela, 5800
-Northeast to Argentina, 8400
-Northeast to Bolivia, 8200
-Northeast to Brazil, 6700
-Northeast to Chile, 8000
-Northeast to Columbia, 5300
-Northeast to Ecuador, 5600
-Northeast to Guyana, 6600
-Northeast to Paraguay, 7500
-Northeast to Peru, 6100
-Northeast to Suriname, 6700
-Northeast to Uruguay, 8000
-Northeast to Venezuela, 5300
-Southwest to Argentina, 8800
-Southwest to Bolivia, 8500
-Southwest to Brazil, 7200
-Southwest to Chile, 8200
-Southwest to Columbia, 5600
-Southwest to Ecuador, 5800
-Southwest to Guyana, 6600
-Southwest to Paraguay, 7500
-Southwest to Peru, 6300
-Southwest to Suriname, 6900
-Southwest to Uruguay, 7900
-Southwest to Venezuela, 5500
-Southeast to Argentina, 8200
-Southeast to Bolivia, 8000
-Southeast to Brazil, 6700
-Southeast to Chile, 8000
-Southeast to Columbia, 5100
-Southeast to Ecuador, 5600
-Southeast to Guyana, 6600
-Southeast to Paraguay, 7400
-Southeast to Peru, 6100
-Southeast to Suriname, 6700
-Southeast to Uruguay, 7900
-Southeast to Venezuela, 5300
-Alaska to Argentina, 12800
-Alaska to Bolivia, 12400
-Alaska to Brazil, 10800
-Alaska to Chile, 10500
-Alaska to Columbia, 8500
-Alaska to Ecuador, 8800
-Alaska to Guyana, 9600
-Alaska to Paraguay, 11400
-Alaska to Peru, 9300
-Alaska to Suriname, 10000
-Alaska to Uruguay, 11700
-Alaska to Venezuela, 7700
-Hawaii to Argentina, 8500
-Hawaii to Bolivia, 8000
-Hawaii to Brazil, 6700
-Hawaii to Chile, 6700
-Hawaii to Columbia, 5900
-Hawaii to Ecuador, 6100
-Hawaii to Guyana, 6600
-Hawaii to Paraguay, 7400
-Hawaii to Peru, 6300
-Hawaii to Suriname, 6700
-Hawaii to Uruguay, 7700
-Hawaii to Venezuela, 5500
+Alabama to Argentina, 7700
+Alabama to Bolivia, 6700
+Alabama to Brazil, 6300
+Alabama to Chile, 7800
+Alabama to Colombia, 3500
+Alabama to Ecuador, 4400
+Alabama to Guyana, 4800
+Alabama to Paraguay, 7100
+Alabama to Peru, 6000
+Alabama to Suriname, 4700
+Alabama to Uruguay, 7500
+Alabama to Venezuela, 3700
+Alaska to Argentina, 13100
+Alaska to Bolivia, 12200
+Alaska to Brazil, 11600
+Alaska to Chile, 12500
+Alaska to Colombia, 7300
+Alaska to Ecuador, 8300
+Alaska to Guyana, 8800
+Alaska to Paraguay, 12000
+Alaska to Peru, 10100
+Alaska to Suriname, 8600
+Alaska to Uruguay, 12300
+Alaska to Venezuela, 7900
+Arizona to Argentina, 8100
+Arizona to Bolivia, 7400
+Arizona to Brazil, 7000
+Arizona to Chile, 7400
+Arizona to Colombia, 4100
+Arizona to Ecuador, 4700
+Arizona to Guyana, 5000
+Arizona to Paraguay, 7000
+Arizona to Peru, 5700
+Arizona to Suriname, 5100
+Arizona to Uruguay, 7400
+Arizona to Venezuela, 5100
+Arkansas to Argentina, 7900
+Arkansas to Bolivia, 7200
+Arkansas to Brazil, 6800
+Arkansas to Chile, 7300
+Arkansas to Colombia, 4000
+Arkansas to Ecuador, 4600
+Arkansas to Guyana, 5100
+Arkansas to Paraguay, 6900
+Arkansas to Peru, 5600
+Arkansas to Suriname, 5000
+Arkansas to Uruguay, 7200
+Arkansas to Venezuela, 5100
+California to Argentina, 8100
+California to Bolivia, 7400
+California to Brazil, 7000
+California to Chile, 7400
+California to Colombia, 4100
+California to Ecuador, 4700
+California to Guyana, 5000
+California to Paraguay, 7000
+California to Peru, 5700
+California to Suriname, 5100
+California to Uruguay, 7400
+Colorado to Argentina, 8000
+Colorado to Bolivia, 7300
+Colorado to Brazil, 7000
+Colorado to Chile, 7200
+Colorado to Colombia, 4000
+Colorado to Ecuador, 4600
+Colorado to Guyana, 5100
+Colorado to Paraguay, 6900
+Colorado to Peru, 5500
+Colorado to Suriname, 5000
+Colorado to Uruguay, 7200
+Colorado to Venezuela, 5100
+Connecticut to Argentina, 8300
+Connecticut to Bolivia, 7600
+Connecticut to Brazil, 7300
+Connecticut to Chile, 7500
+Connecticut to Colombia, 4400
+Connecticut to Ecuador, 5000
+Connecticut to Guyana, 5300
+Connecticut to Paraguay, 7300
+Connecticut to Peru, 5900
+Connecticut to Suriname, 5400
+Connecticut to Uruguay, 7600
+Connecticut to Venezuela, 5300
+Delaware to Argentina, 8300
+Delaware to Bolivia, 7600
+Delaware to Brazil, 7300
+Delaware to Chile, 7500
+Delaware to Colombia, 4400
+Delaware to Ecuador, 5000
+Delaware to Guyana, 5300
+Delaware to Paraguay, 7300
+Delaware to Peru, 5900
+Delaware to Suriname, 5400
+Delaware to Uruguay, 7600
+Delaware to Venezuela, 5300
+Florida to Argentina, 7700
+Florida to Bolivia, 7100
+Florida to Brazil, 6900
+Florida to Chile, 7200
+Florida to Colombia, 3000
+Florida to Ecuador, 3500
+Florida to Guyana, 3800
+Florida to Paraguay, 6900
+Florida to Peru, 5000
+Florida to Suriname, 3900
+Florida to Uruguay, 7100
+Florida to Venezuela, 3900
+Georgia to Argentina, 7800
+Georgia to Bolivia, 7100
+Georgia to Brazil, 6800
+Georgia to Chile, 7100
+Georgia to Colombia, 3200
+Georgia to Ecuador, 3700
+Georgia to Guyana, 4000
+Georgia to Paraguay, 6800
+Georgia to Peru, 4900
+Georgia to Suriname, 4000
+Georgia to Uruguay, 7100
+Georgia to Venezuela, 4000
+Hawaii to Argentina, 11400
+Hawaii to Bolivia, 10800
+Hawaii to Brazil, 10500
+Hawaii to Chile, 10800
+Hawaii to Colombia, 8100
+Hawaii to Ecuador, 8700
+Hawaii to Guyana, 9100
+Hawaii to Paraguay, 10500
+Hawaii to Peru, 9200
+Hawaii to Suriname, 8800
+Hawaii to Uruguay, 10800
+Hawaii to Venezuela, 8900
+Idaho to Argentina, 8400
+Idaho to Bolivia, 7700
+Idaho to Brazil, 7400
+Idaho to Chile, 7600
+Idaho to Colombia, 4400
+Idaho to Ecuador, 5000
+Idaho to Guyana, 5300
+Idaho to Paraguay, 7400
+Idaho to Peru, 5900
+Idaho to Suriname, 5400
+Idaho to Uruguay, 7600
+Idaho to Venezuela, 5300
+Illinois to Argentina, 8000
+Illinois to Bolivia, 7400
+Illinois to Brazil, 7100
+Illinois to Chile, 7400
+Illinois to Colombia, 4100
+Illinois to Ecuador, 4700
+Illinois to Guyana, 5000
+Illinois to Paraguay, 7100
+Illinois to Peru, 5700
+Illinois to Suriname, 5100
+Illinois to Uruguay, 7400
+Illinois to Venezuela, 5100
+Indiana to Argentina, 7900
+Indiana to Bolivia, 7200
+Indiana to Brazil, 6900
+Indiana to Chile, 7200
+Indiana to Colombia, 4000
+Indiana to Ecuador, 4600
+Indiana to Guyana, 4900
+Indiana to Paraguay, 6900
+Indiana to Peru, 5600
+Indiana to Suriname, 4900
+Indiana to Uruguay, 7200
+Indiana to Venezuela, 4900
+Iowa to Argentina, 7800
+Iowa to Bolivia, 7100
+Iowa to Brazil, 6800
+Iowa to Chile, 7100
+Iowa to Colombia, 4000
+Iowa to Ecuador, 4600
+Iowa to Guyana, 4900
+Iowa to Paraguay, 6800
+Iowa to Peru, 5600
+Iowa to Suriname, 4900
+Iowa to Uruguay, 7100
+Iowa to Venezuela, 4900
+Kansas to Argentina, 7700
+Kansas to Bolivia, 7000
+Kansas to Brazil, 6700
+Kansas to Chile, 7000
+Kansas to Colombia, 3900
+Kansas to Ecuador, 4500
+Kansas to Guyana, 4800
+Kansas to Paraguay, 6700
+Kansas to Peru, 5500
+Kansas to Suriname, 4800
+Kansas to Uruguay, 7000
+Kansas to Venezuela, 4800
+Kentucky to Argentina, 7800
+Kentucky to Bolivia, 7100
+Kentucky to Brazil, 6800
+Kentucky to Chile, 7100
+Kentucky to Colombia, 4000
+Kentucky to Ecuador, 4600
+Kentucky to Guyana, 4900
+Kentucky to Paraguay, 6800
+Kentucky to Peru, 5600
+Kentucky to Suriname, 4900
+Kentucky to Uruguay, 7100
+Kentucky to Venezuela, 4900
+Louisiana to Argentina, 7400
+Louisiana to Bolivia, 6700
+Louisiana to Brazil, 6400
+Louisiana to Chile, 6700
+Louisiana to Colombia, 3500
+Louisiana to Ecuador, 4000
+Louisiana to Guyana, 4300
+Louisiana to Paraguay, 6400
+Louisiana to Peru, 4800
+Louisiana to Suriname, 4300
+Louisiana to Uruguay, 6700
+Louisiana to Venezuela, 4300
+Maine to Argentina, 8400
+Maine to Bolivia, 7700
+Maine to Brazil, 7400
+Maine to Chile, 7600
+Maine to Colombia, 4600
+Maine to Ecuador, 5200
+Maine to Guyana, 5500
+Maine to Paraguay, 7400
+Maine to Peru, 6000
+Maine to Suriname, 5500
+Maine to Uruguay, 7700
+Maine to Venezuela, 5500
+Maryland to Argentina, 8200
+Maryland to Bolivia, 7500
+Maryland to Brazil, 7200
+Maryland to Chile, 7500
+Maryland to Colombia, 4300
+Maryland to Ecuador, 4900
+Maryland to Guyana, 5200
+Maryland to Paraguay, 7200
+Maryland to Peru, 5800
+Maryland to Suriname, 5200
+Maryland to Uruguay, 7500
+Maryland to Venezuela, 5200
+Massachusetts to Argentina, 8300
+Massachusetts to Bolivia, 7600
+Massachusetts to Brazil, 7300
+Massachusetts to Chile, 7500
+Massachusetts to Colombia, 4400
+Massachusetts to Ecuador, 5000
+Massachusetts to Guyana, 5300
+Massachusetts to Paraguay, 7300
+Massachusetts to Peru, 5900
+Massachusetts to Suriname, 5300
+Massachusetts to Uruguay, 7600
+Massachusetts to Venezuela, 5300
+Michigan to Argentina, 7900
+Michigan to Bolivia, 7200
+Michigan to Brazil, 6900
+Michigan to Chile, 7200
+Michigan to Colombia, 4000
+Michigan to Ecuador, 4600
+Michigan to Guyana, 4900
+Michigan to Paraguay, 6900
+Michigan to Peru, 5600
+Michigan to Suriname, 4900
+Michigan to Uruguay, 7200
+Michigan to Venezuela, 4900
+Minnesota to Argentina, 8000
+Minnesota to Bolivia, 7300
+Minnesota to Brazil, 7000
+Minnesota to Chile, 7300
+Minnesota to Colombia, 4100
+Minnesota to Ecuador, 4700
+Minnesota to Guyana, 5000
+Minnesota to Paraguay, 7000
+Minnesota to Peru, 5700
+Minnesota to Suriname, 5000
+Minnesota to Uruguay, 7300
+Minnesota to Venezuela, 5000
+Mississippi to Argentina, 7400
+Mississippi to Bolivia, 6700
+Mississippi to Brazil, 6400
+Mississippi to Chile, 6700
+Mississippi to Colombia, 3500
+Mississippi to Ecuador, 4000
+Mississippi to Guyana, 4300
+Mississippi to Paraguay, 6400
+Mississippi to Peru, 4800
+Mississippi to Suriname, 4300
+Mississippi to Uruguay, 6700
+Mississippi to Venezuela, 4300
+Missouri to Argentina, 7600
+Missouri to Bolivia, 6900
+Missouri to Brazil, 6600
+Missouri to Chile, 6900
+Missouri to Colombia, 3800
+Missouri to Ecuador, 4400
+Missouri to Guyana, 4700
+Missouri to Paraguay, 6600
+Missouri to Peru, 5300
+Missouri to Suriname, 4700
+Missouri to Uruguay, 6900
+Missouri to Venezuela, 4700
+Montana to Argentina, 8200
+Montana to Bolivia, 7500
+Montana to Brazil, 7200
+Montana to Chile, 7500
+Montana to Colombia, 4300
+Montana to Ecuador, 4900
+Montana to Guyana, 5200
+Montana to Paraguay, 7200
+Montana to Peru, 5900
+Montana to Suriname, 5200
+Montana to Uruguay, 7500
+Montana to Venezuela, 5200
+Nebraska to Argentina, 7700
+Nebraska to Bolivia, 7000
+Nebraska to Brazil, 6700
+Nebraska to Chile, 7000
+Nebraska to Colombia, 3800
+Nebraska to Ecuador, 4400
+Nebraska to Guyana, 4700
+Nebraska to Paraguay, 6700
+Nebraska to Peru, 5300
+Nebraska to Suriname, 4700
+Nebraska to Uruguay, 7000
+Nebraska to Venezuela, 4700
+Nevada to Argentina, 8600
+Nevada to Bolivia, 7900
+Nevada to Brazil, 7600
+Nevada to Chile, 7900
+Nevada to Colombia, 5300
+Nevada to Ecuador, 5900
+Nevada to Guyana, 6200
+Nevada to Paraguay, 7600
+Nevada to Peru, 6300
+Nevada to Suriname, 6200
+Nevada to Uruguay, 7900
+Nevada to Venezuela, 6200
+New Hampshire to Argentina, 8400
+New Hampshire to Bolivia, 7700
+New Hampshire to Brazil, 7400
+New Hampshire to Chile, 7600
+New Hampshire to Colombia, 4600
+New Hampshire to Ecuador, 5200
+New Hampshire to Guyana, 5500
+New Hampshire to Paraguay, 7400
+New Hampshire to Peru, 6000
+New Hampshire to Suriname, 5500
+New Hampshire to Uruguay, 7700
+New Hampshire to Venezuela, 5500
+New Jersey to Argentina, 8200
+New Jersey to Bolivia, 7500
+New Jersey to Brazil, 7200
+New Jersey to Chile, 7500
+New Jersey to Colombia, 4300
+New Jersey to Ecuador, 4900
+New Jersey to Guyana, 5200
+New Jersey to Paraguay, 7200
+New Jersey to Peru, 5800
+New Jersey to Suriname, 5200
+New Jersey to Uruguay, 7500
+New Jersey to Venezuela, 5200
+New Mexico to Argentina, 8100
+New Mexico to Bolivia, 7400
+New Mexico to Brazil, 7100
+New Mexico to Chile, 7400
+New Mexico to Colombia, 4200
+New Mexico to Ecuador, 4800
+New Mexico to Guyana, 5100
+New Mexico to Paraguay, 7100
+New Mexico to Peru, 5700
+New Mexico to Suriname, 5100
+New Mexico to Uruguay, 7400
+New Mexico to Venezuela, 5100
+New York to Argentina, 8300
+New York to Bolivia, 7600
+New York to Brazil, 7300
+New York to Chile, 7500
+New York to Colombia, 4400
+New York to Ecuador, 5000
+New York to Guyana, 5300
+New York to Paraguay, 7300
+New York to Peru, 5900
+New York to Suriname, 5300
+New York to Uruguay, 7600
+New York to Venezuela, 5300
+North Carolina to Argentina, 8000
+North Carolina to Bolivia, 7300
+North Carolina to Brazil, 7000
+North Carolina to Chile, 7300
+North Carolina to Colombia, 4100
+North Carolina to Ecuador, 4700
+North Carolina to Guyana, 5000
+North Carolina to Paraguay, 7000
+North Carolina to Peru, 5700
+North Carolina to Suriname, 5000
+North Carolina to Uruguay, 7300
+North Carolina to Venezuela, 5000
+North Dakota to Argentina, 8200
+North Dakota to Bolivia, 7500
+North Dakota to Brazil, 7200
+North Dakota to Chile, 7500
+North Dakota to Colombia, 4300
+North Dakota to Ecuador, 4900
+North Dakota to Guyana, 5200
+North Dakota to Paraguay, 7200
+North Dakota to Peru, 5900
+North Dakota to Suriname, 5200
+North Dakota to Uruguay, 7500
+North Dakota to Venezuela, 5200
+Ohio to Argentina, 7900
+Ohio to Bolivia, 7200
+Ohio to Brazil, 6900
+Ohio to Chile, 7200
+Ohio to Colombia, 4000
+Ohio to Ecuador, 4600
+Ohio to Guyana, 4900
+Ohio to Paraguay, 6900
+Ohio to Peru, 5600
+Ohio to Suriname, 4900
+Ohio to Uruguay, 7200
+Ohio to Venezuela, 4900
+Oklahoma to Argentina, 7500
+Oklahoma to Bolivia, 6800
+Oklahoma to Brazil, 6500
+Oklahoma to Chile, 6800
+Oklahoma to Colombia, 3700
+Oklahoma to Ecuador, 4300
+Oklahoma to Guyana, 4600
+Oklahoma to Paraguay, 6500
+Oklahoma to Peru, 5200
+Oklahoma to Suriname, 4600
+Oklahoma to Uruguay, 6800
+Oklahoma to Venezuela, 4600
+Oregon to Argentina, 8800
+Oregon to Bolivia, 8100
+Oregon to Brazil, 7800
+Oregon to Chile, 8100
+Oregon to Colombia, 5500
+Oregon to Ecuador, 6100
+Oregon to Guyana, 6400
+Oregon to Paraguay, 7800
+Oregon to Peru, 6500
+Oregon to Suriname, 6400
+Oregon to Uruguay, 8100
+Oregon to Venezuela, 6400
 

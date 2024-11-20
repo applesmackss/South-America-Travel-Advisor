@@ -29,18 +29,5 @@ class Flight {
       return totalCost;
   }
   
-  void displayFlightDetails() {
-    println("Airline: " + airline);
-    println("Distance: " + distance + " km");
-    println("Rate per km: $" + ratePerKm);
-    println("Number of Passengers: " + passengers.size());
-
-    println("\nTicket Costs:");
-    for (int i = 0; i < passengers.size(); i++) {
-      Traveler traveler = passengers.get(i);
-      println("Passenger " + (i + 1) + ": Age " + traveler.age + " - Ticket Cost: $" + traveler.ticketCost);
-    }
-
-    println("\nTotal Flight Cost: $" + calculateTotalCost());
-  }
+ 
 }
