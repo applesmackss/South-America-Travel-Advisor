@@ -13,8 +13,9 @@ String[] backgroundChoice = {"bg1.png","bg2.png","bg3.png"};
 int numOfTrav = 0, numOfTravUnder12 = 0,numOfTravUnder2 = 0;
 int bgPicked = int(random(backgroundChoice.length));
 PFont font1, font2;
+int dislength;
+String[] distanceData;
 Trip tripbeingTaken;
-String[] distanceData = loadStrings("Distances.txt");
 
 
 
@@ -26,6 +27,8 @@ public void setup(){
   //Initialized the fonts
   font1 = loadFont("Cambria-Bold-48.vlw");
   font2 = loadFont("MicrosoftPhagsPa-48.vlw");
+  distanceData = loadStrings("Distances.txt");
+  dislength = distanceData.length;
 
  
 }

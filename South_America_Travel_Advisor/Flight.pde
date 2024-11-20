@@ -20,7 +20,7 @@ class Flight {
 
   float getDistance() {
     String stateToCountry = (stateChosen + " to " + countryChosen);
-    for (int i = 0; i < distanceData.length; i++) {
+    for (int i = 0; i < dislength; i++) {
       String dataLine = distanceData[i];
       String[] commaSplit = dataLine.split(", ");
       String dataStateToCountry = commaSplit[0];
