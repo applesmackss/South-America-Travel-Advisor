@@ -13,7 +13,7 @@ class Flight {
     this.passengers = new ArrayList<Traveler>();
   }
   
-  void addPassnger(Traveler traveler) {
+  void addPassenger(Traveler traveler) {
     passengers.add(traveler);  
 }
   

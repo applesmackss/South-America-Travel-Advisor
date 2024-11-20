@@ -25,7 +25,7 @@ public void setup(){
   createGUI();
   customGUI();
   bg = loadImage(backgroundChoice[bgPicked]);
-  
+  String[] notepad = loadStrings("Distances.txt");
   //Initialized the fonts
   font1 = loadFont("Cambria-Bold-48.vlw");
   font2 = loadFont("MicrosoftPhagsPa-48.vlw");
