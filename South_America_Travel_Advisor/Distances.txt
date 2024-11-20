@@ -93,6 +93,18 @@ Delaware to Peru, 5900
 Delaware to Suriname, 5400
 Delaware to Uruguay, 7600
 Delaware to Venezuela, 5300
+District of Columbia to Argentina, 8000
+District of Columbia to Bolivia, 6500
+District of Columbia to Brazil, 6800
+District of Columbia to Chile, 7500
+District of Columbia to Colombia, 3300
+District of Columbia to Ecuador, 3900
+District of Columbia to Guyana, 4100
+District of Columbia to Paraguay, 7200
+District of Columbia to Peru, 5500
+District of Columbia to Suriname, 4100
+District of Columbia to Uruguay, 7800
+District of Columbia to Venezuela, 3400
 Florida to Argentina, 7700
 Florida to Bolivia, 7100
 Florida to Brazil, 6900
@@ -441,4 +453,159 @@ Oregon to Peru, 6500
 Oregon to Suriname, 6400
 Oregon to Uruguay, 8100
 Oregon to Venezuela, 6400
-
+Pennsylvania to Argentina, 8700
+Pennsylvania to Bolivia, 6900
+Pennsylvania to Brazil, 7300
+Pennsylvania to Chile, 8200
+Pennsylvania to Colombia, 3900
+Pennsylvania to Ecuador, 4500
+Pennsylvania to Guyana, 4600
+Pennsylvania to Paraguay, 8000
+Pennsylvania to Peru, 6000
+Pennsylvania to Suriname, 4600
+Pennsylvania to Uruguay, 8600
+Pennsylvania to Venezuela, 4000
+Rhode Island to Argentina, 8600
+Rhode Island to Bolivia, 6900
+Rhode Island to Brazil, 7200
+Rhode Island to Chile, 8100
+Rhode Island to Colombia, 3800
+Rhode Island to Ecuador, 4400
+Rhode Island to Guyana, 4500
+Rhode Island to Paraguay, 7900
+Rhode Island to Peru, 5900
+Rhode Island to Suriname, 4500
+Rhode Island to Uruguay, 8500
+Rhode Island to Venezuela, 3900
+South Carolina to Argentina, 7900
+South Carolina to Bolivia, 6400
+South Carolina to Brazil, 6700
+South Carolina to Chile, 7400
+South Carolina to Colombia, 3300
+South Carolina to Ecuador, 3900
+South Carolina to Guyana, 4000
+South Carolina to Paraguay, 7200
+South Carolina to Peru, 5400
+South Carolina to Suriname, 4000
+South Carolina to Uruguay, 7800
+South Carolina to Venezuela, 3400
+South Dakota to Argentina, 9100
+South Dakota to Bolivia, 7700
+South Dakota to Brazil, 8100
+South Dakota to Chile, 8600
+South Dakota to Colombia, 4900
+South Dakota to Ecuador, 5500
+South Dakota to Guyana, 5700
+South Dakota to Paraguay, 8500
+South Dakota to Peru, 7000
+South Dakota to Suriname, 5700
+South Dakota to Uruguay, 9000
+South Dakota to Venezuela, 5100
+Tennessee to Argentina, 8200
+Tennessee to Bolivia, 6800
+Tennessee to Brazil, 7100
+Tennessee to Chile, 7700
+Tennessee to Colombia, 3700
+Tennessee to Ecuador, 4300
+Tennessee to Guyana, 4400
+Tennessee to Paraguay, 7500
+Tennessee to Peru, 5700
+Tennessee to Suriname, 4400
+Tennessee to Uruguay, 8100
+Tennessee to Venezuela, 3800
+Texas to Argentina, 8100
+Texas to Bolivia, 6800
+Texas to Brazil, 6800
+Texas to Chile, 7700
+Texas to Colombia, 3400
+Texas to Ecuador, 4000
+Texas to Guyana, 4200
+Texas to Paraguay, 7400
+Texas to Peru, 5400
+Texas to Suriname, 4200
+Texas to Uruguay, 8000
+Texas to Venezuela, 3500
+Utah to Argentina, 9100
+Utah to Bolivia, 7700
+Utah to Brazil, 7800
+Utah to Chile, 8600
+Utah to Colombia, 4900
+Utah to Ecuador, 5500
+Utah to Guyana, 5700
+Utah to Paraguay, 8500
+Utah to Peru, 6900
+Utah to Suriname, 5700
+Utah to Uruguay, 9000
+Utah to Venezuela, 5100
+Vermont to Argentina, 8800
+Vermont to Bolivia, 7000
+Vermont to Brazil, 7400
+Vermont to Chile, 8300
+Vermont to Colombia, 4000
+Vermont to Ecuador, 4600
+Vermont to Guyana, 4700
+Vermont to Paraguay, 8100
+Vermont to Peru, 6100
+Vermont to Suriname, 4700
+Vermont to Uruguay, 8700
+Vermont to Venezuela, 4200
+Virginia to Argentina, 8200
+Virginia to Bolivia, 6600
+Virginia to Brazil, 6900
+Virginia to Chile, 7600
+Virginia to Colombia, 3400
+Virginia to Ecuador, 4000
+Virginia to Guyana, 4200
+Virginia to Paraguay, 7400
+Virginia to Peru, 5600
+Virginia to Suriname, 4200
+Virginia to Uruguay, 8100
+Virginia to Venezuela, 3500
+Washington to Argentina, 10,100
+Washington to Bolivia, 8400
+Washington to Brazil, 8800
+Washington to Chile, 9600
+Washington to Colombia, 5300
+Washington to Ecuador, 5900
+Washington to Guyana, 6100
+Washington to Paraguay, 9500
+Washington to Peru, 7800
+Washington to Suriname, 6100
+Washington to Uruguay, 9700
+Washington to Venezuela, 5400
+West Virginia to Argentina, 8200
+West Virginia to Bolivia, 6700
+West Virginia to Brazil, 7100
+West Virginia to Chile, 7700
+West Virginia to Colombia, 3500
+West Virginia to Ecuador, 4100
+West Virginia to Guyana, 4300
+West Virginia to Paraguay, 7400
+West Virginia to Peru, 5600
+West Virginia to Suriname, 4300
+West Virginia to Uruguay, 8100
+West Virginia to Venezuela, 3600
+Wisconsin to Argentina, 8800
+Wisconsin to Bolivia, 7400
+Wisconsin to Brazil, 7700
+Wisconsin to Chile, 8500
+Wisconsin to Colombia, 4600
+Wisconsin to Ecuador, 5200
+Wisconsin to Guyana, 5400
+Wisconsin to Paraguay, 8400
+Wisconsin to Peru, 6700
+Wisconsin to Suriname, 5400
+Wisconsin to Uruguay, 8600
+Wisconsin to Venezuela, 4800
+Wyoming to Argentina, 9300
+Wyoming to Bolivia, 7800
+Wyoming to Brazil, 8200
+Wyoming to Chile, 8900
+Wyoming to Colombia, 5000
+Wyoming to Ecuador, 5600
+Wyoming to Guyana, 5800
+Wyoming to Paraguay, 8800
+Wyoming to Peru, 7100
+Wyoming to Suriname, 5800
+Wyoming to Uruguay, 9100
+Wyoming to Venezuela, 5200
