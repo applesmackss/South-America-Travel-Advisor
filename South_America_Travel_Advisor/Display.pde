@@ -66,7 +66,14 @@ void display() {
     Start.setVisible(false);  
     About.setVisible(false);
     X.setVisible(false);
-    Next.setVisible(true);
+    
+    if(startTripDate != null && endTripDate != null && stateChosen != null && countryChosen != null) {
+      Next.setVisible(true);  
+    }
+    else {
+    Next.setVisible(false);
+    }
+    
     Previous.setVisible(true);
     Finish.setVisible(false);
     fill(backcol);
@@ -139,7 +146,15 @@ void display() {
     Start.setVisible(false);  
     About.setVisible(false);
     X.setVisible(false);
-    Next.setVisible(true);
+    
+    if (vehicleAtuse != null) {
+      Next.setVisible(true);
+    }
+    
+    else {
+      Next.setVisible(false);
+    }
+    
     Previous.setVisible(true);
     Finish.setVisible(false);
     fill(backcol);
@@ -268,7 +283,6 @@ void Info1() {
   text("Year:",700,435);
   text("Month:",820,435);
   text("Day:",940,435);
-
 }
 
 void Info2() {
