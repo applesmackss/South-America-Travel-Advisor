@@ -80,7 +80,7 @@ void display() {
       else {
         fill(255,0,0);
         Next.setVisible(false);
-        if(tripbeingTaken.travelDays > 15){
+        if(tripbeingTaken.travelDays > 14){
           text("We unfortunately do not provide services if your vacation is above 2 weeks.",250,600);
         }
         
@@ -330,17 +330,48 @@ void Info2() {
   if(numOfTrav > 1) {
   text("How many under 12 years old?",100,250);
   TravLess12.setVisible(true);
-  if(numOfTravUnder12 >= numOfTrav) {
+  
+  if(numOfTravUnder12 == numOfTrav) {
     fill(255,0,0);
-    text("You need atleast 1 adult.",370,320);  
+    textSize(20);
+    text("Invalid Entry: At least one adult is required for the flight.",370,310);  
+  }  
+    
+  if(numOfTravUnder12 > numOfTrav) {
+    fill(255,0,0);
+    textSize(18);
+    text("Invalid Entry: number of passengers should be greater than the number of children", 370, 310);
   }
   
-  if(numOfTravUnder2 >= numOfTrav | numOfTravUnder2 > numOfTravUnder12) {
+  if(numOfTravUnder2 > numOfTrav) {
     fill(255,0,0);
-    text("That is not possible as number of",370,470);  
+    textSize(18);
+    text("Invalid Entry: number of passengers should be greater than the number of toddlers.",370,460);  
+    
+  }
+  
+  if(numOfTravUnder2 == numOfTrav) {
+    fill(255,0,0);
+    textSize(20);
+    text("Invalid Entry: At least one adult is required for the flight.", 370, 460);
+  
+  }
+  
+  if((numOfTravUnder2 + numOfTravUnder12) == numOfTrav) {
+    fill(255,0,0);
+    textSize(35);
+    text("Invalid Entry: At least one adult is required for the flight.", 125, 600);
+  }
+  
+  if((numOfTravUnder2 + numOfTravUnder12) > numOfTrav) {
+    fill(255,0,0);
+    textSize(25);
+    text("Invalid Entry: number of passengers should be greater than the number of children.", 100, 600);
+   
   }
   
   fill(0);
+  textSize(35);
   text("How many of these kids are under 2?",100,400);
   TravUnder2.setVisible(true);
   }
