@@ -35,27 +35,7 @@ public void setup(){
 
 public void draw(){
   image(bg,0,0);
-  display();
-    
-    
-  // This will change constantly if the user wants to update something, so this is why its in draw
-  if (stateChosen != null && countryChosen != null && startTripDate != null && endTripDate != null) {
-    tripbeingTaken = new Trip(stateChosen,countryChosen,startTripDate,endTripDate);
-    
-    //train,bus, 5,7,11 seaters (transportation class) (vehicle, price per day, max pasengers allowed) (are constantly changing)
-    train = new Transportation("train", 4.00 , 10, tripbeingTaken.travelDays, numOfTrav);  
-    
-    car = new Transportation("car", 50.00 , 5, tripbeingTaken.travelDays, numOfTrav);
-  
-    bus = new Transportation("bus", 2.00 , 10, tripbeingTaken.travelDays, numOfTrav);
-    
-    minivan = new Transportation("minivan", 70.00 , 7, tripbeingTaken.travelDays, numOfTrav);
-    
-    van = new Transportation("van", 80.00 , 11, tripbeingTaken.travelDays, numOfTrav);
-  }
-  
-
-  
+  display();  
 }
 
 // Use this method to add additional statements

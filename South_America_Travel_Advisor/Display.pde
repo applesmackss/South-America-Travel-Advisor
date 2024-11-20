@@ -66,20 +66,35 @@ void display() {
     Start.setVisible(false);  
     About.setVisible(false);
     X.setVisible(false);
-    
-    if(startTripDate != null && endTripDate != null && stateChosen != null && countryChosen != null) {
-      Next.setVisible(true);  
-    }
-    else {
-    Next.setVisible(false);
-    }
-    
     Previous.setVisible(true);
     Finish.setVisible(false);
     fill(backcol);
     rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
-    Info1();
     
+    if(startTripDate != null && endTripDate != null && stateChosen != null && countryChosen != null) {
+      tripbeingTaken = new Trip(stateChosen,countryChosen,startTripDate,endTripDate);
+      if(tripbeingTaken.travelDays <= 14 && tripbeingTaken.travelDays >= 1) {
+        Next.setVisible(true);
+      }
+      
+      else {
+        fill(255,0,0);
+        Next.setVisible(false);
+        if(tripbeingTaken.travelDays > 15){
+          text("We unfortunately do not provide services if your vacation is above 2 weeks.",250,600);
+        }
+        
+        if(tripbeingTaken.travelDays < 1) {
+          text("We are not time travelers, we can not go to the past sorry for the incovenience.",250,600);
+        }
+      }
+    }
+    
+    else {
+      Next.setVisible(false);
+    }
+    
+    Info1();    
   }
   if(pageOn == "info2") {
     Airlines.setVisible(false);
@@ -96,7 +111,13 @@ void display() {
     Start.setVisible(false);  
     About.setVisible(false);
     X.setVisible(false);
-    Next.setVisible(true);
+    
+    if(numOfTrav != 0) {
+      Next.setVisible(true);
+    }
+    else {
+      Next.setVisible(false);
+    }
     Previous.setVisible(true);
     Finish.setVisible(false);
     fill(backcol);
@@ -121,7 +142,15 @@ void display() {
     Start.setVisible(false);  
     About.setVisible(false);
     X.setVisible(false);
-    Next.setVisible(true);
+    
+    if(airlineChosen != null) {
+      Next.setVisible(true);
+    }
+    
+    else {
+      Next.setVisible(false);
+    }
+    
     Previous.setVisible(true);
     Finish.setVisible(false);
     fill(backcol);
@@ -146,6 +175,13 @@ void display() {
     Start.setVisible(false);  
     About.setVisible(false);
     X.setVisible(false);
+    
+    //train,bus, 5,7,11 seaters (transportation class) (vehicle, price per day, max pasengers allowed) (are constantly changing)
+    train = new Transportation("train", 4.00 , 10, tripbeingTaken.travelDays, numOfTrav);     
+    car = new Transportation("car", 50.00 , 5, tripbeingTaken.travelDays, numOfTrav); 
+    bus = new Transportation("bus", 2.00 , 10, tripbeingTaken.travelDays, numOfTrav);    
+    minivan = new Transportation("minivan", 70.00 , 7, tripbeingTaken.travelDays, numOfTrav);    
+    van = new Transportation("van", 80.00 , 11, tripbeingTaken.travelDays, numOfTrav);
     
     if (vehicleAtuse != null) {
       Next.setVisible(true);
@@ -283,6 +319,7 @@ void Info1() {
   text("Year:",700,435);
   text("Month:",820,435);
   text("Day:",940,435);
+  
 }
 
 void Info2() {
