@@ -103,6 +103,13 @@ class Transportation {
    }
   
  }
+ 
+ void finalTotalTransportationCost() {
+   textFont(font1);
+   textSize(30);
+   fill(0);
+   text("$"+calculateTotalCost(),580,490); 
+ }
 
   
 }

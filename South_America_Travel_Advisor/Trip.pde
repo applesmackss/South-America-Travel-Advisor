@@ -54,16 +54,21 @@ class Trip {
   }
 
   void displaySummary() {
-    println("Trip from " + fromState + " to " + toCountry);
-    println("Travel Dates: " + startDate + " to " + endDate);
-    println("Duration: " + travelDays + " days");
-    println("Number of Travelers: " + travelers.size());
+    fill(0);
+    textFont(font2);
+    textSize(15);
+    text("Trip from " + fromState + " to " + toCountry,100,470);
+    text("Travel Dates: " + startDate + " to " + endDate,100,490);
+    text("Duration: " + travelDays + " days",100,510);
+    text("Number of Travelers: " + travelers.size(),100,530);
     
     for (int i = 0; i < travelers.size(); i++) {
-      println("Traveler " + (i + 1) + ": Age " + travelers.get(i).age);
+      text("Traveler " + (i + 1) + ": Age " + travelers.get(i).age,100,550);
     }
-    
-    println("Total Cost: $" + calculateTotalCost());
+    fill(0);
+    textFont(font1);
+    textSize(25);
+    text("Total Flight Cost: $" + calculateTotalCost(),100,570);
   }
 }
   
