@@ -34,7 +34,7 @@ class Trip {
     
     long daysBetween = ChronoUnit.DAYS.between(start, end);
     
-    return int(daysBetween);
+    return int(daysBetween + 1);
 
   }
   
