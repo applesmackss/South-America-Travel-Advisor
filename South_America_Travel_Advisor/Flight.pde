@@ -33,16 +33,31 @@ class Flight {
   }
   
   
-  float calculateTotalTicketsCost() {
+  String calculateTotalTicketsCost() {
     float totalCost = 0;
+    float decimals = 2;
+    float power = pow(10, decimals);
+
     
     for (Traveler traveler : passengers) {
       traveler.calculateTicketCost(getDistance(), ratePerKm);
       totalCost += traveler.ticketCost;
     }
+    totalCost = totalCost * power;
+    totalCost = round(totalCost);
+    float rounded = totalCost / power;
+    String roundedStringto2Decimals = nf(rounded, 0, 2);
+    println(roundedStringto2Decimals);
     
-      return totalCost;
+      return roundedStringto2Decimals;
   }
   
+  String findRoundTripCost() {
+    float cost = float(calculateTotalTicketsCost());
+    float roundTripCost = cost * 2;
+    String formatedRoundTrip = nf(roundTripCost, 0, 2);
+    
+    return formatedRoundTrip;
+  }
  
 }

@@ -43,7 +43,7 @@ class Transportation {
     textSize(25);
     fill(0);
     text("Transportation Method: " + vehicle,700,250);
-    text("Daily Rate: $" + cost,700,300);
+    text("Daily Rate: $" + nf(cost, 0, 2),700,300);
     text(("Seating Capacity: " + (maximumCapacity == -1 ? "Unlimited" : maximumCapacity)), 700,350);
     text("Trip Duration: " + tripDays + " days",700,400);
     text("Number of Travelers: " + numberOfPeople,700,450);
@@ -53,7 +53,7 @@ class Transportation {
       text("\nError: This transportation method",700,500);
       text("cannot accommodate all travelers.",700,575);
     } else {
-      text("\nTotal Transportation Cost: $" + calculateTotalCost(),700,500);
+      text("\nTotal Transportation Cost: $" + nf(calculateTotalCost(), 0, 2),700,500);
     }
   }
   
@@ -108,7 +108,7 @@ class Transportation {
    textFont(font1);
    textSize(30);
    fill(0);
-   text("$"+calculateTotalCost(),580,490); 
+   text("$"+ nf(calculateTotalCost(), 0, 2),580,490); 
  }
 
   

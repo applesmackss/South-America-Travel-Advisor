@@ -1,4 +1,3 @@
-
 void display() {
   color backcol = color(255,255,255);
   PVector bookCoord = new PVector(50,25);
@@ -459,10 +458,13 @@ void Info3() {
     textFont(font1);
     textSize(20);
     text("Total",635,485);
+    textSize(25);
+    text("Total Round Trip Cost: $" + (airlineAtuse.findRoundTripCost()), 715, 575);
     
     int ptx = 715;
     int pty = 260;
     for(int i = 0; i < numOfTrav; i++) {
+<<<<<<< Updated upstream
       if(addingTrav[i].age > 12) {
       fill(0);
       text("Passenger #"+(i+1)+"          " + "$"+addingTrav[i].ticketCost,ptx,pty);
@@ -485,6 +487,14 @@ void Info3() {
       pty += 20;
     }
     fill(0);
+=======
+      textSize(20);
+      text("Passenger #"+(i+1)+"          " + "$"+ nf(addingTrav[i].ticketCost, 0, 2),ptx,pty);
+      pty += 20;
+    }
+    
+    textSize(20);
+>>>>>>> Stashed changes
     text("$"+airlineAtuse.calculateTotalTicketsCost(),715,485);
   }
 }
