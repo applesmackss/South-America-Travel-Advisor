@@ -463,9 +463,28 @@ void Info3() {
     int ptx = 715;
     int pty = 260;
     for(int i = 0; i < numOfTrav; i++) {
+      if(addingTrav[i].age > 12) {
+      fill(0);
       text("Passenger #"+(i+1)+"          " + "$"+addingTrav[i].ticketCost,ptx,pty);
+      }
+      if(addingTrav[i].age < 13 && addingTrav[i].age > 2) {
+        fill(0);
+        text("Passenger #"+(i+1)+"          " + "$"+addingTrav[i].ticketCost, ptx,pty);
+        fill(255,0,0);
+        text("Discount: 20%", 1000, pty);
+        
+      }
+      if(addingTrav[i].age < 2) {
+        fill(0);
+        text("Passenger #"+(i+1)+"          " + "$"+addingTrav[i].ticketCost, ptx,pty);       
+        fill(255,0,0);
+        text("Discount: 100%", 1000, pty);
+      }
+        
+      
       pty += 20;
     }
+    fill(0);
     text("$"+airlineAtuse.calculateTotalTicketsCost(),715,485);
   }
 }
