@@ -113,7 +113,7 @@ void display() {
     About.setVisible(false);
     X.setVisible(false);
     
-    if(numOfTrav != 0) {
+    if(numOfTrav != 0 && numOfTrav > (numOfTravUnder12+numOfTravUnder2)) {
       Next.setVisible(true);
     }
     else {
@@ -449,7 +449,22 @@ void Info3() {
   text("What airline do you prefer?",100,100);
   text(stateChosen+" to "+countryChosen,100,300);
   if (airlineAtuse != null) {
-  text("Distance: " + airlineAtuse.getDistance() + " km", 100, 400); 
+    text("Distance: " + airlineAtuse.getDistance() + " km", 100, 400);
+    
+    //Table to calculate cost
+    line(600,200,600,550);
+    fill(0);
+    rect(700, 200, 5, 350);
+    rect(660,450,400,5);
+    rect(660,500,400,5);
+    textFont(font1);
+    textSize(20);
+    text("Subtotal",615,485);
+    text("Total",640,535);
+    
+    for(int i = 0; i < numOfTrav; i++) {
+      text("Passenger #"+i+" $",300,200);
+    } 
   }
 }
 
