@@ -237,7 +237,7 @@ void display() {
     minivan = new Transportation("minivan", 70.00 , 7, tripbeingTaken.travelDays, numOfTrav);    
     van = new Transportation("van", 80.00 , 11, tripbeingTaken.travelDays, numOfTrav);
     
-    if (vehicleAtuse != null) {
+    if (vehicleAtuse != null && vehicleAtuse.maximumCapacity >= numOfTrav) {
       Next.setVisible(true);
     }
     
@@ -456,15 +456,17 @@ void Info3() {
     fill(0);
     rect(700, 200, 5, 350);
     rect(660,450,400,5);
-    rect(660,500,400,5);
     textFont(font1);
     textSize(20);
-    text("Subtotal",615,485);
-    text("Total",640,535);
+    text("Total",635,485);
     
+    int ptx = 715;
+    int pty = 260;
     for(int i = 0; i < numOfTrav; i++) {
-      text("Passenger #"+i+" $",300,200);
-    } 
+      text("Passenger #"+(i+1)+"          " + "$"+addingTrav[i].ticketCost,ptx,pty);
+      pty += 20;
+    }
+    text("$"+airlineAtuse.calculateTotalTicketsCost(),715,485);
   }
 }
 
