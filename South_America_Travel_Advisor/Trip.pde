@@ -61,10 +61,6 @@ class Trip {
     text("Travel Dates: " + startDate + " to " + endDate,100,490);
     text("Duration: " + travelDays + " days",100,510);
     text("Number of Travelers: " + travelers.size(),100,530);
-    
-    for (int i = 0; i < travelers.size(); i++) {
-      text("Traveler " + (i + 1) + ": Age " + travelers.get(i).age,100,550);
-    }
     fill(0);
     textFont(font1);
     textSize(25);

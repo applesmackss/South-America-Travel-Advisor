@@ -137,23 +137,28 @@ void display() {
     for(int i = 0; i < numOfTrav;i++) {
       
       if(i < numOfTravUnder12) {
-        addingTrav[i] = new Traveler(12);     
+        addingTrav[i] = new Traveler(12);
       }
       
       else if(i < (numOfTravUnder2+numOfTravUnder12)) {
-        addingTrav[i] = new Traveler(1);      
+        addingTrav[i] = new Traveler(1);
       }
       
       else {
-        addingTrav[i] = new Traveler(18);      
+        addingTrav[i] = new Traveler(18);
       }
     }
     
-    for(int i = 0; i < numOfTrav;i++) {
-      tripbeingTaken.addTraveler(addingTrav[i]);
+    for(int i = 0; i < numOfTrav; i++) {
+      int maxSize = numOfTrav;
+      if (tripbeingTaken.travelers.size() < maxSize) {
+        tripbeingTaken.addTraveler(addingTrav[i]);
+      }
       
       if(airlineAtuse != null) {
+        if (airlineAtuse.passengers.size() < maxSize) {  
         airlineAtuse.addPassenger(addingTrav[i]);
+        }
       }
     }
     
