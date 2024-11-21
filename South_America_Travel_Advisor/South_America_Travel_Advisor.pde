@@ -8,6 +8,7 @@ Transportation vehicleAtuse,van,car,minivan,train,bus;
 String vehicleChosen,stateChosen,countryChosen,airlineChosen;
 String vStartYear = null,vStartMonth = null,vStartDay = null,vEndYear = null,vEndMonth = null,vEndDay = null;
 String startTripDate,endTripDate;
+String itinerary1,itinerary2,itinerary3,itinerary4,itinerary5,itinerary6,itinerary7,itinerary8,itinerary9,itinerary10,itinerary11,itinerary12,itinerary13,itinerary14;
 boolean pageStopper = true;
 String[] backgroundChoice = {"bg1.png","bg2.png","bg3.png"};
 int numOfTrav = 0, numOfTravUnder12 = 0,numOfTravUnder2 = 0;
