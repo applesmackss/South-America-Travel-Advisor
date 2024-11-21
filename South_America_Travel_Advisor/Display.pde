@@ -382,7 +382,7 @@ void Info2() {
   text("Number of Travelers?",100,100);
   if(numOfTrav > 1) {
     textSize(40);
-    text("How many are between the age of 2-12 years old?",100,250);
+    text("How many travelers are between 2 and 12 years old?",100,250);
   TravLess12.setVisible(true);
   
   if(numOfTravUnder12 == numOfTrav) {
@@ -427,7 +427,7 @@ void Info2() {
   fill(0);
   textFont(font1);
   textSize(40);
-  text("How many of these kids are under 2?",100,400);
+  text("How many travelers are under the age of 2?",100,400);
   TravUnder2.setVisible(true);
   }
   
@@ -464,23 +464,27 @@ void Info3() {
     int ptx = 715;
     int pty = 260;
     for(int i = 0; i < numOfTrav; i++) {
+      textSize(25);
       if(addingTrav[i].age > 12) {
         fill(0);
-        text("Passenger #"+(i+1)+"          " + "$"+nf(addingTrav[i].ticketCost, 0, 2),ptx,pty);
+        text("Passenger #"+(i+1)+"   " + "$"+nf(addingTrav[i].ticketCost, 0, 2),ptx,pty);
       }
       
       if(addingTrav[i].age < 13 && addingTrav[i].age > 2) {
         fill(0);
-        text("Passenger #"+(i+1)+"          " + "$"+nf(addingTrav[i].ticketCost, 0, 2), ptx,pty);
+        text("Passenger #"+(i+1)+"   " + "$"+nf(addingTrav[i].ticketCost, 0, 2), ptx,pty);
         fill(255,0,0);
-        text("Discount: 20%", 1000, pty);       
+        textSize(20);
+        text("Discount: 20%", 990, pty);       
       }
       
       if(addingTrav[i].age < 2) {
         fill(0);
-        text("Passenger #"+(i+1)+"          " + "$"+nf(addingTrav[i].ticketCost,0,2), ptx,pty);       
+        textSize(25);
+        text("Passenger #"+(i+1)+"   " + "$"+nf(addingTrav[i].ticketCost,0,2), ptx,pty);       
         fill(255,0,0);
-        text("Discount: 100%", 1000, pty);
+        textSize(20);
+        text("Discount: 100%", 990, pty);
       }
               
       pty += 20;
