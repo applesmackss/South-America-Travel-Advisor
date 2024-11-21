@@ -33,6 +33,7 @@ public void NextButtonClicked(GButton source, GEvent event) { //_CODE_:Next:3424
   
   else if(pageOn == "info2") {
     pageOn = "info3";
+    
   }
   
   else if(pageOn == "info3") {
@@ -198,10 +199,12 @@ public void AirlinesClicked(GDropList source, GEvent event) { //_CODE_:Airlines:
 
 public void TravLess12Clicked(GDropList source, GEvent event) { //_CODE_:TravLess12:769362:
   numOfTravUnder12 = int(TravLess12.getSelectedText());
+  println(numOfTravUnder12);
 } //_CODE_:TravLess12:769362:
 
 public void TravUnder2Clicked(GDropList source, GEvent event) { //_CODE_:TravUnder2:321795:
   numOfTravUnder2 = int(TravUnder2.getSelectedText());
+  println(numOfTravUnder2);
 } //_CODE_:TravUnder2:321795:
 
 

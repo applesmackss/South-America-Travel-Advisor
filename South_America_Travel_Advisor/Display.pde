@@ -128,14 +128,14 @@ void display() {
   
   if(pageOn == "info3") {
     
+    airline1 = new Flight("Flying Sheep",0.125);
+    airline2 = new Flight("Average Steve",0.16);
+    airline3 = new Flight("Luxarice",0.2);
+    
     addingTrav = new Traveler[numOfTrav];
     
-    airline1 = new Flight("Flying Sheep",10);
-    airline2 = new Flight("Average Steve",5);
-    airline3 = new Flight("Luxarice",20);
-    
     for(int i = 0; i < numOfTrav;i++) {
-      
+     
       if(i < numOfTravUnder12) {
         addingTrav[i] = new Traveler(12);
       }
@@ -148,23 +148,26 @@ void display() {
         addingTrav[i] = new Traveler(18);
       }
     }
-    
-    for(int i = 0; i < numOfTrav; i++) {
+    if (airlineAtuse!= null){
+      airlineAtuse.passengers.clear();
+      tripbeingTaken.travelers.clear();
+    }
+    for(int g = 0; g < numOfTrav; g++) {
       int maxSize = numOfTrav;
       if (tripbeingTaken.travelers.size() < maxSize) {
-        tripbeingTaken.addTraveler(addingTrav[i]);
+        tripbeingTaken.addTraveler(addingTrav[g]);
       }
       
       if(airlineAtuse != null) {
         if (airlineAtuse.passengers.size() < maxSize) {  
-        airlineAtuse.addPassenger(addingTrav[i]);
+        airlineAtuse.addPassenger(addingTrav[g]);
         }
       }
     }
     
     if (airlineAtuse != null) {
     for (int i = 0; i < numOfTrav; i++) {
-      float fDistance = airlineAtuse.distance;
+      float fDistance = airlineAtuse.getDistance();
       float fRPK = airlineAtuse.ratePerKm;
       addingTrav[i].calculateTicketCost(fDistance, fRPK);
       
@@ -446,7 +449,7 @@ void Info3() {
   text("What airline do you prefer?",100,100);
   text(stateChosen+" to "+countryChosen,100,300);
   if (airlineAtuse != null) {
-  text("Distance: " + int(airlineAtuse.distance) + " km", 100, 400); 
+  text("Distance: " + airlineAtuse.getDistance() + " km", 100, 400); 
   }
 }
 

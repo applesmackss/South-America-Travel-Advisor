@@ -38,6 +38,9 @@ public void setup(){
 public void draw(){
   image(bg,0,0);
   display();  
+    
+
+   
 }
 
 // Use this method to add additional statements

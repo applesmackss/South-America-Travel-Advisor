@@ -37,7 +37,7 @@ class Flight {
     float totalCost = 0;
     
     for (Traveler traveler : passengers) {
-      traveler.calculateTicketCost(distance, ratePerKm);
+      traveler.calculateTicketCost(getDistance(), ratePerKm);
       totalCost += traveler.ticketCost;
     }
     
