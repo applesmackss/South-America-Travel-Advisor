@@ -86,7 +86,7 @@ class Transportation {
   }
   
   if (vehicle.equals("bus")) {
-    text("Althoguh it may not be as comfortable or fast as the train, the bus is the best ", 110, 300);
+    text("Although it may not be as comfortable or fast as the train, the bus is the best ", 110, 300);
     text(" option for travellers who are on a tight budget. Busses are ubiquitous in South ", 110, 320);
     text("America, so rest assured that no matter which country you visit, you will be ", 110, 340);
     text("able to frequently find busses to ride. ",110,360);
