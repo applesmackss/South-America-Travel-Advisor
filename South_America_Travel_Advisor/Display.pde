@@ -325,11 +325,12 @@ void Info1() {
 
 void Info2() {
   fill(0);
-  textSize(35);
   textFont(font1);
+  textSize(40);
   text("Number of Travelers?",100,100);
   if(numOfTrav > 1) {
-  text("How many under 12 years old?",100,250);
+    textSize(40);
+    text("How many are between the age of 2-12 years old?",100,250);
   TravLess12.setVisible(true);
   
   if(numOfTravUnder12 == numOfTrav) {
@@ -372,7 +373,8 @@ void Info2() {
   }
   
   fill(0);
-  textSize(35);
+  textFont(font1);
+  textSize(40);
   text("How many of these kids are under 2?",100,400);
   TravUnder2.setVisible(true);
   }

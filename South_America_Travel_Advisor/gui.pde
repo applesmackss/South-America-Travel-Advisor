@@ -223,10 +223,10 @@ public void createGUI(){
   TransportationType = new GDropList(this, 100, 165, 347, 141, 2, 10);
   TransportationType.setItems(loadStrings("list_818380"), 0);
   TransportationType.addEventHandler(this, "TransportationTypeClicked");
-  StartingLocation = new GDropList(this, 100, 250, 222, 360, 3, 10);
+  StartingLocation = new GDropList(this, 100, 250, 222, 200, 3, 10);
   StartingLocation.setItems(loadStrings("list_860803"), 0);
   StartingLocation.addEventHandler(this, "StartingLocationClicked");
-  EndingLocation = new GDropList(this, 700, 250, 222, 360, 3, 10);
+  EndingLocation = new GDropList(this, 700, 250, 222, 200, 3, 10);
   EndingLocation.setItems(loadStrings("list_592370"), 0);
   EndingLocation.addEventHandler(this, "EndingLocationClicked");
   NumOfTravelers = new GDropList(this, 100, 130, 250, 138, 2, 10);
