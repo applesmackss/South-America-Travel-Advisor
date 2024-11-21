@@ -179,6 +179,21 @@ public void EndDayClicked(GDropList source, GEvent event) { //_CODE_:EndDay:7178
 
 public void AirlinesClicked(GDropList source, GEvent event) { //_CODE_:Airlines:456921:
   airlineChosen = Airlines.getSelectedText();
+  
+  if(airlineChosen.equals ("Airline 1")) {
+    airlineAtuse = airline1;
+  
+  }
+  
+  if(airlineChosen.equals ("Airline 2")) {
+    airlineAtuse = airline2;
+  
+  }
+  
+  if(airlineChosen.equals ("Airline 3")) {
+    airlineAtuse = airline3;
+  
+  }
 } //_CODE_:Airlines:456921:
 
 public void TravLess12Clicked(GDropList source, GEvent event) { //_CODE_:TravLess12:769362:

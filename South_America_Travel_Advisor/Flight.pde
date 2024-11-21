@@ -7,7 +7,7 @@ class Flight {
   ArrayList<Traveler> passengers;
   float finalDistance;
   
-  Flight(String a, float rpk, float d) {
+  Flight(String a, float rpk) {
     this.airline = a;
     this.ratePerKm = rpk;
     this.distance = getDistance();

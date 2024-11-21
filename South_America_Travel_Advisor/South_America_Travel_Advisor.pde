@@ -15,6 +15,8 @@ int bgPicked = int(random(backgroundChoice.length));
 PFont font1, font2;
 int dislength;
 String[] distanceData;
+Flight airline1,airline2,airline3,airlineAtuse;
+Traveler[] addingPass,addingTrav;
 Trip tripbeingTaken;
 
 

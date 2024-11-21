@@ -127,6 +127,37 @@ void display() {
   }
   
   if(pageOn == "info3") {
+    
+    addingTrav = new Traveler[numOfTrav];
+    
+    airline1 = new Flight("Flying Sheep",10);
+    airline2 = new Flight("Average Steve",5);
+    airline3 = new Flight("Luxarice",20);
+    
+    for(int i = 0; i < numOfTrav;i++) {
+      
+      if(i < numOfTravUnder12) {
+        addingTrav[i] = new Traveler(12);     
+      }
+      
+      else if(i < (numOfTravUnder2+numOfTravUnder12)) {
+        addingTrav[i] = new Traveler(1);      
+      }
+      
+      else {
+        addingTrav[i] = new Traveler(18);      
+      }
+    }
+    
+    for(int i = 0; i < numOfTrav;i++) {
+      tripbeingTaken.addTraveler(addingTrav[i]);
+      
+      if(airlineAtuse != null) {
+        airlineAtuse.addPassenger(addingTrav[i]);
+      }
+    }
+    
+    
     Airlines.setVisible(true);
     StartYear.setVisible(false);
     StartMonth.setVisible(false);
