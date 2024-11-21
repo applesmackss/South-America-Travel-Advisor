@@ -162,6 +162,20 @@ void display() {
       }
     }
     
+    if (airlineAtuse != null) {
+    for (int i = 0; i < numOfTrav; i++) {
+      float fDistance = airlineAtuse.distance;
+      float fRPK = airlineAtuse.ratePerKm;
+      addingTrav[i].calculateTicketCost(fDistance, fRPK);
+      
+    }
+    println(airlineAtuse.calculateTotalTicketsCost());
+
+    
+    }
+    
+    
+    
     
     Airlines.setVisible(true);
     StartYear.setVisible(false);
@@ -431,6 +445,9 @@ void Info3() {
   textFont(font1);
   text("What airline do you prefer?",100,100);
   text(stateChosen+" to "+countryChosen,100,300);
+  if (airlineAtuse != null) {
+  text("Distance: " + int(airlineAtuse.distance) + " km", 100, 400); 
+  }
 }
 
 void Info4() {

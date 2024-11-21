@@ -64,8 +64,6 @@ class Trip {
     fill(0);
     textFont(font1);
     textSize(25);
-    text("Total Flight Cost: $" + calculateTotalCost(),100,570);
+    text("Total Flight Cost: $" + airlineAtuse.calculateTotalTicketsCost(),100,570);
   }
 }
-  
-  

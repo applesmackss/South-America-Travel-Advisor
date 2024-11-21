@@ -33,7 +33,7 @@ class Flight {
   }
   
   
-  float calculateTotalCost() {
+  float calculateTotalTicketsCost() {
     float totalCost = 0;
     
     for (Traveler traveler : passengers) {
