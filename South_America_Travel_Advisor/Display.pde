@@ -465,36 +465,34 @@ void Info3() {
     int pty = 260;
     for(int i = 0; i < numOfTrav; i++) {
       if(addingTrav[i].age > 12) {
-      fill(0);
-      text("Passenger #"+(i+1)+"          " + "$"+addingTrav[i].ticketCost,ptx,pty);
+        fill(0);
+        text("Passenger #"+(i+1)+"          " + "$"+nf(addingTrav[i].ticketCost, 0, 2),ptx,pty);
       }
+      
       if(addingTrav[i].age < 13 && addingTrav[i].age > 2) {
         fill(0);
-        text("Passenger #"+(i+1)+"          " + "$"+addingTrav[i].ticketCost, ptx,pty);
+        text("Passenger #"+(i+1)+"          " + "$"+nf(addingTrav[i].ticketCost, 0, 2), ptx,pty);
         fill(255,0,0);
-        text("Discount: 20%", 1000, pty);
-        
+        text("Discount: 20%", 1000, pty);       
       }
+      
       if(addingTrav[i].age < 2) {
         fill(0);
-        text("Passenger #"+(i+1)+"          " + "$"+addingTrav[i].ticketCost, ptx,pty);       
+        text("Passenger #"+(i+1)+"          " + "$"+nf(addingTrav[i].ticketCost,0,2), ptx,pty);       
         fill(255,0,0);
         text("Discount: 100%", 1000, pty);
       }
-        
-      
+              
       pty += 20;
     }
-    fill(0);
-      textSize(20);
-      text("Passenger #"+(i+1)+"          " + "$"+ nf(addingTrav[i].ticketCost, 0, 2),ptx,pty);
-      pty += 20;
-    }
-    
     textSize(20);
     text("$"+airlineAtuse.calculateTotalTicketsCost(),715,485);
+      
+    }
+   
   }
-}
+
+
 
 void Info4() {
   rect(100,225,500,375);
