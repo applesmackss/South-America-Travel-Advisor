@@ -209,58 +209,72 @@ public void TravUnder2Clicked(GDropList source, GEvent event) { //_CODE_:TravUnd
 
 public void Itinerary1Clicked(GDropList source, GEvent event) { //_CODE_:Itinerary1:483667:
   itinerary1 = Itinerary1.getSelectedText();
+  itin1Picked = true;
 } //_CODE_:Itinerary1:483667:
 
 public void Itinerary2Clicked(GDropList source, GEvent event) { //_CODE_:Itinerary2:210311:
   itinerary2 = Itinerary2.getSelectedText();
+  itin2Picked = true;
 } //_CODE_:Itinerary2:210311:
 
 public void Itinerary3Clicked(GDropList source, GEvent event) { //_CODE_:Itinerary3:591154:
   itinerary3 = Itinerary3.getSelectedText();
+  itin3Picked = true;
 } //_CODE_:Itinerary3:591154:
 
 public void Itinerary4Clicked(GDropList source, GEvent event) { //_CODE_:Itinerary4:747335:
   itinerary4 = Itinerary4.getSelectedText();
+  itin4Picked = true;
 } //_CODE_:Itinerary4:747335:
 
 public void Itinerary5Clicked(GDropList source, GEvent event) { //_CODE_:Itinerary5:484035:
   itinerary5 = Itinerary5.getSelectedText();
+  itin5Picked = true;
 } //_CODE_:Itinerary5:484035:
 
 public void Itinerary6Clicked(GDropList source, GEvent event) { //_CODE_:Itinerary6:642544:
   itinerary6 = Itinerary6.getSelectedText();
+  itin6Picked = true;
 } //_CODE_:Itinerary6:642544:
 
 public void Itinerary7Clicked(GDropList source, GEvent event) { //_CODE_:Itinerary7:459172:
   itinerary7 = Itinerary7.getSelectedText();
+  itin7Picked = true;
 } //_CODE_:Itinerary7:459172:
 
 public void Itinerary8Clicked(GDropList source, GEvent event) { //_CODE_:Itinerary8:828640:
   itinerary8 = Itinerary8.getSelectedText();
+  itin8Picked = true;
 } //_CODE_:Itinerary8:828640:
 
 public void Itinerary9Clicked(GDropList source, GEvent event) { //_CODE_:Itinerary9:627520:
   itinerary9 = Itinerary9.getSelectedText();
+  itin9Picked = true;
 } //_CODE_:Itinerary9:627520:
 
 public void Itinerary10Clicked(GDropList source, GEvent event) { //_CODE_:Itinerary10:626244:
   itinerary10 = Itinerary10.getSelectedText();
+  itin10Picked = true;
 } //_CODE_:Itinerary10:626244:
 
 public void Itinerary11Clicked(GDropList source, GEvent event) { //_CODE_:Itinerary11:719164:
   itinerary11 = Itinerary11.getSelectedText();
+  itin11Picked = true;
 } //_CODE_:Itinerary11:719164:
 
 public void Itinerary12Clicked(GDropList source, GEvent event) { //_CODE_:Itinerary12:811019:
   itinerary12 = Itinerary12.getSelectedText();
+  itin12Picked = true;
 } //_CODE_:Itinerary12:811019:
 
 public void Itinerary13Clicked(GDropList source, GEvent event) { //_CODE_:Itinerary13:519033:
   itinerary13 = Itinerary13.getSelectedText();
+  itin13Picked = true;
 } //_CODE_:Itinerary13:519033:
 
 public void Itinerary14Clicked(GDropList source, GEvent event) { //_CODE_:Itinerary14:861829:
   itinerary14 = Itinerary14.getSelectedText();
+  itin14Picked = true;
 } //_CODE_:Itinerary14:861829:
 
 

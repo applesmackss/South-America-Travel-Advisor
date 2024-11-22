@@ -1,21 +1,18 @@
 class ItineraryItem {
   // Fields
-  String country;
   String activityName;
   float cost; // per person
 
   // Constructor
-  ItineraryItem(String country, String activityName, float cost) {
-    this.country = country;
+  ItineraryItem(String activityName, float cost) {
     this.activityName = activityName;
     this.cost = cost;
   }
 
   // Method to display item details
-  void displayItemDetails() {
-    println("Country: " + country);
-    println("Activity: " + activityName);
-    println("Cost per Person: $" + cost);
-    println();
+  String itemCostForWholeParty() {
+    String costForWholeParty = nf(cost * numOfTrav, 0, 2);
+    return costForWholeParty;
+    //text("Total Cost For " + numOfTrav + " People: $" + costForWholeParty, 350, 127.5);
   }
 }

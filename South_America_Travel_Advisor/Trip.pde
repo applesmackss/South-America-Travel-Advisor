@@ -44,7 +44,7 @@ class Trip {
         return -1; // Return a special value indicating an error
     }
 }
-  
+
   void addTraveler(Traveler traveler) {
     travelers.add(traveler);
   }
@@ -71,6 +71,6 @@ class Trip {
     fill(0);
     textFont(font1);
     textSize(25);
-    text("Total Flight Cost: $" + airlineAtuse.calculateTotalTicketsCost(),100,570);
+    text("Total Flight Cost: $" + nf((float(airlineAtuse.calculateTotalTicketsCost()) * 2), 0, 2),100,570);
   }
 }

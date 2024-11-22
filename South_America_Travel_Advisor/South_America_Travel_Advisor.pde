@@ -19,6 +19,9 @@ String[] distanceData;
 Flight airline1,airline2,airline3,airlineAtuse;
 Traveler[] addingPass,addingTrav;
 Trip tripbeingTaken;
+boolean itin1Picked, itin2Picked, itin3Picked, itin4Picked, 
+itin5Picked, itin6Picked, itin7Picked, itin8Picked, 
+itin9Picked, itin10Picked, itin11Picked,itin12Picked, itin13Picked, itin14Picked = false;
 
 
 
