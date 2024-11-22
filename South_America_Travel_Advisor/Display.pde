@@ -40,6 +40,7 @@ void display() {
     fill(255,255,255,128);
     stroke(255,255,255,128);
     rect(100,250,1000,150);
+    stroke(0);
     Start();
   }
   
