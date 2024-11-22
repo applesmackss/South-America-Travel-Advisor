@@ -1130,58 +1130,100 @@ void Final() {
   textSize(15);
   fill(0);
   if(itinerary1 != null) {
-    text(item1.activityName,110,150); 
+    String string1 = item1.activityName;
+    int $index = string1.indexOf(" $");
+    String activity1 = string1.substring(0, $index);
+    text(activity1, 110,150); 
   }
   
   if(itinerary2 != null) {
-    text(item2.activityName,(110+(2*(1000/7))),150); 
+    String string2 = item2.activityName;
+    int $index = string2.indexOf(" $");
+    String activity2 = string2.substring(0, $index);
+    text(activity2,(110 + (1000/7)),150); 
   }
   
   if(itinerary3 != null) {
-    text(item3.activityName,(110+(3*(1000/7))),150); 
+    String string3 = item3.activityName;
+    int $index = string3.indexOf(" $");
+    String activity3 = string3.substring(0, $index);
+    text(activity3,(110+(2*(1000/7))),150); 
   }
   
   if(itinerary4 != null) {
-    text(item4.activityName,(110+(4*(1000/7))),150); 
+    String string4 = item4.activityName;
+    int $index = string4.indexOf(" $");
+    String activity4 = string4.substring(0, $index);
+    text(activity4,(110+(3*(1000/7))),150); 
   }
   
   if(itinerary5 != null) {
-    text(item5.activityName,(110+(5*(1000/7))),150); 
+    String string5 = item5.activityName;
+    int $index = string5.indexOf(" $");
+    String activity5 = string5.substring(0, $index);
+    text(activity5,(110+(4*(1000/7))),150); 
   }
   
   if(itinerary6 != null) {
-    text(item6.activityName,(110+(6*(1000/7))),150); 
+    String string6 = item6.activityName;
+    int $index = string6.indexOf(" $");
+    String activity6 = string6.substring(0, $index);
+    text(activity6,(110+(5*(1000/7))),150); 
   }
   
   if(itinerary7 != null) {
-    text(item7.activityName,(110+(7*(1000/7))),150); 
+    String string7 = item7.activityName;
+    int $index = string7.indexOf(" $");
+    String activity7 = string7.substring(0, $index);
+    text(activity7,(110+(6*(1000/7))),150); 
   }
   
   if(itinerary8 != null) {
-    text(item8.activityName,110,300); 
+    String string8 = item8.activityName;
+    int $index = string8.indexOf(" $");
+    String activity8 = string8.substring(0, $index);
+    text(activity8,110,300); 
   }
   
   if(itinerary9 != null) {
-    text(item9.activityName,(110+(2*(1000/7))),300); 
+    String string9 = item9.activityName;
+    int $index = string9.indexOf(" $");
+    String activity9 = string9.substring(0, $index);
+    text(activity9,(110+(1000/7)),300); 
   }
   
   if(itinerary10 != null) {
-    text(item10.activityName,(110+(3*(1000/7))),300); 
+    String string10 = item10.activityName;
+    int $index = string10.indexOf(" $");
+    String activity10 = string10.substring(0, $index);
+    text(activity10,(110+(2*(1000/7))),300); 
   }
   
   if(itinerary11 != null) {
-    text(item11.activityName,(110+(4*(1000/7))),300); 
+    String string11 = item11.activityName;
+    int $index = string11.indexOf(" $");
+    String activity11 = string11.substring(0, $index);
+    text(activity11,(110+(3*(1000/7))),300); 
   }
   
   if(itinerary12 != null) {
-    text(item12.activityName,(110+(5*(1000/7))),300); 
+    String string12 = item11.activityName;
+    int $index = string12.indexOf(" $");
+    String activity12 = string12.substring(0, $index);
+    text(activity12,(110+(4*(1000/7))),300); 
   }
   
   if(itinerary13 != null) {
-    text(item13.activityName,(110+(6*(1000/7))),300); 
+    String string13 = item11.activityName;
+    int $index = string13.indexOf(" $");
+    String activity13 = string13.substring(0, $index);
+    text(activity13,(110+(5*(1000/7))),300); 
   }
   
   if(itinerary14 != null) {
-    text(item14.activityName,(110+(7*(1000/7))),300); 
+    String string14 = item14.activityName;
+    int $index = string14.indexOf(" $");
+    String activity14 = string14.substring(0, $index);
+    text(activity14,(110+(6*(1000/7))),300); 
   }
 }
