@@ -17,26 +17,33 @@ class Trip {
   }
   
   int calculateDuration() {
-    String[] startParts = split(startDate, "-");
-    String[] endParts = split(endDate, "-");
-    
-    int startYear = int(startParts[0]);
-    int startMonth = int(startParts[1]);
-    int startDay = int(startParts[2]);
+    try {
+        String[] startParts = split(this.startDate, "-");
+        String[] endParts = split(this.endDate, "-");
 
-    int endYear = int(endParts[0]);
-    int endMonth = int(endParts[1]);
-    int endDay = int(endParts[2]);
+        int startYear = int(startParts[0]);
+        int startMonth = int(startParts[1]);
+        int startDay = int(startParts[2]);
 
-    // Convert to Java LocalDate for easy calculation
-    LocalDate start = LocalDate.of(startYear, startMonth, startDay);
-    LocalDate end = LocalDate.of(endYear, endMonth, endDay);
-    
-    long daysBetween = ChronoUnit.DAYS.between(start, end);
-    
-    return int(daysBetween + 1);
+        int endYear = int(endParts[0]);
+        int endMonth = int(endParts[1]);
+        int endDay = int(endParts[2]);
 
-  }
+        // Validate and parse dates
+        LocalDate start = LocalDate.of(startYear, startMonth, startDay);
+        LocalDate end = LocalDate.of(endYear, endMonth, endDay);
+
+        // Calculate days between
+        long daysBetween = ChronoUnit.DAYS.between(start, end);
+
+        return int(daysBetween + 1); // Include the start date
+    } catch (Exception e) {
+        textSize(20);
+        fill(0, 0, 0);
+        text("Invalid date entered. Please check your input.", 400, 550);
+        return -1; // Return a special value indicating an error
+    }
+}
   
   void addTraveler(Traveler traveler) {
     travelers.add(traveler);
