@@ -198,7 +198,7 @@ void display() {
     Itinerary14.setVisible(false);
     
     airline1 = new Flight("Flying Sheep",0.125);
-    airline2 = new Flight("Average Steve",0.16);
+    airline2 = new Flight("Normalize AVG",0.16);
     airline3 = new Flight("Luxarice",0.2);
     
     addingTrav = new Traveler[numOfTrav];
@@ -652,9 +652,10 @@ void Info3() {
   textSize(35);
   textFont(font1);
   text("What airline do you prefer?",100,100);
-  text(stateChosen+" to "+countryChosen,100,300);
+  text(stateChosen+" to "+countryChosen+":",100,400);
   if (airlineAtuse != null) {
-    text("Distance: " + airlineAtuse.getDistance() + " km", 100, 400);
+    text("Distance: " + airlineAtuse.getDistance() + " km", 100, 500);
+    airlineAtuse.displayFlightSummary();
     
     //Table to calculate cost
     line(600,200,600,550);
