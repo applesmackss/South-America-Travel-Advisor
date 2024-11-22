@@ -66,12 +66,19 @@ class Flight {
     fill(0);
     if(airlineChosen.equals ("Flying Sheep") ){
       text("Flying Sheep is the cheapest flight on the market with a ratePerKm of "+airlineAtuse.ratePerKm+".",100,220);
-      text("This is the most cheap stake flight to take, you can have a never clean washroom,",200,240);
-     // text("");
+      text("This is the most cheap stake flight to take, you can have the following,",100,240);
+      text("a never cleaned washroom, food that is only microwaved, water as",100,260);
+      text("your only source of drinks. Plane assistants are quite busy and probably",100,280);
+      text("won't be there to help you if you need something.",100,300);
     }
     
     if(airlineChosen.equals ("Normalize AVG") ){
-      text("Average normal class flight on the market",100,220);
+      text("Normalize AVG is an average normal class flight on the market with a",100,220);
+      text("ratePerKm of "+airlineAtuse.ratePerKm+". This is an average used airline for family, who just",100,240);
+      text("want a normal and comfortable journey. This airline provides, clean",100,260);
+      text("bathrooms, fresh food and even multiple beverage options than just water.",100,280);
+      text("Howeverthis airline gets quite crowded due its high, so beware",100,300);
+      text("of that.",100,320);
     }
     
     if(airlineChosen.equals ("Luxarice") ){

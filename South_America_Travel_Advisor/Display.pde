@@ -37,7 +37,8 @@ void display() {
     Next.setVisible(false);
     Previous.setVisible(false);
     Finish.setVisible(false);
-    fill(255);
+    fill(255,255,255,128);
+    stroke(255,255,255,128);
     rect(100,250,1000,150);
     Start();
   }
@@ -72,6 +73,7 @@ void display() {
     Finish.setVisible(false);
     fill(backcol);
     rect(300,25,600,650);
+    image(logo,510,455);
     About();
     
     
@@ -468,8 +470,140 @@ void display() {
       }
     }
     
-    else {
-      Finish.setVisible(false);
+    if(tripbeingTaken.travelDays == 2) {
+      if(itinerary1 != null && itinerary2 != null) {
+        Finish.setVisible(true);
+      }
+      
+      else {
+        Finish.setVisible(false);
+      }
+    }    
+ 
+    if(tripbeingTaken.travelDays == 3) {
+      if(itinerary1 != null && itinerary2 != null && itinerary3 != null) {
+        Finish.setVisible(true);
+      }
+      
+      else {
+        Finish.setVisible(false);
+      }
+    }
+    
+    if(tripbeingTaken.travelDays == 4) {
+      if(itinerary1 != null && itinerary2 != null && itinerary3 != null && itinerary4 != null) {
+        Finish.setVisible(true);
+      }
+      
+      else {
+        Finish.setVisible(false);
+      }
+    }
+    
+    if(tripbeingTaken.travelDays == 5) {
+      if(itinerary1 != null && itinerary2 != null && itinerary3 != null && itinerary4 != null && itinerary5 != null) {
+        Finish.setVisible(true);
+      }
+      
+      else {
+        Finish.setVisible(false);
+      }
+    } 
+    
+    if(tripbeingTaken.travelDays == 6) {
+      if(itinerary1 != null && itinerary2 != null && itinerary3 != null && itinerary4 != null && itinerary5 != null && itinerary6 != null ) {
+        Finish.setVisible(true);
+      }
+      
+      else {
+        Finish.setVisible(false);
+      }
+    }
+    
+    if(tripbeingTaken.travelDays == 7) {
+      if(itinerary1 != null && itinerary2 != null && itinerary3 != null && itinerary4 != null && itinerary5 != null && itinerary6 != null && itinerary7 != null) {
+        Finish.setVisible(true);
+      }
+      
+      else {
+        Finish.setVisible(false);
+      }
+    }
+    
+    if(tripbeingTaken.travelDays == 8) {
+      if(itinerary1 != null && itinerary2 != null && itinerary3 != null && itinerary4 != null && itinerary5 != null && itinerary6 != null && itinerary7 != null && itinerary8 != null) {
+        Finish.setVisible(true);
+      }
+      
+      else {
+        Finish.setVisible(false);
+      }
+    }
+    
+    if(tripbeingTaken.travelDays == 9) {
+      if(itinerary1 != null && itinerary2 != null && itinerary3 != null && itinerary4 != null && itinerary5 != null && itinerary6 != null && itinerary7 != null 
+      && itinerary8 != null && itinerary9 != null) {
+        Finish.setVisible(true);
+      }
+      
+      else {
+        Finish.setVisible(false);
+      }
+    }
+    
+    if(tripbeingTaken.travelDays == 10) {
+      if(itinerary1 != null && itinerary2 != null && itinerary3 != null && itinerary4 != null && itinerary5 != null && itinerary6 != null && itinerary7 != null 
+      && itinerary8 != null && itinerary9 != null && itinerary10 != null) {
+        Finish.setVisible(true);
+      }
+      
+      else {
+        Finish.setVisible(false);
+      }
+    }
+    
+    if(tripbeingTaken.travelDays == 11) {
+      if(itinerary1 != null && itinerary2 != null && itinerary3 != null && itinerary4 != null && itinerary5 != null && itinerary6 != null && itinerary7 != null 
+      && itinerary8 != null && itinerary9 != null && itinerary10 != null && itinerary11 != null) {
+        Finish.setVisible(true);
+      }
+      
+      else {
+        Finish.setVisible(false);
+      }
+    }
+    
+    if(tripbeingTaken.travelDays == 12) {
+      if(itinerary1 != null && itinerary2 != null && itinerary3 != null && itinerary4 != null && itinerary5 != null && itinerary6 != null && itinerary7 != null 
+      && itinerary8 != null && itinerary9 != null && itinerary10 != null && itinerary11 != null && itinerary12 != null) {
+        Finish.setVisible(true);
+      }
+      
+      else {
+        Finish.setVisible(false);
+      }
+    }
+    
+    if(tripbeingTaken.travelDays == 13) {
+      if(itinerary1 != null && itinerary2 != null && itinerary3 != null && itinerary4 != null && itinerary5 != null && itinerary6 != null && itinerary7 != null 
+      && itinerary8 != null && itinerary9 != null && itinerary10 != null && itinerary11 != null && itinerary12 != null && itinerary13 != null) {
+        Finish.setVisible(true);
+      }
+      
+      else {
+        Finish.setVisible(false);
+      }
+    }
+    
+    if(tripbeingTaken.travelDays == 14) {
+      if(itinerary1 != null && itinerary2 != null && itinerary3 != null && itinerary4 != null && itinerary5 != null && itinerary6 != null && itinerary7 != null 
+      && itinerary8 != null && itinerary9 != null && itinerary10 != null && itinerary11 != null && itinerary12 != null && itinerary13 != null && itinerary14 != null) {
+        Finish.setVisible(true);
+      }
+      
+      else {
+        Finish.setVisible(false);
+      }
     }
     
     fill(backcol);
@@ -732,6 +866,10 @@ void Info4() {
 }
 
 void Info5() {
+  textFont(font1);
+  textSize(20);
+  fill(0);
+  text("Choose your itineary for the next "+tripbeingTaken.travelDays+" days",375,50);
   int x = 100;
   int y = 100;
   for(int i = 0; i < tripbeingTaken.travelDays; i++) {
@@ -771,7 +909,7 @@ void Info5() {
     int $index2 = activity2.indexOf("$");
     String price2 = activity2.substring($index2 + 1, activity2.length());
     float fprice2 = float(price2);
-    ItineraryItem item2 = new ItineraryItem(activity2, fprice2);
+    item2 = new ItineraryItem(activity2, fprice2);
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item2.itemCostForWholeParty(), 900, 127.5);
@@ -784,7 +922,7 @@ void Info5() {
     int $index3 = activity3.indexOf("$");
     String price3 = activity3.substring($index3 + 1, activity3.length());
     float fprice3 = float(price3);
-    ItineraryItem item3 = new ItineraryItem(activity3, fprice3);
+    item3 = new ItineraryItem(activity3, fprice3);
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item3.itemCostForWholeParty(), 350, 197.5);
@@ -798,7 +936,7 @@ void Info5() {
     int $index4 = activity4.indexOf("$");
     String price4 = activity4.substring($index4 + 1, activity4.length());
     float fprice4 = float(price4);
-    ItineraryItem item4 = new ItineraryItem(activity4, fprice4);
+    item4 = new ItineraryItem(activity4, fprice4);
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item4.itemCostForWholeParty(), 900, 197.5);
@@ -811,7 +949,7 @@ void Info5() {
     int $index5 = activity5.indexOf("$");
     String price5 = activity5.substring($index5 + 1, activity5.length());
     float fprice5 = float(price5);
-    ItineraryItem item5 = new ItineraryItem(activity5, fprice5);
+    item5 = new ItineraryItem(activity5, fprice5);
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item5.itemCostForWholeParty(), 350, 267.5);
@@ -824,7 +962,7 @@ void Info5() {
     int $index6 = activity6.indexOf("$");
     String price6 = activity6.substring($index6 + 1, activity6.length());
     float fprice6 = float(price6);
-    ItineraryItem item6 = new ItineraryItem(activity6, fprice6);
+    item6 = new ItineraryItem(activity6, fprice6);
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item6.itemCostForWholeParty(), 900, 267.5);
@@ -837,7 +975,7 @@ void Info5() {
     int $index7 = activity7.indexOf("$");
     String price7 = activity7.substring($index7 + 1, activity7.length());
     float fprice7 = float(price7);
-    ItineraryItem item7 = new ItineraryItem(activity7, fprice7);
+    item7 = new ItineraryItem(activity7, fprice7);
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item7.itemCostForWholeParty(), 350, 337.5);
@@ -850,7 +988,7 @@ void Info5() {
     int $index8 = activity8.indexOf("$");
     String price8 = activity8.substring($index8 + 1, activity8.length());
     float fprice8 = float(price8);
-    ItineraryItem item8 = new ItineraryItem(activity8, fprice8);
+    item8 = new ItineraryItem(activity8, fprice8);
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item8.itemCostForWholeParty(), 900, 337.5);
@@ -863,7 +1001,7 @@ void Info5() {
     int $index9 = activity9.indexOf("$");
     String price9 = activity9.substring($index9 + 1, activity9.length());
     float fprice9 = float(price9);
-    ItineraryItem item9 = new ItineraryItem(activity9, fprice9);
+    item9 = new ItineraryItem(activity9, fprice9);
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item9.itemCostForWholeParty(), 350, 407.5);
@@ -876,7 +1014,7 @@ void Info5() {
     int $index10 = activity10.indexOf("$");
     String price10 = activity10.substring($index10 + 1, activity10.length());
     float fprice10 = float(price10);
-    ItineraryItem item10 = new ItineraryItem(activity10, fprice10);
+    item10 = new ItineraryItem(activity10, fprice10);
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item10.itemCostForWholeParty(), 900, 407.5);
@@ -889,7 +1027,7 @@ void Info5() {
     int $index11 = activity11.indexOf("$");
     String price11 = activity11.substring($index11 + 1, activity11.length());
     float fprice11 = float(price11);
-    ItineraryItem item11 = new ItineraryItem(activity11, fprice11);
+    item11 = new ItineraryItem(activity11, fprice11);
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item11.itemCostForWholeParty(), 350, 477.5);
@@ -902,7 +1040,7 @@ void Info5() {
     int $index12 = activity12.indexOf("$");
     String price12 = activity12.substring($index12 + 1, activity12.length());
     float fprice12 = float(price12);
-    ItineraryItem item12 = new ItineraryItem(activity12, fprice12);
+    item12 = new ItineraryItem(activity12, fprice12);
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item12.itemCostForWholeParty(), 900, 477.5);
@@ -915,7 +1053,7 @@ void Info5() {
     int $index13 = activity13.indexOf("$");
     String price13 = activity13.substring($index13 + 1, activity13.length());
     float fprice13 = float(price13);
-    ItineraryItem item13 = new ItineraryItem(activity13 + 1, fprice13);
+    item13 = new ItineraryItem(activity13 + 1, fprice13);
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item13.itemCostForWholeParty(), 350, 547.5);
@@ -974,17 +1112,76 @@ void Final() {
   text("Your Planner Schedule",440,75);
   
   int dx = 110;
-  int y = 125;
+  int dy = 125;
   for(int d = 1; d < tripbeingTaken.travelDays + 1; d++) {
   textFont(font2);
   textSize(20);
-  text("Day"+d,dx,y);
+  text("Day"+d,dx,dy);
   dx += (1000/7);  
   
   if( d == 7) {
-    y = 275;
+    dy = 275;
     dx = 110;   
   }
   }
   vehicleAtuse.finalTotalTransportationCost();
+  
+  textFont(font2);
+  textSize(15);
+  fill(0);
+  if(itinerary1 != null) {
+    text(item1.activityName,110,150); 
+  }
+  
+  if(itinerary2 != null) {
+    text(item2.activityName,(110+(2*(1000/7))),150); 
+  }
+  
+  if(itinerary3 != null) {
+    text(item3.activityName,(110+(3*(1000/7))),150); 
+  }
+  
+  if(itinerary4 != null) {
+    text(item4.activityName,(110+(4*(1000/7))),150); 
+  }
+  
+  if(itinerary5 != null) {
+    text(item5.activityName,(110+(5*(1000/7))),150); 
+  }
+  
+  if(itinerary6 != null) {
+    text(item6.activityName,(110+(6*(1000/7))),150); 
+  }
+  
+  if(itinerary7 != null) {
+    text(item7.activityName,(110+(7*(1000/7))),150); 
+  }
+  
+  if(itinerary8 != null) {
+    text(item8.activityName,110,300); 
+  }
+  
+  if(itinerary9 != null) {
+    text(item9.activityName,(110+(2*(1000/7))),300); 
+  }
+  
+  if(itinerary10 != null) {
+    text(item10.activityName,(110+(3*(1000/7))),300); 
+  }
+  
+  if(itinerary11 != null) {
+    text(item11.activityName,(110+(4*(1000/7))),300); 
+  }
+  
+  if(itinerary12 != null) {
+    text(item12.activityName,(110+(5*(1000/7))),300); 
+  }
+  
+  if(itinerary13 != null) {
+    text(item13.activityName,(110+(6*(1000/7))),300); 
+  }
+  
+  if(itinerary14 != null) {
+    text(item14.activityName,(110+(7*(1000/7))),300); 
+  }
 }

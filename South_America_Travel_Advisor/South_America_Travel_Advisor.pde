@@ -2,7 +2,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 // Need G4P library
 import g4p_controls.*;
-PImage bg;
+PImage bg,logo;
 String pageOn = "start";
 Transportation vehicleAtuse,van,car,minivan,train,bus;
 String vehicleChosen,stateChosen,countryChosen,airlineChosen;
@@ -31,6 +31,7 @@ public void setup(){
   size(1200, 700, JAVA2D);
   createGUI();
   customGUI();
+  logo = loadImage("SATA LOGO.png");
   bg = loadImage(backgroundChoice[bgPicked]);
   //Initialized the fonts
   font1 = loadFont("Cambria-Bold-48.vlw");
