@@ -1091,7 +1091,7 @@ void Final() {
   textFont(font1);
   textSize(30);
   fill(0, 0, 0);
-  text("$" + nf(totalItinCost, 0, 2), 950, 490);
+  text("$" + nf(totalItinCost, 0, 2), 925, 490);
   float totalFinalCost = totalItinCost + vehicleAtuse.calculateTotalCost() + float(airlineAtuse.findRoundTripCost());
   text("$" + nf(totalFinalCost, 0, 2), 570, 590);
   
