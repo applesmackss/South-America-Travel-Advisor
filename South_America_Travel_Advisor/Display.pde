@@ -458,8 +458,14 @@ void display() {
     Next.setVisible(false);
     Previous.setVisible(true);
     
-    if(itinerary1 != null) {
-      Finish.setVisible(true);
+    if(tripbeingTaken.travelDays == 1) {
+      if(itinerary1 != null) {
+        Finish.setVisible(true);
+      }
+      
+      else {
+        Finish.setVisible(false);
+      }
     }
     
     else {
