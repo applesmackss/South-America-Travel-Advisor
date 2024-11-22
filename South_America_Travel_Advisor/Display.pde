@@ -123,11 +123,15 @@ void display() {
         fill(255,0,0);
         Next.setVisible(false);
         if(tripbeingTaken.travelDays > 14){
-          text("We unfortunately do not provide services if your vacation is above 2 weeks.",250,600);
+          if(dateChecker == true) {
+            text("We unfortunately do not provide services if your vacation is above 2 weeks.",250,600);
+          }
         }
         
         if(tripbeingTaken.travelDays < 1) {
-          text("We are not time travelers, we can not go to the past sorry for the incovenience.",250,600);
+          if(dateChecker == true) {
+            text("We are not time travelers, we can not go to the past sorry for the incovenience.",250,600);
+          }
         }
       }
     }
@@ -737,7 +741,7 @@ void Info5() {
     }
     
     if(i % 2 == 0) {
-      x += 800;    
+      x += 550;    
     }  
   }
   
@@ -764,7 +768,7 @@ void Info5() {
     ItineraryItem item2 = new ItineraryItem(activity2, fprice2);
     textSize(15);
     fill(0, 0, 0);
-    text("Total Cost For " + numOfTrav + " People: $" + item2.itemCostForWholeParty(), 650, 127.5);
+    text("Total Cost For " + numOfTrav + " People: $" + item2.itemCostForWholeParty(), 900, 127.5);
     totalItinCost += float(item2.itemCostForWholeParty());
 
   }
@@ -791,7 +795,7 @@ void Info5() {
     ItineraryItem item4 = new ItineraryItem(activity4, fprice4);
     textSize(15);
     fill(0, 0, 0);
-    text("Total Cost For " + numOfTrav + " People: $" + item4.itemCostForWholeParty(), 650, 197.5);
+    text("Total Cost For " + numOfTrav + " People: $" + item4.itemCostForWholeParty(), 900, 197.5);
     totalItinCost += float(item4.itemCostForWholeParty());
 
   }
@@ -817,7 +821,7 @@ void Info5() {
     ItineraryItem item6 = new ItineraryItem(activity6, fprice6);
     textSize(15);
     fill(0, 0, 0);
-    text("Total Cost For " + numOfTrav + " People: $" + item6.itemCostForWholeParty(), 650, 267.5);
+    text("Total Cost For " + numOfTrav + " People: $" + item6.itemCostForWholeParty(), 900, 267.5);
     totalItinCost += float(item6.itemCostForWholeParty());
   }
 
@@ -843,7 +847,7 @@ void Info5() {
     ItineraryItem item8 = new ItineraryItem(activity8, fprice8);
     textSize(15);
     fill(0, 0, 0);
-    text("Total Cost For " + numOfTrav + " People: $" + item8.itemCostForWholeParty(), 650, 337.5);
+    text("Total Cost For " + numOfTrav + " People: $" + item8.itemCostForWholeParty(), 900, 337.5);
     totalItinCost += float(item8.itemCostForWholeParty());
   }
 
@@ -869,7 +873,7 @@ void Info5() {
     ItineraryItem item10 = new ItineraryItem(activity10, fprice10);
     textSize(15);
     fill(0, 0, 0);
-    text("Total Cost For " + numOfTrav + " People: $" + item10.itemCostForWholeParty(), 650, 407.5);
+    text("Total Cost For " + numOfTrav + " People: $" + item10.itemCostForWholeParty(), 900, 407.5);
     totalItinCost += float(item10.itemCostForWholeParty());
   }
 
@@ -895,7 +899,7 @@ void Info5() {
     ItineraryItem item12 = new ItineraryItem(activity12, fprice12);
     textSize(15);
     fill(0, 0, 0);
-    text("Total Cost For " + numOfTrav + " People: $" + item12.itemCostForWholeParty(), 650, 477.5);
+    text("Total Cost For " + numOfTrav + " People: $" + item12.itemCostForWholeParty(), 900, 477.5);
     totalItinCost += float(item12.itemCostForWholeParty());
   }
 
@@ -921,7 +925,7 @@ void Info5() {
     item14 = new ItineraryItem(activity14, fprice14);
     textSize(15);
     fill(0, 0, 0);
-    text("Total Cost For " + numOfTrav + " People: $" + item14.itemCostForWholeParty(), 650, 547.5);
+    text("Total Cost For " + numOfTrav + " People: $" + item14.itemCostForWholeParty(), 900, 547.5);
     totalItinCost += float(item14.itemCostForWholeParty());
   }
   

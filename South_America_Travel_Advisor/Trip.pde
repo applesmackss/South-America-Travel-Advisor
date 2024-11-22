@@ -18,6 +18,7 @@ class Trip {
   
   int calculateDuration() {
     try {
+        dateChecker = true;
         String[] startParts = split(this.startDate, "-");
         String[] endParts = split(this.endDate, "-");
 
@@ -38,6 +39,7 @@ class Trip {
 
         return int(daysBetween + 1); // Include the start date
     } catch (Exception e) {
+        dateChecker = false;
         textSize(20);
         fill(0, 0, 0);
         text("Invalid date entered. Please check your input.", 400, 550);
