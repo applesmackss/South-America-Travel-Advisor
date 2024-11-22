@@ -13,6 +13,5 @@ class ItineraryItem {
   String itemCostForWholeParty() {
     String costForWholeParty = nf(cost * numOfTrav, 0, 2);
     return costForWholeParty;
-    //text("Total Cost For " + numOfTrav + " People: $" + costForWholeParty, 350, 127.5);
   }
 }

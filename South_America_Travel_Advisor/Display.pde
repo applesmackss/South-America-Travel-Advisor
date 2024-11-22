@@ -741,16 +741,18 @@ void Info5() {
     }  
   }
   
+  totalItinCost = 0;
   String activity1 = itinerary1;
   if (itin1Picked == true) {
     int $index1 = activity1.indexOf("$");
     String price1 = activity1.substring($index1 + 1, activity1.length());
     float fprice1 = float(price1);
     println(fprice1);
-    ItineraryItem item1 = new ItineraryItem(activity1, fprice1);
+    item1 = new ItineraryItem(activity1, fprice1);
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item1.itemCostForWholeParty(), 350, 127.5);
+    totalItinCost += float(item1.itemCostForWholeParty());
   }
   
   
@@ -763,6 +765,8 @@ void Info5() {
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item2.itemCostForWholeParty(), 650, 127.5);
+    totalItinCost += float(item2.itemCostForWholeParty());
+
   }
   
   String activity3 = itinerary3;
@@ -774,6 +778,8 @@ void Info5() {
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item3.itemCostForWholeParty(), 350, 197.5);
+    totalItinCost += float(item3.itemCostForWholeParty());
+
   }
 
   
@@ -786,6 +792,8 @@ void Info5() {
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item4.itemCostForWholeParty(), 650, 197.5);
+    totalItinCost += float(item4.itemCostForWholeParty());
+
   }
   
   String activity5 = itinerary5;
@@ -797,6 +805,8 @@ void Info5() {
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item5.itemCostForWholeParty(), 350, 267.5);
+    totalItinCost += float(item5.itemCostForWholeParty());
+
   }
   
   String activity6 = itinerary6;
@@ -808,6 +818,7 @@ void Info5() {
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item6.itemCostForWholeParty(), 650, 267.5);
+    totalItinCost += float(item6.itemCostForWholeParty());
   }
 
   
@@ -820,6 +831,7 @@ void Info5() {
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item7.itemCostForWholeParty(), 350, 337.5);
+    totalItinCost += float(item7.itemCostForWholeParty());
   }
 
   
@@ -832,6 +844,7 @@ void Info5() {
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item8.itemCostForWholeParty(), 650, 337.5);
+    totalItinCost += float(item8.itemCostForWholeParty());
   }
 
   
@@ -844,6 +857,7 @@ void Info5() {
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item9.itemCostForWholeParty(), 350, 407.5);
+    totalItinCost += float(item9.itemCostForWholeParty());
   }
 
   
@@ -856,6 +870,7 @@ void Info5() {
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item10.itemCostForWholeParty(), 650, 407.5);
+    totalItinCost += float(item10.itemCostForWholeParty());
   }
 
   
@@ -868,6 +883,7 @@ void Info5() {
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item11.itemCostForWholeParty(), 350, 477.5);
+    totalItinCost += float(item11.itemCostForWholeParty());
   }
 
   
@@ -880,6 +896,7 @@ void Info5() {
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item12.itemCostForWholeParty(), 650, 477.5);
+    totalItinCost += float(item12.itemCostForWholeParty());
   }
 
   
@@ -892,6 +909,7 @@ void Info5() {
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item13.itemCostForWholeParty(), 350, 547.5);
+    totalItinCost += float(item13.itemCostForWholeParty());
   }
 
   
@@ -900,12 +918,14 @@ void Info5() {
     int $index14 = activity14.indexOf("$");
     String price14 = activity14.substring($index14 + 1, activity14.length());
     float fprice14 = float(price14);
-    ItineraryItem item14 = new ItineraryItem(activity14, fprice14);
+    item14 = new ItineraryItem(activity14, fprice14);
     textSize(15);
     fill(0, 0, 0);
     text("Total Cost For " + numOfTrav + " People: $" + item14.itemCostForWholeParty(), 650, 547.5);
+    totalItinCost += float(item14.itemCostForWholeParty());
   }
   
+   
 }
 
 
@@ -918,6 +938,13 @@ void Final() {
     line(calx,caly,calx+(1000-7),caly);
     caly += 150;
   }
+  
+  textFont(font1);
+  textSize(30);
+  fill(0, 0, 0);
+  text("$" + nf(totalItinCost, 0, 2), 950, 490);
+  float totalFinalCost = totalItinCost + vehicleAtuse.calculateTotalCost() + float(airlineAtuse.findRoundTripCost());
+  text("$" + nf(totalFinalCost, 0, 2), 570, 590);
   
   caly = 100;
   

@@ -22,7 +22,8 @@ Trip tripbeingTaken;
 boolean itin1Picked, itin2Picked, itin3Picked, itin4Picked, 
 itin5Picked, itin6Picked, itin7Picked, itin8Picked, 
 itin9Picked, itin10Picked, itin11Picked,itin12Picked, itin13Picked, itin14Picked = false;
-
+ItineraryItem item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14;
+float totalItinCost;
 
 
 public void setup(){

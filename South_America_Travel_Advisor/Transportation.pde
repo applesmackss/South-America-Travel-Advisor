@@ -108,7 +108,7 @@ class Transportation {
    textFont(font1);
    textSize(30);
    fill(0);
-   text("$"+ nf(calculateTotalCost(), 0, 2),580,490); 
+   text("$"+ nf(calculateTotalCost(), 0, 2),570,490); 
  }
 
   
