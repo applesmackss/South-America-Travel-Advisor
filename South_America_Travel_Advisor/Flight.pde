@@ -65,7 +65,9 @@ class Flight {
     textSize(15);
     fill(0);
     if(airlineChosen.equals ("Flying Sheep") ){
-      text("Cheapest flight on the market",100,220);
+      text("Flying Sheep is the cheapest flight on the market with a ratePerKm of "+airlineAtuse.ratePerKm+".",100,220);
+      text("This is the most cheap stake flight to take, you can have a never clean washroom,",200,240);
+     // text("");
     }
     
     if(airlineChosen.equals ("Normalize AVG") ){
@@ -74,7 +76,7 @@ class Flight {
     
     if(airlineChosen.equals ("Luxarice") ){
       text("Luxarice is the most expensive flight on the market with a ratePerKm of "+airlineAtuse.ratePerKm+".",100,220);
-      text("This is the most luxurarious flight to take you can have the following, elite",100,240);
+      text("This is the most luxurarious flight to take, you can have the following, elite",100,240);
       text("tier food. You can even take a nice little nap when watching a show.",100,260);
       text("Oh and best of all, you always have access to a plane assistant whenever",100,280);
       text("you need something.",100,300);
