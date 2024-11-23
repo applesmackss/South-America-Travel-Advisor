@@ -38,29 +38,36 @@ class Transportation {
   }
   }
   
+  //Void displays the details the transportation
   void displayTransportationDetails() {
     textFont(font1);
     textSize(25);
     fill(0);
-    text("Transportation Method: " + vehicle,700,250);
-    text("Daily Rate: $" + nf(cost, 0, 2),700,300);
-    text(("Seating Capacity: " + (maximumCapacity == -1 ? "Unlimited" : maximumCapacity)), 700,350);
-    text("Trip Duration: " + tripDays + " days",700,400);
-    text("Number of Travelers: " + numberOfPeople,700,450);
-
+    
+    //Adding text to page 4
+    text("Transportation Method: " + vehicle,700,250); // Shows the Transportation Method that is being used
+    text("Daily Rate: $" + nf(cost, 0, 2),700,300); // ShowsT te rental cost of this vehicle per day
+    text(("Seating Capacity: " + (maximumCapacity == -1 ? "Unlimited" : maximumCapacity)), 700,350); // The maxium seating capacity this vehicle has
+    text("Trip Duration: " + tripDays + " days",700,400); // Shows how many days your trip is going to last 
+    text("Number of Travelers: " + numberOfPeople,700,450); // Shows the number of travelers that are going on vacation
+    
+    //If the transportation isn't valid meaning maximum capacity is less than the number of travelerers
     if (!isValidOption()) {
       fill(255,0,0);
-      text("\nError: This transportation method",700,500);
-      text("cannot accommodate all travelers.",700,575);
+      text("\nError: This transportation method",700,500); //Shows the error message
+      text("cannot accommodate all travelers.",700,575); //Shows the reason why it won't work
     } else {
-      text("\nTotal Transportation Cost: $" + nf(calculateTotalCost(), 0, 2),700,500);
+      text("\nTotal Transportation Cost: $" + nf(calculateTotalCost(), 0, 2),700,500); //This shows the total cost for using this transportation in the following days
     }
   }
   
+  //Talks about what each of the vehicles do in the summary box
   void displayTransportationSummary() {
     fill(0);
     textFont(font2);
     textSize(14);
+    
+    //if the vehicle they picked is car, they describe what this vehicle does
     if (vehicle.equals("car")) {
       text("This is a 5 seater vehicle that is availble for rent. Popular cars for this option ", 110, 300);
       text("include but are not limited to: Toyota Corolla, Honda Civic, Toyota RAV4, and ", 110, 320);
@@ -69,15 +76,17 @@ class Transportation {
       text("expensive for solo travellers and small families, so be wary of your budget.", 110, 380);
     }
     
-   if (vehicle.equals("train")) {
+   //if the vehicle they picked is train, they describe what this vehicle does 
+    if (vehicle.equals("train")) {
      text("The train is a great option for large families or travellers with a lower budget.", 110, 300);
      text("It is a great option for travelling across South America, as it is faster than a bus ", 110, 320);
      text("and more affordable than renting a vehicle. Although South America doesn't ", 110, 340);
      text("have the extensive train routes that Japan or countries in Europe do, it can ", 110, 360);
      text("still be a memorable journey for tourists ", 110, 380);
   }
-  
-  if (vehicle.equals("van")) {
+    
+    //if the vehicle they picked is van, they describe what this vehicle does
+   if (vehicle.equals("van")) {
     text("This is a 11 seater vehicle that is availble for rent. Popular vans for this option ", 110, 300);
     text("include but are not limited to: Toyota Sienna, Honda Oddessey, and Hyundai ", 110, 320);
     text("Ebtourage. This is a great option for very large families who want to have more ", 110, 340);
@@ -85,6 +94,7 @@ class Transportation {
     text("expensive option out of the 5, so be wary of your budget.", 110, 380);
   }
   
+  //if the vehicle they picked is bus, they describe what this vehicle does
   if (vehicle.equals("bus")) {
     text("Although it may not be as comfortable or fast as the train, the bus is the best ", 110, 300);
     text(" option for travellers who are on a tight budget. Busses are ubiquitous in South ", 110, 320);
@@ -93,6 +103,7 @@ class Transportation {
   
     }
     
+  //if the vehicle they picked is minivan, they describe what this vehicle does
   if (vehicle.equals("minivan")) {
     text("The minivan is a 8-seat vehicle that is availble for rent. Popular minivans include ", 110, 300);
     text("but are no limited to: Lincoln Navigator, Chevrolet Suburban, Subaru Ascent, ", 110, 320);
@@ -104,11 +115,12 @@ class Transportation {
   
  }
  
+ //Display the final total transportation class on the final page
  void finalTotalTransportationCost() {
    textFont(font1);
    textSize(30);
    fill(0);
-   text("$"+ nf(calculateTotalCost(), 0, 2),570,490); 
+   text("$"+ nf(calculateTotalCost(), 0, 2),570,490); //Shows the total amount of cost needed for transportation
  }
 
   
