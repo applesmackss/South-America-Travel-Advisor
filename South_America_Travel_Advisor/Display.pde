@@ -248,8 +248,6 @@ void display() {
       addingTrav[i].calculateTicketCost(fDistance, fRPK);
       
     }
-    println(airlineAtuse.calculateTotalTicketsCost());
-
     
     }
     
@@ -896,7 +894,6 @@ void Info5() {
     int $index1 = activity1.indexOf("$");
     String price1 = activity1.substring($index1 + 1, activity1.length());
     float fprice1 = float(price1);
-    println(fprice1);
     item1 = new ItineraryItem(activity1, fprice1);
     textSize(15);
     fill(0, 0, 0);
