@@ -70,6 +70,11 @@ public void setup() {
   // Load distance data from an external file
   distanceData = loadStrings("Distances.txt"); // Load distance data
   dislength = distanceData.length;             // Calculate the number of entries in the distance data
+  
+  //Create the classes for airlines
+  airline1 = new Flight("Raspberry  Airlines",0.125);
+  airline2 = new Flight("Gold Airlines",0.16);
+  airline3 = new Flight("Diamond Airlines",0.2);
 }
 
 public void draw() {

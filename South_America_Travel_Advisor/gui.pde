@@ -183,7 +183,6 @@ public void StartMonthClicked(GDropList source, GEvent event) { //_CODE_:StartMo
   //Creates the date, if start year,month and day has been chosen
   if(vStartYear != null && vStartMonth != null && vStartDay != null) {
     startTripDate = (vStartYear+"-"+vStartMonth+"-"+vStartDay);
-    print(startTripDate);
   }
   
 } //_CODE_:StartMonth:925594:
@@ -196,7 +195,6 @@ public void StartDayClicked(GDropList source, GEvent event) { //_CODE_:StartDay:
   //Creates the date, if start year,month and day has been chosen
   if(vStartYear != null && vStartMonth != null && vStartDay != null) {
     startTripDate = (vStartYear+"-"+vStartMonth+"-"+vStartDay);
-    print(startTripDate);
   }
   
 } //_CODE_:StartDay:923299:
@@ -209,7 +207,6 @@ public void EndYearClicked(GDropList source, GEvent event) { //_CODE_:EndYear:51
   //Creates the date, if end year,month and day has been chosen
   if(vEndYear != null && vEndMonth != null && vEndDay != null) {
     endTripDate = (vEndYear+"-"+vEndMonth+"-"+vEndDay);  
-    print(endTripDate);
   }
   
 } //_CODE_:EndYear:516209:
@@ -222,7 +219,6 @@ public void EndMonthClicked(GDropList source, GEvent event) { //_CODE_:EndMonth:
   //Creates the date, if end year,month and day has been chosen
   if(vEndYear != null && vEndMonth != null && vEndDay != null) {
     endTripDate = (vEndYear+"-"+vEndMonth+"-"+vEndDay);  
-    print(endTripDate);
   }
   
 } //_CODE_:EndMonth:405891:
@@ -235,7 +231,6 @@ public void EndDayClicked(GDropList source, GEvent event) { //_CODE_:EndDay:7178
   //Creates the date, if end year,month and day has been chosen
   if(vEndYear != null && vEndMonth != null && vEndDay != null) {
     endTripDate = (vEndYear+"-"+vEndMonth+"-"+vEndDay);  
-    print(endTripDate);
   }
   
 } //_CODE_:EndDay:717898:

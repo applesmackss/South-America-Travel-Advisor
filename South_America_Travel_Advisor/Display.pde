@@ -6,7 +6,7 @@ void display() {
   PVector bookCoord = new PVector(50,25);
   PVector bookShape = new PVector(1100,600);
 
-  //If the page your own is start page
+  //If the page your on is start page
   if(pageOn == "start") {
     
     //Setting visibility of certain gui buttons to be displayed or not
@@ -54,8 +54,10 @@ void display() {
     Start();
   }
   
-  //If the page your on is about
+  //If the page your on is about page
   if(pageOn == "about") {
+    
+    //Setting visibility of certain gui buttons to be displayed or not
     Itinerary1.setVisible(false);
     Itinerary2.setVisible(false);
     Itinerary3.setVisible(false);
@@ -91,7 +93,10 @@ void display() {
     
   }
   
+  //If the page your on is info1 page
   if(pageOn == "info1") {
+    
+    //Setting visibility of certain gui buttons to be displayed or not
     Itinerary1.setVisible(false);
     Itinerary2.setVisible(false);
     Itinerary3.setVisible(false);
@@ -124,15 +129,18 @@ void display() {
     X.setVisible(false);
     Previous.setVisible(true);
     Finish.setVisible(false);
+    //make the white page
     fill(backcol);
     rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
     
+    //If the required information drop on the first pages have been chosen you can go to the next page
     if(startTripDate != null && endTripDate != null && stateChosen != null && countryChosen != null) {
       tripbeingTaken = new Trip(stateChosen,countryChosen,startTripDate,endTripDate);
       if(tripbeingTaken.travelDays <= 14 && tripbeingTaken.travelDays >= 1) {
         Next.setVisible(true);
       }
       
+      //If the trip is not within a 14 day period, we can provide service to help them schedule their vacation
       else {
         fill(255,0,0);
         Next.setVisible(false);
@@ -142,6 +150,7 @@ void display() {
           }
         }
         
+        //If the drip is somehow less than 1 day, it simply is not possible as we are not time travelers that can go back in time
         if(tripbeingTaken.travelDays < 1) {
           if(dateChecker == true) {
             text("We are not time travelers, we can not go to the past sorry for the incovenience.",250,600);
@@ -150,13 +159,19 @@ void display() {
       }
     }
     
+    //If the required information drop on the first pages have no been chosen you can not go to the next page
     else {
       Next.setVisible(false);
     }
     
+    //Calls the info1 function
     Info1();    
   }
+  
+  //If the page your on is info2 page
   if(pageOn == "info2") {
+    
+    //Setting visibility of certain gui buttons to be displayed or not
     Itinerary1.setVisible(false);
     Itinerary2.setVisible(false);
     Itinerary3.setVisible(false);
@@ -186,20 +201,32 @@ void display() {
     About.setVisible(false);
     X.setVisible(false);
     
+    //If the number of travelers is not greather than the kids under ages of 12 and 2, the next button isn't availible as you need atleast 1 adult
     if(numOfTrav != 0 && numOfTrav > (numOfTravUnder12+numOfTravUnder2)) {
       Next.setVisible(true);
     }
+    
+    //If the number of travelers is greather than the kids under the of 12 and 2, the next button will apear
     else {
       Next.setVisible(false);
     }
+    
+    //Setting visibility of certain gui buttons to be displayed or not
     Previous.setVisible(true);
     Finish.setVisible(false);
+    
+    //makes the white page for the background
     fill(backcol);
     rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
+    
+    //Calls the info2 function
     Info2();
   }
   
+  //If the page your on is info2 page
   if(pageOn == "info3") {
+    
+    //Setting visibility of certain gui buttons to be displayed or not
     Itinerary1.setVisible(false);
     Itinerary2.setVisible(false);
     Itinerary3.setVisible(false);
@@ -215,36 +242,44 @@ void display() {
     Itinerary13.setVisible(false);
     Itinerary14.setVisible(false);
     
-    airline1 = new Flight("Raspberry  Airlines",0.125);
-    airline2 = new Flight("Gold Airlines",0.16);
-    airline3 = new Flight("Diamond Airlines",0.2);
-    
+    //Makes a new array of Travelers (for each person they are an element of an array)
     addingTrav = new Traveler[numOfTrav];
     
+    //For loop adding the travelers to traveler class
     for(int i = 0; i < numOfTrav;i++) {
      
+      //Adds these travelers as kids between 2-12 years old
       if(i < numOfTravUnder12) {
         addingTrav[i] = new Traveler(12);
       }
       
+      //Adds these travelers as kids under 2 years old
       else if(i < (numOfTravUnder2+numOfTravUnder12)) {
         addingTrav[i] = new Traveler(1);
       }
       
+      //Adds these travelers that are adults that are 18+ or older.
       else {
         addingTrav[i] = new Traveler(18);
       }
     }
+    
+    //If airlineAtuse has a value reset the number of travelers and passengers as the user may want to change the number of travelers so we have to let them reset it
     if (airlineAtuse!= null){
       airlineAtuse.passengers.clear();
       tripbeingTaken.travelers.clear();
     }
+    
+   //For loop adding travelers to other classes
     for(int g = 0; g < numOfTrav; g++) {
       int maxSize = numOfTrav;
+      
+      //Adds the number of traverlers to the flight class
       if (tripbeingTaken.travelers.size() < maxSize) {
         tripbeingTaken.addTraveler(addingTrav[g]);
       }
       
+      //Adds the number of traverlers to the Trip class
       if(airlineAtuse != null) {
         if (airlineAtuse.passengers.size() < maxSize) {  
         airlineAtuse.addPassenger(addingTrav[g]);
@@ -252,6 +287,7 @@ void display() {
       }
     }
     
+    //Calculates the cost the of each travelers ticket to fly to South America
     if (airlineAtuse != null) {
     for (int i = 0; i < numOfTrav; i++) {
       float fDistance = airlineAtuse.getDistance();
@@ -264,7 +300,7 @@ void display() {
     
     
     
-    
+    //Setting visibility of certain gui buttons to be displayed or not
     Airlines.setVisible(true);
     StartYear.setVisible(false);
     StartMonth.setVisible(false);
@@ -282,22 +318,32 @@ void display() {
     About.setVisible(false);
     X.setVisible(false);
     
+    //If they did not choose an airline, they can not go to the next page
     if(airlineChosen != null) {
       Next.setVisible(true);
     }
     
+    //If they did  choose an airline, they can go to the next page
     else {
       Next.setVisible(false);
     }
     
+    //Setting visibility of certain gui buttons to be displayed or not
     Previous.setVisible(true);
     Finish.setVisible(false);
+    
+    //Makes the white page background
     fill(backcol);
     rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
+    
+    //Calls the info3 function
     Info3();
   }
   
+  //If the page your on is info4 page
   if(pageOn == "info4") {
+    
+    //Setting visibility of certain gui buttons to be displayed or not
     Itinerary1.setVisible(false);
     Itinerary2.setVisible(false);
     Itinerary3.setVisible(false);
@@ -329,6 +375,7 @@ void display() {
     About.setVisible(false);
     X.setVisible(false);
     
+    //Recreates this transporation classes over and over because, user might change variables numbers
     //train,bus, 5,7,11 seaters (transportation class) (vehicle, price per day, max pasengers allowed) (are constantly changing)
     train = new Transportation("train", 4.00 , 10, tripbeingTaken.travelDays, numOfTrav);     
     car = new Transportation("car", 50.00 , 5, tripbeingTaken.travelDays, numOfTrav); 
@@ -336,23 +383,34 @@ void display() {
     minivan = new Transportation("minivan", 70.00 , 7, tripbeingTaken.travelDays, numOfTrav);    
     van = new Transportation("van", 80.00 , 11, tripbeingTaken.travelDays, numOfTrav);
     
+    // If they chose a vehicle and the vehicle can carry all passenger they can go to the next page
     if (vehicleAtuse != null && vehicleAtuse.maximumCapacity >= numOfTrav) {
       Next.setVisible(true);
     }
     
+    // If they do not choose a vehicle or the vehicle can not carry all passenger they can not go to the next page
     else {
       Next.setVisible(false);
     }
     
+    //Setting visibility of certain gui buttons to be displayed or not
     Previous.setVisible(true);
     Finish.setVisible(false);
+    
+    //Creates the white page background
     fill(backcol);
     rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
+    
+    //Calls the info4 function
     Info4();
   }
   
+  //If the page your on is info5 page
   if(pageOn == "info5") {
-
+    
+    //Setting visibility of certain gui buttons to be displayed or not
+    
+    //If the number of days being taken is less than the number of desinated itinerary day it will not show. Ex.( your going on vacation for 4 days, they will plan for 4 itinerary for each day)
     if(1 <= tripbeingTaken.travelDays){
       Itinerary1.setVisible(true);
     }
@@ -451,6 +509,7 @@ void display() {
       Itinerary14.setVisible(false);
     }
     
+    //Setting visibility of certain gui buttons to be displayed or not
     Airlines.setVisible(false);
     StartYear.setVisible(false);
     StartMonth.setVisible(false);
@@ -470,6 +529,8 @@ void display() {
     Next.setVisible(false);
     Previous.setVisible(true);
     
+    //If they did not fill out all the days with the itinerary they can not go to the next page depending on how many days they chose 
+    //(You have vacation for 4 days, you must pick an itinerary for each of those 4 days
     if(tripbeingTaken.travelDays == 1) {
       if(itinerary1 != null) {
         Finish.setVisible(true);
@@ -616,12 +677,18 @@ void display() {
       }
     }
     
+    //Creates the white page as the background
     fill(backcol);
     rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
+    
+    //Calls the info5 function
     Info5();
   }
   
+  //If the page your on is final page
   if(pageOn == "final") {
+    
+    //Setting visibility of certain gui buttons to be displayed or not
     Itinerary1.setVisible(false);
     Itinerary2.setVisible(false);
     Itinerary3.setVisible(false);
@@ -655,25 +722,34 @@ void display() {
     Next.setVisible(false);
     Previous.setVisible(true);
     Finish.setVisible(false);
+    
+    //Creates the white page background
     fill(backcol);
     rect(bookCoord.x,bookCoord.y,bookShape.x,bookShape.y);
+    
+    //Calls the final page function
     Final();
+    
+    //Calls for the display summary for the trip in the trip class
     tripbeingTaken.displaySummary();
   }
 
 
 }
 
+//Start function is the one which connects to the start page
 void Start() {
    textFont(font1);
    textSize(65);
    fill(0);
-   text("South America Travel Advisor",140,height/2);
+   text("South America Travel Advisor",140,height/2); //Makes the title text
 
 }
 
-
+// About function is the one which connects to the about page
 void About() {
+  
+  //Creates the text for the page and selects the format
   textFont(font1);
   textSize(60);
   fill(0);
@@ -685,12 +761,12 @@ void About() {
   textSize(14.5);
   fill(0);
     
-  //First Block of Text
+  //First Block of the Text
   text("South America Travel Advisor (SATA) is the perfect travel planner for U.S. citizens who ", 320, 200);
   text("want to explore the diverse landscapes of South America. Whether you plan on visiting ", 320, 220);
   text("the Igauzu Falls, Ibirapuera Park, or the 'Christ the Reedemer' landmark, we got it covered!", 320, 240);
     
-  //Second Bloxk of Text
+  //Second Block of the Text
   textFont(font1);
   textSize(30);
   fill(0);
@@ -703,7 +779,8 @@ void About() {
   text("how you plan on travelling across the country? We'll find you the best transportation ", 320, 410);
   text("method for you, and we'll show you the pricing of each option too, so that you can ", 320, 430);
   text("adjust them accordingly to your budget.",475,450);
-
+  
+  //End Block of the Text
   textSize(12);
   text("To start planning for your trip, exit out this page by pressing the 'x' mark on the top right and then press the ", 310, 650);
   text("'start planning' button on the main page", 490, 665);
@@ -711,11 +788,14 @@ void About() {
 
 }
 
-
+// Info1 function is the one which connects to the Info1 page
 void Info1() {
+  
   fill(0);
   textSize(35);
   textFont(font1);
+  
+  //SubTitles for the respective drop box
   text("Starting Location",100,200);
   text("Ending Location",700,200);
   text("Start Date",100,400);
@@ -735,28 +815,37 @@ void Info1() {
   
 }
 
+// Info1 function is the one which connects to the Info1 page
 void Info2() {
+  
   fill(0);
   textFont(font1);
   textSize(40);
+  
+  //Text that is displayed as subtitles
   text("Number of Travelers?",100,100);
+  
+  //This part of the text only loads if they have more than 1 traveller travelling with them (we assume 1 traveller has to be an adult)
   if(numOfTrav > 1) {
     textSize(40);
     text("How many travelers are between 2 and 12 years old?",100,250);
-  TravLess12.setVisible(true);
+    TravLess12.setVisible(true);
   
+  //Errors message if: there is no adults on the trip
   if(numOfTravUnder12 == numOfTrav) {
     fill(255,0,0);
     textSize(20);
     text("Invalid Entry: At least one adult is required for the flight.",370,310);  
   }  
-    
+  
+  //Errors message if: there are more 2-12 year olds than travellers, that means there is no adults
   if(numOfTravUnder12 > numOfTrav) {
     fill(255,0,0);
     textSize(18);
     text("Invalid Entry: number of passengers should be greater than the number of children", 370, 310);
   }
   
+   //Errors message if: there are more infants than travellers, that means there is no adults
   if(numOfTravUnder2 > numOfTrav) {
     fill(255,0,0);
     textSize(18);
@@ -764,6 +853,7 @@ void Info2() {
     
   }
   
+  //Errors message if: there needs to be atleast 1 adult not just all kids
   if(numOfTravUnder2 == numOfTrav) {
     fill(255,0,0);
     textSize(20);
@@ -771,19 +861,22 @@ void Info2() {
   
   }
   
+  //Errors message if: If the kids between 0-12 is equal to the number of travelers, it will cause an error as there is no adults on this vacation
   if((numOfTravUnder2 + numOfTravUnder12) == numOfTrav) {
     fill(255,0,0);
     textSize(35);
     text("Invalid Entry: At least one adult is required for the flight.", 125, 600);
   }
   
+  //Errors message if: If the kids between 0-12 is greater to the number of travelers 
+  //it will cause an error as there is no adults on this vacation and they did not account for all travelers
   if((numOfTravUnder2 + numOfTravUnder12) > numOfTrav) {
     fill(255,0,0);
     textSize(25);
     text("Invalid Entry: number of passengers should be greater than the number of children.", 100, 600);
    
   }
-  
+  //Asks the question if travelers are under the age of 2 text.
   fill(0);
   textFont(font1);
   textSize(40);
@@ -791,22 +884,25 @@ void Info2() {
   TravUnder2.setVisible(true);
   }
   
+  //If they only pick the number of travellers to be 1, then this will happen
   else {
    TravUnder2.setVisible(false);
    TravLess12.setVisible(false);
   }
 
-
-
-
 }
 
+/// Info3 function is the one which connects to the Info3 page
 void Info3() {
   fill(0);
   textSize(35);
   textFont(font1);
+  
+  //Displaying the subtitles and new information that need to be asked as texts.
   text("What airline do you prefer?",100,100);
   text(stateChosen+" to "+countryChosen+":",100,400);
+  
+  //If they did not choose airline the following will not be shown
   if (airlineAtuse != null) {
     text("Distance: " + airlineAtuse.getDistance() + " km", 100, 500);
     airlineAtuse.displayFlightSummary();
@@ -825,7 +921,8 @@ void Info3() {
     int ptx = 715;
     int pty = 260;
     for(int i = 0; i < numOfTrav; i++) {  
-
+      
+      //Table displays clearly a 20% discount for travelers aged 2-12 years old
       if(addingTrav[i].age < 13 && addingTrav[i].age > 2) {    
         fill(255,0,0);
         textSize(20);
@@ -833,6 +930,7 @@ void Info3() {
         
       }
         
+      //Table displays clearly a 100% discount for travelers under the age of 2 years old
       if(addingTrav[i].age < 2) {    
 
         fill(255,0,0);
@@ -840,34 +938,48 @@ void Info3() {
         text("Discount: 100%", 990, pty);
       }
       
+      //This is the text that displays the # of passenger and cost of the ticket
       fill(0);
+      
+      //Formats the 10th passenger on the table a little differently
       if((i+1) == 10) {
         text("Passenger #"+(i+1)+"        " + "$"+nf(addingTrav[i].ticketCost,0,2), ptx,pty);
       }
       
+      //Formats the passengers on the table normalls
       else {
         text("Passenger #"+(i+1)+"          " + "$"+nf(addingTrav[i].ticketCost,0,2), ptx,pty);   
       }
       
       pty += 20;
     }
+    
+    //Shows the total cost of the tickets
     text("$"+airlineAtuse.calculateTotalTicketsCost(),715,485);
       
     }
 }
 
-
+/// Info4 function is the one which connects to the Info4 page
 void Info4() {
+  
+  //Makes summary box
   rect(100,225,500,375);
   fill(0);
   textSize(20);
+  
+  //Asks the type of transportation displayed in text
   text("Transporation Type",100,150);
   textFont(font1);
   textSize(35);
+  
+  //Side table that displays all the information they need to know
   text("What kind of transporation would you like in this country?",100,100);
   text("Summary: ",275,270);
   text("Cost of Method Chosen",700,200);
   fill(255);
+  
+  //If they decided to use a vehicle display the details and summary of the vehicle
   if(vehicleAtuse != null) {
   vehicleAtuse.displayTransportationDetails();
   vehicleAtuse.displayTransportationSummary();
@@ -875,11 +987,16 @@ void Info4() {
   
 }
 
+/// Info5 function is the one which connects to the Info5 page
 void Info5() {
   textFont(font1);
   textSize(20);
   fill(0);
+  
+  //Title for the page
   text("Choose your itineary for the next "+tripbeingTaken.travelDays+" days",375,50);
+  
+  //For loop that displays the Subtitle text for number of days the user wants to have a vacation for
   int x = 100;
   int y = 100;
   for(int i = 0; i < tripbeingTaken.travelDays; i++) {
@@ -899,16 +1016,20 @@ void Info5() {
     }  
   }
   
-  totalItinCost = 0;
-  String activity1 = itinerary1;
+  //This is the same as the following below (look at this comment to the rest
+  
+  totalItinCost = 0; // Initialize total itinerary cost
+  String activity1 = itinerary1; // Set variable = user input
   if (itin1Picked == true) {
-    int $index1 = activity1.indexOf("$");
-    String price1 = activity1.substring($index1 + 1, activity1.length());
-    float fprice1 = float(price1);
-    item1 = new ItineraryItem(activity1, fprice1);
+    int $index1 = activity1.indexOf("$"); // Find $ sign in activity name
+    String price1 = activity1.substring($index1 + 1, activity1.length()); // Isolate string to get price
+    float fprice1 = float(price1); // convert to float for calculations 
+    item1 = new ItineraryItem(activity1, fprice1); // create new itinerary object
     textSize(15);
     fill(0, 0, 0);
+    // Display total cost for activity for entire group
     text("Total Cost For " + numOfTrav + " People: $" + item1.itemCostForWholeParty(), 350, 127.5);
+    // Add cost to total cost of itinerary
     totalItinCost += float(item1.itemCostForWholeParty());
   }
   
@@ -1082,12 +1203,22 @@ void Info5() {
     totalItinCost += float(item14.itemCostForWholeParty());
   }
   
-   
 }
 
 
-
+/// Final function is the one which connects to the Final page
 void Final() {
+  
+  //Creates the text that shows the cost for itinerary and total cost
+  textFont(font1);
+  textSize(30);
+  fill(0, 0, 0);
+  text("$" + nf(totalItinCost, 0, 2), 925, 490);
+  float totalFinalCost = totalItinCost + vehicleAtuse.calculateTotalCost() + float(airlineAtuse.findRoundTripCost());
+  text("$" + nf(totalFinalCost, 0, 2), 570, 590);
+  
+  
+  //Makes the horizontal lines for the calender
   float calx = 100;
   int caly = 100;
   for(int i = 0; i < 3; i++) {    
@@ -1096,20 +1227,17 @@ void Final() {
     caly += 150;
   }
   
-  textFont(font1);
-  textSize(30);
-  fill(0, 0, 0);
-  text("$" + nf(totalItinCost, 0, 2), 925, 490);
-  float totalFinalCost = totalItinCost + vehicleAtuse.calculateTotalCost() + float(airlineAtuse.findRoundTripCost());
-  text("$" + nf(totalFinalCost, 0, 2), 570, 590);
-  
+ 
+  //Creates the vertical lines for the calender
   caly = 100;
-  
+ 
   for(int g = 0; g < 8; g++) {
     stroke(50);
     line(calx,caly,calx,caly+(150*2));
     calx += (1000/7);
   }
+  
+  //Text that are the subtitles for the cost of each necessity and flight information
   textFont(font1);
   textSize(25);
   fill(0);
@@ -1120,8 +1248,10 @@ void Final() {
   text("Total Final Trip Cost:",450,550);
   text("Your Planner Schedule",440,75);
   
+  //Creates the number of days text on each of the calender boxes
   int dx = 110;
   int dy = 125;
+  
   for(int d = 1; d < tripbeingTaken.travelDays + 1; d++) {
   textFont(font2);
   textSize(20);
@@ -1133,18 +1263,22 @@ void Final() {
     dx = 110;   
   }
   }
+  
+  //Calls the function that will display the total cost for transporation
   vehicleAtuse.finalTotalTransportationCost();
   
   textFont(font2);
   textSize(15);
   fill(0);
   
+  //This does the same for the following just a different ininerary each time.
   
+  //Itinerary # currently has a value then:
   if(itinerary1 != null) {
-    String string1 = item1.activityName;
-    int $index = string1.indexOf(" $");
-    String activity1 = string1.substring(0, $index);
-    text(activity1, 110,150); 
+    String string1 = item1.activityName; //Making the string variable to the itinerary name
+    int $index = string1.indexOf(" $"); //Finding the index of the " $"
+    String activity1 = string1.substring(0, $index); //Only taking the text before the dollar sign
+    text(activity1, 110,150); //displaying the text
   }
   
   if(itinerary2 != null) {
