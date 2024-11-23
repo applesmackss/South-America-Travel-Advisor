@@ -91,7 +91,7 @@ class Flight {
     // Summary for "Diamond" airline
     if (airlineChosen.equals("Diamond Airlines")) {
       text("Diamond Airlines is the most expensive flight on the market with a", 100, 220);
-      text("ratePerKm of" + airlineAtuse.ratePerKm + ".This is the most luxurious flight to take, you can", 100, 240);
+      text("ratePerKm of " + airlineAtuse.ratePerKm + ". This is the most luxurious flight to take, you can", 100, 240);
       text("have the following, elite tier food. You can even take a nice little nap", 100, 260);
       text("when watching a show. Oh and best of all, you always have access to a", 100, 280);
       text("plane assistant whenever you need something.", 100, 300);
