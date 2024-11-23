@@ -246,7 +246,7 @@ public void AirlinesClicked(GDropList source, GEvent event) { //_CODE_:Airlines:
   airlineChosen = Airlines.getSelectedText();
   
   // If they choose Razzberry Airlines then, Razzberry Airlines attributes show on display screen
-  if(airlineChosen.equals ("Razzberry Airlines")) {
+  if(airlineChosen.equals ("Raspberry Airlines")) {
     airlineAtuse = airline1;
   }
   

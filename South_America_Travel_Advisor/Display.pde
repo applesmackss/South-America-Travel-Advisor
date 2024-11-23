@@ -1,9 +1,15 @@
+// Void Display fun   ction
 void display() {
+  
+  //Page colour of the white page background and coordinates
   color backcol = color(255,255,255);
   PVector bookCoord = new PVector(50,25);
   PVector bookShape = new PVector(1100,600);
 
+  //If the page your own is start page
   if(pageOn == "start") {
+    
+    //Setting visibility of certain gui buttons to be displayed or not
     Itinerary1.setVisible(false);
     Itinerary2.setVisible(false);
     Itinerary3.setVisible(false);
@@ -37,13 +43,18 @@ void display() {
     Next.setVisible(false);
     Previous.setVisible(false);
     Finish.setVisible(false);
+    
+    //creating the white page background
     fill(255,255,255,128);
     stroke(255,255,255,128);
     rect(100,250,1000,150);
     stroke(0);
+    
+    //calling the start page function 
     Start();
   }
   
+  //If the page your on is about
   if(pageOn == "about") {
     Itinerary1.setVisible(false);
     Itinerary2.setVisible(false);
@@ -204,9 +215,9 @@ void display() {
     Itinerary13.setVisible(false);
     Itinerary14.setVisible(false);
     
-    airline1 = new Flight("Flying Sheep",0.125);
-    airline2 = new Flight("Normalize AVG",0.16);
-    airline3 = new Flight("Luxarice",0.2);
+    airline1 = new Flight("Raspberry  Airlines",0.125);
+    airline2 = new Flight("Gold Airlines",0.16);
+    airline3 = new Flight("Diamond Airlines",0.2);
     
     addingTrav = new Traveler[numOfTrav];
     
@@ -1130,6 +1141,8 @@ void Final() {
   textFont(font2);
   textSize(15);
   fill(0);
+  
+  
   if(itinerary1 != null) {
     String string1 = item1.activityName;
     int $index = string1.indexOf(" $");

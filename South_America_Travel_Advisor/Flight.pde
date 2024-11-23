@@ -69,10 +69,10 @@ class Flight {
     textSize(15);
     fill(0);
 
-    // Summary for "Razzberry" airline
-    if (airlineChosen.equals("Razzberry Airlines")) {
-      text("Razzberry Airlines is the cheapest flight on the market with a ratePerKm of " + airlineAtuse.ratePerKm + ".", 100, 220);
-      text("This is the most cheap stake flight to take, you can have the following,", 100, 240);
+    // Summary for "Raspberry" airline
+    if (airlineChosen.equals("Raspberry Airlines")) {
+      text("Razzberry Airlines is the cheapest flight on the market with a ratePerKm of", 100, 220);
+      text(airlineAtuse.ratePerKm + ". This is the most cheap stake flight to take, you can have the following,", 100, 240);
       text("a never cleaned washroom, food that is only microwaved, water as", 100, 260);
       text("your only source of drinks. Plane assistants are quite busy and probably", 100, 280);
       text("won't be there to help you if you need something.", 100, 300);
@@ -90,11 +90,11 @@ class Flight {
 
     // Summary for "Diamond" airline
     if (airlineChosen.equals("Diamond Airlines")) {
-      text("Diamond Airlines is the most expensive flight on the market with a ratePerKm of " + airlineAtuse.ratePerKm + ".", 100, 220);
-      text("This is the most luxurious flight to take, you can have the following, elite", 100, 240);
-      text("tier food. You can even take a nice little nap when watching a show.", 100, 260);
-      text("Oh and best of all, you always have access to a plane assistant whenever", 100, 280);
-      text("you need something.", 100, 300);
+      text("Diamond Airlines is the most expensive flight on the market with a", 100, 220);
+      text("ratePerKm of" + airlineAtuse.ratePerKm + ".This is the most luxurious flight to take, you can", 100, 240);
+      text("have the following, elite tier food. You can even take a nice little nap", 100, 260);
+      text("when watching a show. Oh and best of all, you always have access to a", 100, 280);
+      text("plane assistant whenever you need something.", 100, 300);
     }
   }
 }
