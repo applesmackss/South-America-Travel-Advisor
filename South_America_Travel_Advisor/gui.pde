@@ -245,18 +245,18 @@ public void AirlinesClicked(GDropList source, GEvent event) { //_CODE_:Airlines:
   //grabs the text for the airlines dropbox
   airlineChosen = Airlines.getSelectedText();
   
-  // If they choose flying sheep then, flying sheep attributes show on display screen
-  if(airlineChosen.equals ("Flying Sheep")) {
+  // If they choose Razzberry Airlines then, Razzberry Airlines attributes show on display screen
+  if(airlineChosen.equals ("Raspberry Airlines")) {
     airlineAtuse = airline1;
   }
   
-  // If they choose normalize avg then, normalize avg attributes show on display screen
-  if(airlineChosen.equals ("Normalize AVG")) {
+  // If they choose Gold Airlines then, Gold Airlines attributes show on display screen
+  if(airlineChosen.equals ("Gold Airlines")) {
     airlineAtuse = airline2;
   }
   
-  // If they choose luxarice then, luxarice attributes show on display screen
-  if(airlineChosen.equals ("Luxarice")) {
+  // If they choose Diamond Airlines then, Diamond Airlines attributes show on display screen
+  if(airlineChosen.equals ("Diamond Airlines")) {
     airlineAtuse = airline3;
   }
 } //_CODE_:Airlines:456921:
