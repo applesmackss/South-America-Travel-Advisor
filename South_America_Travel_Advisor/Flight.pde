@@ -69,18 +69,18 @@ class Flight {
     textSize(15);
     fill(0);
 
-    // Summary for "Flying Sheep" airline
-    if (airlineChosen.equals("Flying Sheep")) {
-      text("Flying Sheep is the cheapest flight on the market with a ratePerKm of " + airlineAtuse.ratePerKm + ".", 100, 220);
+    // Summary for "Razzberry" airline
+    if (airlineChosen.equals("Razzberry Airlines")) {
+      text("Razzberry Airlines is the cheapest flight on the market with a ratePerKm of " + airlineAtuse.ratePerKm + ".", 100, 220);
       text("This is the most cheap stake flight to take, you can have the following,", 100, 240);
       text("a never cleaned washroom, food that is only microwaved, water as", 100, 260);
       text("your only source of drinks. Plane assistants are quite busy and probably", 100, 280);
       text("won't be there to help you if you need something.", 100, 300);
     }
 
-    // Summary for "Normalize AVG" airline
-    if (airlineChosen.equals("Normalize AVG")) {
-      text("Normalize AVG is an average normal class flight on the market with a", 100, 220);
+    // Summary for "Gold" airline
+    if (airlineChosen.equals("Gold Airlines")) {
+      text("Gold Airlines is an average normal class flight on the market with a", 100, 220);
       text("ratePerKm of " + airlineAtuse.ratePerKm + ". This is an average used airline for family, who just", 100, 240);
       text("want a normal and comfortable journey. This airline provides, clean", 100, 260);
       text("bathrooms, fresh food and even multiple beverage options than just water.", 100, 280);
@@ -88,9 +88,9 @@ class Flight {
       text("of that.", 100, 320);
     }
 
-    // Summary for "Luxarice" airline
-    if (airlineChosen.equals("Luxarice")) {
-      text("Luxarice is the most expensive flight on the market with a ratePerKm of " + airlineAtuse.ratePerKm + ".", 100, 220);
+    // Summary for "Diamond" airline
+    if (airlineChosen.equals("Diamond Airlines")) {
+      text("Diamond Airlines is the most expensive flight on the market with a ratePerKm of " + airlineAtuse.ratePerKm + ".", 100, 220);
       text("This is the most luxurious flight to take, you can have the following, elite", 100, 240);
       text("tier food. You can even take a nice little nap when watching a show.", 100, 260);
       text("Oh and best of all, you always have access to a plane assistant whenever", 100, 280);
