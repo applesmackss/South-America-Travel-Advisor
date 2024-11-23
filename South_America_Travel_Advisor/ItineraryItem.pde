@@ -1,17 +1,18 @@
 class ItineraryItem {
   // Fields
-  String activityName;
-  float cost; // per person
+  String activityName;  // Name of the activity
+  float cost;           // Cost of the activity per person
 
   // Constructor
   ItineraryItem(String activityName, float cost) {
-    this.activityName = activityName;
-    this.cost = cost;
+    this.activityName = activityName; // Set the activity name
+    this.cost = cost;                 // Set the cost per person
   }
 
-  // Method to display item details
+  // Method to calculate and format the total cost of the activity for the whole party
   String itemCostForWholeParty() {
-    String costForWholeParty = nf(cost * numOfTrav, 0, 2);
-    return costForWholeParty;
+    // Multiply the per-person cost by the number of travelers to get the total cost
+    String costForWholeParty = nf(cost * numOfTrav, 0, 2); // Format the total cost to two decimal places
+    return costForWholeParty; // Return the formatted total cost
   }
 }
